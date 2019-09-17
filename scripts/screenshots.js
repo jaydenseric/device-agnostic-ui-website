@@ -9,6 +9,8 @@ const imageminZopfli = require('imagemin-zopfli')
 const puppeteer = require('puppeteer')
 
 const exec = util.promisify(childProcess.exec)
+const readdir = util.promisify(fs.readdir)
+const mkdir = util.promisify(fs.mkdir)
 
 /**
  * Recursively deletes a directory, if it exists.
@@ -108,7 +110,7 @@ async function screenshotPageElement(
  */
 async function getComponentNames(componentPath) {
   try {
-    return (await fs.promises.readdir(componentPath))
+    return (await readdir(componentPath))
       .map(filename => path.basename(filename, '.js'))
       .filter(name => name !== 'index')
   } catch (error) {
@@ -134,7 +136,7 @@ async function updateScreenshots(
     await deleteDirectory(screenshotPath)
 
     // Ensure the screenshot directory exists.
-    await fs.promises.mkdir(screenshotPath, { recursive: true })
+    await mkdir(screenshotPath, { recursive: true })
 
     if (!componentNames) componentNames = await getComponentNames(componentPath)
 

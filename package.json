@@ -19,7 +19,7 @@
     "static"
   ],
   "engines": {
-    "node": ">=11.14.0"
+    "node": ">=10"
   },
   "dependencies": {
     "device-agnostic-ui": "^0.0.0",
