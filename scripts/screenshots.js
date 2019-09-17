@@ -132,8 +132,8 @@ async function updateScreenshots(
   componentNames
 ) {
   try {
-    // Clean the screenshot directory.
-    await deleteDirectory(screenshotPath)
+    // If updating all component screenshots, clean the screenshot directory.
+    if (!componentNames) await deleteDirectory(screenshotPath)
 
     // Ensure the screenshot directory exists.
     await mkdir(screenshotPath, { recursive: true })
