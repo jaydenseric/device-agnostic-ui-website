@@ -1,0 +1,64 @@
+{
+  "name": "device-agnostic-ui-website",
+  "private": true,
+  "description": "The Device Agnostic UI website.",
+  "license": "MIT",
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "https://jaydenseric.com"
+  },
+  "repository": "github:jaydenseric/device-agnostic-ui-website",
+  "homepage": "https://github.com/jaydenseric/device-agnostic-ui-website#readme",
+  "bugs": "https://github.com/jaydenseric/device-agnostic-ui-website/issues",
+  "files": [
+    "components",
+    "meta",
+    "pages",
+    "public",
+    "static"
+  ],
+  "engines": {
+    "node": ">=11.14.0"
+  },
+  "dependencies": {
+    "device-agnostic-ui": "^0.0.0",
+    "next": "^9.0.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "strip-indent": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-syntax-highlight": "^1.0.0",
+    "eslint": "^6.4.0",
+    "eslint-config-env": "^9.0.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import-order-alphabetical": "^1.0.0",
+    "eslint-plugin-jsdoc": "^15.9.2",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "husky": "^3.0.5",
+    "imagemin": "^7.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "imagemin-webp": "^5.1.0",
+    "imagemin-zopfli": "^6.0.0",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "prismjs": "^1.17.1",
+    "puppeteer": "^1.20.0"
+  },
+  "scripts": {
+    "screenshots": "node scripts/screenshots",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "npm run test:eslint && npm run test:prettier",
+    "test:eslint": "eslint .",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l"
+  }
+}

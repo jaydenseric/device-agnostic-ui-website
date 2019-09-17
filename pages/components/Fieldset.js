@@ -1,0 +1,106 @@
+import { jsx } from 'babel-plugin-syntax-highlight'
+import { Fieldset, LinkText, Para, Scroll, Toggle } from 'device-agnostic-ui'
+import { CodeExample } from '../../components/CodeExample'
+import { ComponentPage } from '../../components/ComponentPage'
+import { LinkElement } from '../../components/LinkElement'
+import { TypeCard } from '../../components/TypeCard'
+import { Fieldset as FieldsetComponentMeta } from '../../meta/components'
+
+const FieldsetComponentPage = () => (
+  <ComponentPage
+    componentMeta={FieldsetComponentMeta}
+    componentIntro={
+      <Para>
+        It implements the <LinkElement element="fieldset" /> element.
+      </Para>
+    }
+    componentPropsContent={
+      <Scroll>
+        <TypeCard
+          identity={{ name: 'legend', idPrefix: 'prop' }}
+          type={
+            <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
+              JSX children
+            </LinkText>
+          }
+          description={
+            <>
+              Children for the <LinkElement element="legend" /> element. It may
+              only render{' '}
+              <LinkText href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">
+                phrasing content
+              </LinkText>
+              .
+            </>
+          }
+        />
+        <TypeCard
+          identity={{ name: '...props', idPrefix: 'prop' }}
+          type="…*"
+          description={
+            <>
+              Additional props for the container; a{' '}
+              <LinkElement element="fieldset" /> element.
+            </>
+          }
+        />
+      </Scroll>
+    }
+    componentExamplesContent={
+      <CodeExample
+        caption={<>Grouped checkboxes.</>}
+        code={jsx`
+          import { Fieldset, Textbox } from 'device-agnostic-ui'
+
+          <Fieldset legend="Options">
+            <Toggle
+                inputProps={{
+                  type: 'radio',
+                  name: 'options',
+                  value: 'a',
+                  defaultChecked: true
+                }}
+              >
+                Label A
+              </Toggle>
+              <Toggle
+                inputProps={{
+                  type: 'radio',
+                  name: 'options',
+                  value: 'b'
+                }}
+              >
+                Label B
+              </Toggle>
+            </Fieldset>
+          `}
+        result={
+          <Fieldset legend="Options">
+            <Toggle
+              inputProps={{
+                type: 'radio',
+                name: 'options',
+                value: 'a',
+                defaultChecked: true
+              }}
+            >
+              Label A
+            </Toggle>
+            <Toggle
+              inputProps={{
+                type: 'radio',
+                name: 'options',
+                value: 'b'
+              }}
+            >
+              Label B
+            </Toggle>
+          </Fieldset>
+        }
+        screenshot
+      />
+    }
+  />
+)
+
+export default FieldsetComponentPage
