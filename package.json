@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "device-agnostic-ui": "^0.0.0",
-    "next": "^9.0.4",
+    "next": "^9.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
@@ -39,7 +39,7 @@
     "eslint-plugin-import-order-alphabetical": "^1.0.0",
     "eslint-plugin-jsdoc": "^15.9.2",
     "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "husky": "^3.0.5",
