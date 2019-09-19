@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, Loading, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -60,11 +59,13 @@ const LoadingComponentPage = () => (
     componentExamplesContent={
       <CodeExample
         caption="A loading indicator."
-        code={jsx`
+        code={
+          /* syntax-highlight jsx */ `
             import { Loading } from 'device-agnostic-ui'
 
             <Loading size="2em" />
-          `}
+          `
+        }
         result={<Loading size="2em" />}
         screenshot
       />

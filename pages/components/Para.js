@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -24,14 +23,16 @@ const ParaComponentPage = () => (
     componentExamplesContent={
       <CodeExample
         caption="Simple paragraph."
-        code={jsx`
-          import { Para } from 'device-agnostic-ui'
+        code={
+          /* syntax-highlight jsx */ `
+            import { Para } from 'device-agnostic-ui'
 
-          <Para>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Para>
-        `}
+            <Para>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Para>
+          `
+        }
         result={
           <Para>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

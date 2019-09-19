@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, Para, Scroll, Select } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -55,14 +54,16 @@ const SelectComponentPage = () => (
       <>
         <CodeExample
           caption="Simple."
-          code={jsx`
-            import { Select } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Select } from 'device-agnostic-ui'
 
-            <Select>
-              <option>Option A</option>
-              <option>Option B</option>
-            </Select>
-          `}
+              <Select>
+                <option>Option A</option>
+                <option>Option B</option>
+              </Select>
+            `
+          }
           result={
             <Select>
               <option>Option A</option>
@@ -73,15 +74,17 @@ const SelectComponentPage = () => (
         />
         <CodeExample
           caption="Required, with a placeholder option."
-          code={jsx`
-            import { Select } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Select } from 'device-agnostic-ui'
 
-            <Select required>
-              <option value="" disabled selected>Options</option>
-              <option value="A">Option A</option>
-              <option value="B">Option B</option>
-            </Select>
-          `}
+              <Select required>
+                <option value="" disabled selected>Options</option>
+                <option value="A">Option A</option>
+                <option value="B">Option B</option>
+              </Select>
+            `
+          }
           result={
             <Select required defaultValue="">
               <option value="" disabled>
@@ -94,14 +97,16 @@ const SelectComponentPage = () => (
         />
         <CodeExample
           caption="With a default value."
-          code={jsx`
-            import { Select } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Select } from 'device-agnostic-ui'
 
-            <Select value="B">
-              <option value="A">Option A</option>
-              <option value="B">Option B</option>
-            </Select>
-          `}
+              <Select value="B">
+                <option value="A">Option A</option>
+                <option value="B">Option B</option>
+              </Select>
+            `
+          }
           result={
             <Select defaultValue="B">
               <option value="A">Option A</option>
@@ -117,14 +122,16 @@ const SelectComponentPage = () => (
               to use a <LinkComponent component="Toggle" /> group instead.
             </>
           }
-          code={jsx`
-            import { Select } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Select } from 'device-agnostic-ui'
 
-            <Select multiple size="2">
-              <option>Option A</option>
-              <option>Option B</option>
-            </Select>
-          `}
+              <Select multiple size="2">
+                <option>Option A</option>
+                <option>Option B</option>
+              </Select>
+            `
+          }
           result={
             <Select multiple size="2">
               <option>Option A</option>
@@ -134,20 +141,22 @@ const SelectComponentPage = () => (
         />
         <CodeExample
           caption="With a size matching the count of options + groups."
-          code={jsx`
-            import { Select } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Select } from 'device-agnostic-ui'
 
-            <Select size="6">
-              <optgroup label="Group 1">
-                <option>Option A</option>
-                <option>Option B</option>
-              </optgroup>
-              <optgroup label="Group 2">
-                <option>Option C</option>
-                <option>Option D</option>
-              </optgroup>
-            </Select>
-          `}
+              <Select size="6">
+                <optgroup label="Group 1">
+                  <option>Option A</option>
+                  <option>Option B</option>
+                </optgroup>
+                <optgroup label="Group 2">
+                  <option>Option C</option>
+                  <option>Option D</option>
+                </optgroup>
+              </Select>
+            `
+          }
           result={
             <Select size="6">
               <optgroup label="Group 1">

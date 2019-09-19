@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Html, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -72,48 +71,50 @@ const HtmlComponentPage = () => (
       <>
         <CodeExample
           caption="Using JSX HTML."
-          code={jsx`
-            import { Html } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Html } from 'device-agnostic-ui'
 
-            <Html>
-              <h1>Heading 1</h1>
-              <h2>Heading 2</h2>
-              <h3>Heading 3</h3>
-              <p>Paragraph containing <code>code</code> and a <a href="/">link</a>.</p>
-              <blockquote>Blockquote containing text.</blockquote>
-              <blockquote>
-                <p>Blockquote containing paragraphs.</p>
-                <p>Blockquote containing paragraphs.</p>
-              </blockquote>
-              <ul>
-                <li>Unordered list item</li>
-                <li>Unordered list item</li>
-              </ul>
-              <ol>
-                <li>Ordered list item</li>
-                <li>Ordered list item</li>
-              </ol>
-              <pre><code>Preformatted code</code></pre>
-              <table>
-                <thead>
+              <Html>
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3>Heading 3</h3>
+                <p>Paragraph containing <code>code</code> and a <a href="/">link</a>.</p>
+                <blockquote>Blockquote containing text.</blockquote>
+                <blockquote>
+                  <p>Blockquote containing paragraphs.</p>
+                  <p>Blockquote containing paragraphs.</p>
+                </blockquote>
+                <ul>
+                  <li>Unordered list item</li>
+                  <li>Unordered list item</li>
+                </ul>
+                <ol>
+                  <li>Ordered list item</li>
+                  <li>Ordered list item</li>
+                </ol>
+                <pre><code>Preformatted code</code></pre>
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Table header</th>
+                      <th scope="col">Table header</th>
+                    </tr>
+                  </thead>
+                  <tbody>
                   <tr>
-                    <th scope="col">Table header</th>
-                    <th scope="col">Table header</th>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
                   </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                <tr>
-                  <td>Table cell</td>
-                  <td>Table cell</td>
-                </tr>
-                </tbody>
-              </table>
-            </Html>
-          `}
+                  <tr>
+                    <td>Table cell</td>
+                    <td>Table cell</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </Html>
+            `
+          }
           result={
             <Html>
               <h1>Heading 1</h1>
@@ -163,11 +164,13 @@ const HtmlComponentPage = () => (
         />
         <CodeExample
           caption="Using a HTML string."
-          code={jsx`
-            import { Html } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Html } from 'device-agnostic-ui'
 
-            <Html>{'<h1>Heading 1</h1>'}</Html>
-          `}
+              <Html>{'<h1>Heading 1</h1>'}</Html>
+            `
+          }
           result={<Html>{'<h1>Heading 1</h1>'}</Html>}
         />
       </>

@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { LinkActive, LinkNav, Nav, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -38,18 +37,20 @@ const NavComponentPage = () => (
             link.
           </>
         }
-        code={jsx`
-          import { LinkActive, LinkNav, Nav } from 'device-agnostic-ui'
+        code={
+          /* syntax-highlight jsx */ `
+            import { LinkActive, LinkNav, Nav } from 'device-agnostic-ui'
 
-          <Nav>
-            <LinkActive href="/" passHref>
-              <LinkNav>Home</LinkNav>
-            </LinkActive>
-            <LinkNav href="https://github.com/jaydenseric/device-agnostic-ui">
-              GitHub
-            </LinkNav>
-          </Nav>
-        `}
+            <Nav>
+              <LinkActive href="/" passHref>
+                <LinkNav>Home</LinkNav>
+              </LinkActive>
+              <LinkNav href="https://github.com/jaydenseric/device-agnostic-ui">
+                GitHub
+              </LinkNav>
+            </Nav>
+          `
+        }
         result={
           <Nav>
             <LinkActive href="/" passHref>

@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Heading, List, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -35,24 +34,26 @@ const ScrollComponentPage = () => (
     componentExamplesContent={
       <CodeExample
         caption="Several articles."
-        code={jsx`
-          import { Heading, Scroll } from 'device-agnostic-ui'
+        code={
+          /* syntax-highlight jsx */ `
+            import { Heading, Scroll } from 'device-agnostic-ui'
 
-          <Scroll>
-            <article>
-              <Heading>First</Heading>
-            </article>
-            <article>
-              <Heading>Second</Heading>
-            </article>
-            <article>
-              <Heading>Third</Heading>
-            </article>
-            <article>
-              <Heading>Fourth</Heading>
-            </article>
-          </Scroll>
-        `}
+            <Scroll>
+              <article>
+                <Heading>First</Heading>
+              </article>
+              <article>
+                <Heading>Second</Heading>
+              </article>
+              <article>
+                <Heading>Third</Heading>
+              </article>
+              <article>
+                <Heading>Fourth</Heading>
+              </article>
+            </Scroll>
+          `
+        }
         result={
           <Scroll>
             <article>

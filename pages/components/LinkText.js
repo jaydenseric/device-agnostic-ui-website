@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { LinkText, Para } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
@@ -26,24 +25,28 @@ const LinkTextComponentPage = () => (
       <>
         <CodeExample
           caption="External link."
-          code={jsx`
-            import { LinkText } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { LinkText } from 'device-agnostic-ui'
 
-            <LinkText href="https://reactjs.org">React</LinkText>
-          `}
+              <LinkText href="https://reactjs.org">React</LinkText>
+            `
+          }
           result={<LinkText href="https://reactjs.org">React</LinkText>}
           screenshot
         />
         <CodeExample
           caption="Internal Next.js route link."
-          code={jsx`
-            import { LinkText } from 'device-agnostic-ui'
-            import Link from 'next/link'
+          code={
+            /* syntax-highlight jsx */ `
+              import { LinkText } from 'device-agnostic-ui'
+              import Link from 'next/link'
 
-            <Link href="/" passHref>
-              <LinkText>Home</LinkText>
-            </Link>
-          `}
+              <Link href="/" passHref>
+                <LinkText>Home</LinkText>
+              </Link>
+            `
+          }
           result={
             <Link href="/" passHref>
               <LinkText>Home</LinkText>

@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Blockquote, LinkText, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -25,14 +24,16 @@ const BlockquoteComponentPage = () => (
       <>
         <CodeExample
           caption={<>Containing simple text.</>}
-          code={jsx`
-            import { Blockquote } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Blockquote } from 'device-agnostic-ui'
 
-            <Blockquote>
-              Great minds discuss ideas, average minds discuss events, small
-              minds discuss people.
-            </Blockquote>
-          `}
+              <Blockquote>
+                Great minds discuss ideas, average minds discuss events, small
+                minds discuss people.
+              </Blockquote>
+            `
+          }
           result={
             <Blockquote>
               Great minds discuss ideas, average minds discuss events, small
@@ -50,22 +51,24 @@ const BlockquoteComponentPage = () => (
               .
             </>
           }
-          code={jsx`
-            import { Blockquote, LinkText, Para } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Blockquote, LinkText, Para } from 'device-agnostic-ui'
 
-            <Blockquote>
-              <Para>
-                Great minds discuss ideas, average minds discuss events, small
-                minds discuss people.
-              </Para>
-              <Para>
-                —{' '}
-                <LinkText href="https://en.wikipedia.org/wiki/Henry_Thomas_Buckle">
-                  Henry Thomas Buckle
-                </LinkText>
-              </Para>
-            </Blockquote>
-          `}
+              <Blockquote>
+                <Para>
+                  Great minds discuss ideas, average minds discuss events, small
+                  minds discuss people.
+                </Para>
+                <Para>
+                  —{' '}
+                  <LinkText href="https://en.wikipedia.org/wiki/Henry_Thomas_Buckle">
+                    Henry Thomas Buckle
+                  </LinkText>
+                </Para>
+              </Blockquote>
+            `
+          }
           result={
             <Blockquote>
               <Para>

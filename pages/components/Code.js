@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -25,22 +24,26 @@ const CodeComponentPage = () => (
       <>
         <CodeExample
           caption="Non-HTML code."
-          code={jsx`
-            import { Code } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Code } from 'device-agnostic-ui'
 
-            <Code>window</Code>
-          `}
+              <Code>window</Code>
+            `
+          }
           result={<Code>window</Code>}
         />
         <CodeExample
           caption="Code in a link."
-          code={jsx`
-            import { Code, LinkText } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Code, LinkText } from 'device-agnostic-ui'
 
-            <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
-              <Code>window</Code>
-            </LinkText>
-          `}
+              <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
+                <Code>window</Code>
+              </LinkText>
+            `
+          }
           result={
             <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
               <Code>window</Code>
@@ -49,11 +52,13 @@ const CodeComponentPage = () => (
         />
         <CodeExample
           caption="HTML code."
-          code={jsx`
-            import { Code } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Code } from 'device-agnostic-ui'
 
-            <Code>{'<strong>'}</Code>
-          `}
+              <Code>{'<strong>'}</Code>
+            `
+          }
           result={<Code>{'<strong>'}</Code>}
           screenshot
         />

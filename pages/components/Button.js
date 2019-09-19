@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Button, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -37,21 +36,25 @@ const ButtonComponentPage = () => (
       <>
         <CodeExample
           caption="Simple button."
-          code={jsx`
-            import { Button } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Button } from 'device-agnostic-ui'
 
-            <Button>Label</Button>
-          `}
+              <Button>Label</Button>
+            `
+          }
           result={<Button>Label</Button>}
           screenshot
         />
         <CodeExample
           caption="Disabled button."
-          code={jsx`
-            import { Button } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Button } from 'device-agnostic-ui'
 
-            <Button disabled>Label</Button>
-          `}
+              <Button disabled>Label</Button>
+            `
+          }
           result={<Button disabled>Label</Button>}
         />
       </>

@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, Para, Scroll, Textbox } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -57,57 +56,69 @@ const TextboxComponentPage = () => (
       <>
         <CodeExample
           caption="A text input with a placeholder."
-          code={jsx`
-            import { Textbox } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
 
-            <Textbox placeholder="Placeholder" />
-          `}
+              <Textbox placeholder="Placeholder" />
+            `
+          }
           result={<Textbox placeholder="Placeholder" />}
         />
         <CodeExample
           caption="A text input with text."
-          code={jsx`
-            import { Textbox } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
 
-            <Textbox defaultValue="Text" />
-          `}
+              <Textbox defaultValue="Text" />
+            `
+          }
           result={<Textbox defaultValue="Text" />}
           screenshot
         />
         <CodeExample
           caption="A required text input."
-          code={jsx`
-            import { Textbox } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
 
-            <Textbox required />
-          `}
+              <Textbox required />
+            `
+          }
           result={<Textbox required />}
         />
         <CodeExample
           caption="A text input with a custom validation message."
-          code={jsx`
-            import { Textbox } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
 
-            <Textbox validationMessage="Custom message." />
-          `}
+              <Textbox validationMessage="Custom message." />
+            `
+          }
           result={<Textbox validationMessage="Custom message." />}
         />
         <CodeExample
           caption="A number input."
-          code={jsx`
-            import { Textbox } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
 
-            <Textbox type="number" />
-          `}
+              <Textbox type="number" />
+            `
+          }
           result={<Textbox type="number" />}
         />
         <CodeExample
           caption="A textarea."
-          code={jsx`
-            import { Textbox } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
 
-            <Textbox type="textarea" />
-          `}
+              <Textbox type="textarea" />
+            `
+          }
           result={<Textbox type="textarea" />}
         />
       </>

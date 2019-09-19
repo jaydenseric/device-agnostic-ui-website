@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
@@ -70,16 +69,18 @@ const UseMergedRefHookPage = () => (
             hook.
           </>
         }
-        code={jsx`
-          import { useCustomValidity, useMergedRef } from 'device-agnostic-ui'
-          import React from 'react'
+        code={
+          /* syntax-highlight jsx */ `
+            import { useCustomValidity, useMergedRef } from 'device-agnostic-ui'
+            import React from 'react'
 
-          const Input = React.forwardRef(({ validationMessage, ...props }, ref) => {
-            const mergedRef = useMergedRef([ref])
-            useCustomValidity(mergedRef, validationMessage)
-            return <input {...props} ref={mergedRef} />
-          })
-        `}
+            const Input = React.forwardRef(({ validationMessage, ...props }, ref) => {
+              const mergedRef = useMergedRef([ref])
+              useCustomValidity(mergedRef, validationMessage)
+              return <input {...props} ref={mergedRef} />
+            })
+          `
+        }
       />
     }
   />

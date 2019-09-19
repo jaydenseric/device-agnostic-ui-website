@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { ButtonSubmit, Code, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -62,29 +61,35 @@ const ButtonSubmitComponentPage = () => (
       <>
         <CodeExample
           caption="Submit button."
-          code={jsx`
-            import { ButtonSubmit } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { ButtonSubmit } from 'device-agnostic-ui'
 
-            <ButtonSubmit>Submit</ButtonSubmit>
-          `}
+              <ButtonSubmit>Submit</ButtonSubmit>
+            `
+          }
           result={<ButtonSubmit>Submit</ButtonSubmit>}
         />
         <CodeExample
           caption="If the form submission is loading."
-          code={jsx`
-            import { ButtonSubmit } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { ButtonSubmit } from 'device-agnostic-ui'
 
-            <ButtonSubmit loading>Submit</ButtonSubmit>
-          `}
+              <ButtonSubmit loading>Submit</ButtonSubmit>
+            `
+          }
           result={<ButtonSubmit loading>Submit</ButtonSubmit>}
         />
         <CodeExample
           caption="If the form submission was successful."
-          code={jsx`
-            import { ButtonSubmit } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { ButtonSubmit } from 'device-agnostic-ui'
 
-            <ButtonSubmit success>Submit</ButtonSubmit>
-          `}
+              <ButtonSubmit success>Submit</ButtonSubmit>
+            `
+          }
           result={<ButtonSubmit success>Submit</ButtonSubmit>}
           screenshot
         />

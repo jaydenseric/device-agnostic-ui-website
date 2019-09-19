@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import {
   Button,
   Code,
@@ -103,22 +102,26 @@ const ToggleComponentPage = () => (
       <>
         <CodeExample
           caption="Simple checkbox."
-          code={jsx`
-            import { Toggle } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Toggle } from 'device-agnostic-ui'
 
-            <Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>
-          `}
+              <Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>
+            `
+          }
           result={<Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>}
         />
         <CodeExample
           caption="Required checkbox."
-          code={jsx`
-            import { Toggle } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Toggle } from 'device-agnostic-ui'
 
-            <Toggle inputProps={{ type: 'checkbox', required: true }}>
-              Label
-            </Toggle>
-          `}
+              <Toggle inputProps={{ type: 'checkbox', required: true }}>
+                Label
+              </Toggle>
+            `
+          }
           result={
             <Toggle inputProps={{ type: 'checkbox', required: true }}>
               Label
@@ -127,16 +130,18 @@ const ToggleComponentPage = () => (
         />
         <CodeExample
           caption="Checkbox with a custom validation message."
-          code={jsx`
-            import { Toggle } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Toggle } from 'device-agnostic-ui'
 
-            <Toggle
-              validationMessage="Custom message."
-              inputProps={{ type: 'checkbox' }}
-            >
-              Label
-            </Toggle>
-          `}
+              <Toggle
+                validationMessage="Custom message."
+                inputProps={{ type: 'checkbox' }}
+              >
+                Label
+              </Toggle>
+            `
+          }
           result={
             <Toggle
               validationMessage="Custom message."
@@ -148,29 +153,31 @@ const ToggleComponentPage = () => (
         />
         <CodeExample
           caption="Radio group."
-          code={jsx`
-            import { Button } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Button } from 'device-agnostic-ui'
 
-            <Toggle
-              inputProps={{
-                type: 'radio',
-                name: 'options',
-                value: 'a',
-                defaultChecked: true
-              }}
-            >
-              Label A
-            </Toggle>
-            <Toggle
-              inputProps={{
-                type: 'radio',
-                name: 'options',
-                value: 'b'
-              }}
-            >
-              Label B
-            </Toggle>
-          `}
+              <Toggle
+                inputProps={{
+                  type: 'radio',
+                  name: 'options',
+                  value: 'a',
+                  defaultChecked: true
+                }}
+              >
+                Label A
+              </Toggle>
+              <Toggle
+                inputProps={{
+                  type: 'radio',
+                  name: 'options',
+                  value: 'b'
+                }}
+              >
+                Label B
+              </Toggle>
+            `
+          }
           result={
             <>
               <Toggle
@@ -198,24 +205,26 @@ const ToggleComponentPage = () => (
         />
         <CodeExample
           caption="Using an input element ref."
-          code={jsx`
-            import { Button, Toggle } from 'device-agnostic-ui'
-            import React from 'react'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Button, Toggle } from 'device-agnostic-ui'
+              import React from 'react'
 
-            const InputRefExample = () => {
-              const ref = React.useRef()
-              const onClick = () => ref.current.focus()
+              const InputRefExample = () => {
+                const ref = React.useRef()
+                const onClick = () => ref.current.focus()
 
-              return (
-                <>
-                  <Toggle inputProps={{ type: 'checkbox', ref }} />{' '}
-                  <Button onClick={onClick}>Focus</Button>
-                </>
-              )
-            }
+                return (
+                  <>
+                    <Toggle inputProps={{ type: 'checkbox', ref }} />{' '}
+                    <Button onClick={onClick}>Focus</Button>
+                  </>
+                )
+              }
 
-            <InputRefExample />
-          `}
+              <InputRefExample />
+            `
+          }
           result={<InputRefExample />}
         />
       </>

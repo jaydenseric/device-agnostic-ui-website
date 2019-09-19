@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Fieldset, LinkText, Para, Scroll, Toggle } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -49,11 +48,12 @@ const FieldsetComponentPage = () => (
     componentExamplesContent={
       <CodeExample
         caption={<>Grouped checkboxes.</>}
-        code={jsx`
-          import { Fieldset, Textbox } from 'device-agnostic-ui'
+        code={
+          /* syntax-highlight jsx */ `
+            import { Fieldset, Textbox } from 'device-agnostic-ui'
 
-          <Fieldset legend="Options">
-            <Toggle
+            <Fieldset legend="Options">
+              <Toggle
                 inputProps={{
                   type: 'radio',
                   name: 'options',
@@ -73,7 +73,8 @@ const FieldsetComponentPage = () => (
                 Label B
               </Toggle>
             </Fieldset>
-          `}
+          `
+        }
         result={
           <Fieldset legend="Options">
             <Toggle

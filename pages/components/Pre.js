@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, Para, Pre } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -30,15 +29,17 @@ const PreComponentPage = () => (
       <>
         <CodeExample
           caption="Multiline HTML code block."
-          code={jsx`
-            import { Code, Pre } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Code, Pre } from 'device-agnostic-ui'
 
-            <Pre>
-              <Code>{\`<section>
-              <h1>Header</h1>
-            </section>\`}</Code>
-            </Pre>
-          `}
+              <Pre>
+                <Code>{\`<section>
+                <h1>Header</h1>
+              </section>\`}</Code>
+              </Pre>
+            `
+          }
           result={
             <Pre>
               <Code>{`<section>

@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, List, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -47,15 +46,17 @@ const ListComponentPage = () => (
       <>
         <CodeExample
           caption={<>Bulleted list.</>}
-          code={jsx`
-            import { List } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { List } from 'device-agnostic-ui'
 
-            <List>
-              <li>Eat healthy</li>
-              <li>Sleep well</li>
-              <li>Exercise regularly</li>
-            </List>
-          `}
+              <List>
+                <li>Eat healthy</li>
+                <li>Sleep well</li>
+                <li>Exercise regularly</li>
+              </List>
+            `
+          }
           result={
             <List>
               <li>Eat healthy</li>
@@ -67,26 +68,28 @@ const ListComponentPage = () => (
         />
         <CodeExample
           caption={<>Nested paragraphs and bulleted lists.</>}
-          code={jsx`
-            import { List, Para } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { List, Para } from 'device-agnostic-ui'
 
-            <List>
-              <li>Lorum ipsum.</li>
-              <li>
-                <Para>Lorum ipsum.</Para>
-                <List>
-                  <li>Lorum ipsum.</li>
-                  <li>
-                    <Para>Lorum ipsum.</Para>
-                    <List>
-                      <li>Lorum ipsum.</li>
-                      <li>Lorum ipsum.</li>
-                    </List>
-                  </li>
-                </List>
-              </li>
-            </List>
-          `}
+              <List>
+                <li>Lorum ipsum.</li>
+                <li>
+                  <Para>Lorum ipsum.</Para>
+                  <List>
+                    <li>Lorum ipsum.</li>
+                    <li>
+                      <Para>Lorum ipsum.</Para>
+                      <List>
+                        <li>Lorum ipsum.</li>
+                        <li>Lorum ipsum.</li>
+                      </List>
+                    </li>
+                  </List>
+                </li>
+              </List>
+            `
+          }
           result={
             <List>
               <li>Lorum ipsum.</li>
@@ -108,15 +111,17 @@ const ListComponentPage = () => (
         />
         <CodeExample
           caption={<>Numbered list.</>}
-          code={jsx`
-            import { List } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { List } from 'device-agnostic-ui'
 
-            <List ordered>
-              <li>Pichu</li>
-              <li>Pikachu</li>
-              <li>Raichu</li>
-            </List>
-          `}
+              <List ordered>
+                <li>Pichu</li>
+                <li>Pikachu</li>
+                <li>Raichu</li>
+              </List>
+            `
+          }
           result={
             <List ordered>
               <li>Pichu</li>
@@ -127,26 +132,28 @@ const ListComponentPage = () => (
         />
         <CodeExample
           caption={<>Nested paragraphs and ordered lists.</>}
-          code={jsx`
-            import { List, Para } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { List, Para } from 'device-agnostic-ui'
 
-            <List ordered>
-              <li>Lorum ipsum.</li>
-              <li>
-                <Para>Lorum ipsum.</Para>
-                <List ordered>
-                  <li>Lorum ipsum.</li>
-                  <li>
-                    <Para>Lorum ipsum.</Para>
-                    <List ordered>
-                      <li>Lorum ipsum.</li>
-                      <li>Lorum ipsum.</li>
-                    </List>
-                  </li>
-                </List>
-              </li>
-            </List>
-          `}
+              <List ordered>
+                <li>Lorum ipsum.</li>
+                <li>
+                  <Para>Lorum ipsum.</Para>
+                  <List ordered>
+                    <li>Lorum ipsum.</li>
+                    <li>
+                      <Para>Lorum ipsum.</Para>
+                      <List ordered>
+                        <li>Lorum ipsum.</li>
+                        <li>Lorum ipsum.</li>
+                      </List>
+                    </li>
+                  </List>
+                </li>
+              </List>
+            `
+          }
           result={
             <List ordered>
               <li>Lorum ipsum.</li>

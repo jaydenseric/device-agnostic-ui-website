@@ -1,9 +1,3 @@
 {
-  "extends": ["env"],
-  "rules": {
-    "node/no-unpublished-import": [
-      "error",
-      { "allowModules": ["babel-plugin-syntax-highlight"] }
-    ]
-  }
+  "extends": ["env"]
 }

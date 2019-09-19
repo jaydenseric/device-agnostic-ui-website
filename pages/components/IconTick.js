@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { IconTick, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -27,11 +26,13 @@ const IconComponentPage = () => (
     componentExamplesContent={
       <CodeExample
         caption={<>How to use the icon.</>}
-        code={jsx`
+        code={
+          /* syntax-highlight jsx */ `
             import { IconTick } from 'device-agnostic-ui'
 
             <IconTick size="2em" />
-          `}
+          `
+        }
         result={<IconTick size="2em" />}
         screenshot
       />

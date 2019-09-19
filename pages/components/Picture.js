@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { LinkText, Para, Picture, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -82,16 +81,18 @@ const PictureComponentPage = () => (
       <>
         <CodeExample
           caption="With an SVG source."
-          code={jsx`
-            import { Picture } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Picture } from 'device-agnostic-ui'
 
-            <Picture
-              width={157}
-              height={100}
-              alt="Alternate text."
-              src="/static/example-picture/example.svg"
-            />
-          `}
+              <Picture
+                width={157}
+                height={100}
+                alt="Alternate text."
+                src="/static/example-picture/example.svg"
+              />
+            `
+          }
           result={
             <Picture
               width={157}
@@ -104,22 +105,24 @@ const PictureComponentPage = () => (
         />
         <CodeExample
           caption="With WebP and PNG sources."
-          code={jsx`
-            import { Picture } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Picture } from 'device-agnostic-ui'
 
-            <Picture
-              width={628}
-              height={400}
-              alt="Alternate text."
-              src="/static/example-picture/example.png"
-              style={{ width: '157px' }}
-            >
-              <source
-                type="image/webp"
-                srcSet="/static/example-picture/example.webp"
-              />
-            </Picture>
-          `}
+              <Picture
+                width={628}
+                height={400}
+                alt="Alternate text."
+                src="/static/example-picture/example.png"
+                style={{ width: '157px' }}
+              >
+                <source
+                  type="image/webp"
+                  srcSet="/static/example-picture/example.webp"
+                />
+              </Picture>
+            `
+          }
           result={
             <Picture
               width={628}

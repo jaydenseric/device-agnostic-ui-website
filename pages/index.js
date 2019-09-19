@@ -1,4 +1,3 @@
-import { shell } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeSyntaxHighlighted } from '../components/CodeSyntaxHighlighted'
@@ -117,9 +116,11 @@ const IndexPage = () => (
               Install from{' '}
               <LinkText href="https://www.npmjs.com/">npm</LinkText>:{' '}
               <CodeSyntaxHighlighted
-                code={shell`
-                npm install device-agnostic-ui
-              `}
+                code={
+                  /* syntax-highlight shell */ `
+                    npm install device-agnostic-ui
+                  `
+                }
               />
               .
             </Para>

@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Heading, LinkText, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -56,30 +55,36 @@ const HeadingComponentPage = () => (
       <>
         <CodeExample
           caption="Simple heading."
-          code={jsx`
-            import { Heading } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Heading } from 'device-agnostic-ui'
 
-            <Heading>Heading</Heading>
-          `}
+              <Heading>Heading</Heading>
+            `
+          }
           result={<Heading>Heading</Heading>}
           screenshot
         />
         <CodeExample
           caption="With an ID."
-          code={jsx`
-            import { Heading } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Heading } from 'device-agnostic-ui'
 
-            <Heading id="heading">Heading</Heading>
-          `}
+              <Heading id="heading">Heading</Heading>
+            `
+          }
           result={<Heading id="heading">Heading</Heading>}
         />
         <CodeExample
           caption="Large, responsive font size suitable for a primary page heading."
-          code={jsx`
-            import { Heading } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Heading } from 'device-agnostic-ui'
 
-            <Heading style={{ fontSize: 'calc(2rem + 3vw)' }}>Heading</Heading>
-          `}
+              <Heading style={{ fontSize: 'calc(2rem + 3vw)' }}>Heading</Heading>
+            `
+          }
           result={
             <Heading style={{ fontSize: 'calc(2rem + 3vw)' }}>Heading</Heading>
           }

@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../components/CodeExample'
 import { Inset } from '../components/Inset'
@@ -39,32 +38,34 @@ const StylesPage = () => (
               .
             </>
           }
-          code={jsx`
-          import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui'
-          import App from 'next/app'
-          import Head from 'next/head'
+          code={
+            /* syntax-highlight jsx */ `
+              import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui'
+              import App from 'next/app'
+              import Head from 'next/head'
 
-          export default class CustomApp extends App {
-            render() {
-              const { Component, pageProps = {} } = this.props
-              return (
-                <>
-                  <Head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <meta name="color-scheme" content="light dark" />
-                  </Head>
-                  <Component {...pageProps} />
-                  <style jsx global>
-                    {stylesGlobalTheme}
-                  </style>
-                  <style jsx global>
-                    {stylesGlobal}
-                  </style>
-                </>
-              )
-            }
+              export default class CustomApp extends App {
+                render() {
+                  const { Component, pageProps = {} } = this.props
+                  return (
+                    <>
+                      <Head>
+                        <meta name="viewport" content="width=device-width, initial-scale=1" />
+                        <meta name="color-scheme" content="light dark" />
+                      </Head>
+                      <Component {...pageProps} />
+                      <style jsx global>
+                        {stylesGlobalTheme}
+                      </style>
+                      <style jsx global>
+                        {stylesGlobal}
+                      </style>
+                    </>
+                  )
+                }
+              }
+            `
           }
-        `}
         />
       </Inset>
       <Section
@@ -92,16 +93,18 @@ const StylesPage = () => (
                 elements such as links red instead of blue.
               </>
             }
-            code={jsx`
-            <style jsx global>
-              {stylesGlobalTheme}
-            </style>
-            <style jsx global>{\`
-              :root {
-                --daui-interact-hue: 10;
-              }
-            \`}</style>
-          `}
+            code={
+              /* syntax-highlight jsx */ `
+                <style jsx global>
+                  {stylesGlobalTheme}
+                </style>
+                <style jsx global>{\`
+                  :root {
+                    --daui-interact-hue: 10;
+                  }
+                \`}</style>
+              `
+            }
           />
         </Inset>
       </Section>

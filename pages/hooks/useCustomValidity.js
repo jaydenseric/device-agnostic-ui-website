@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
@@ -66,23 +65,25 @@ const UseCustomValidityHookPage = () => (
             <LinkComponent component="Textbox" prop="validationMessage" /> prop.
           </>
         }
-        code={jsx`
-          import { useCustomValidity } from 'device-agnostic-ui'
-          import React from 'react'
+        code={
+          /* syntax-highlight jsx */ `
+            import { useCustomValidity } from 'device-agnostic-ui'
+            import React from 'react'
 
-          const Input = ({ validationMessage, ...props }) => {
-            const ref = React.useRef()
+            const Input = ({ validationMessage, ...props }) => {
+              const ref = React.useRef()
 
-            useCustomValidity(ref, validationMessage)
+              useCustomValidity(ref, validationMessage)
 
-            return <input {...props} ref={ref} />
-          }
+              return <input {...props} ref={ref} />
+            }
 
-          <Input
-            type="email"
-            validationMessage="Email address already registered."
-          />
-        `}
+            <Input
+              type="email"
+              validationMessage="Email address already registered."
+            />
+          `
+        }
       />
     }
   />

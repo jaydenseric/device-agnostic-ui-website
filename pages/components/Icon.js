@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, Icon, LinkText, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -107,17 +106,19 @@ const IconComponentPage = () => (
               element with a fill.
             </>
           }
-          code={jsx`
-            import { Icon } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Icon } from 'device-agnostic-ui'
 
-            const IconCircleFilled = props => (
-              <Icon title="Circle filled" {...props}>
-                <circle cx="50%" cy="50%" r="50%" stroke="none" />
-              </Icon>
-            )
+              const IconCircleFilled = props => (
+                <Icon title="Circle filled" {...props}>
+                  <circle cx="50%" cy="50%" r="50%" stroke="none" />
+                </Icon>
+              )
 
-            <IconCircleFilled size="2em" />
-          `}
+              <IconCircleFilled size="2em" />
+            `
+          }
           result={<IconCircleFilled size="2em" />}
         />
         <CodeExample
@@ -127,17 +128,19 @@ const IconComponentPage = () => (
               element with a stroke.
             </>
           }
-          code={jsx`
-            import { Icon } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Icon } from 'device-agnostic-ui'
 
-            const IconCircleOutline = props => (
-              <Icon title="Circle outline" {...props}>
-                <circle cx="50%" cy="50%" r="14" strokeWidth="4" fill="none" />
-              </Icon>
-            )
+              const IconCircleOutline = props => (
+                <Icon title="Circle outline" {...props}>
+                  <circle cx="50%" cy="50%" r="14" strokeWidth="4" fill="none" />
+                </Icon>
+              )
 
-            <IconCircleOutline size="2em" />
-          `}
+              <IconCircleOutline size="2em" />
+            `
+          }
           result={<IconCircleOutline size="2em" />}
           screenshot
         />

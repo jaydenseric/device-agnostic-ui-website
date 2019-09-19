@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
@@ -59,20 +58,22 @@ const UseOnFocusReportValidityHookPage = () => (
             <LinkComponent component="Textbox" /> which has this built-in.
           </>
         }
-        code={jsx`
-          import { useOnFocusReportValidity } from 'device-agnostic-ui'
-          import React from 'react'
+        code={
+          /* syntax-highlight jsx */ `
+            import { useOnFocusReportValidity } from 'device-agnostic-ui'
+            import React from 'react'
 
-          const Input = ({ validationMessage, ...props }) => {
-            const ref = React.useRef()
+            const Input = ({ validationMessage, ...props }) => {
+              const ref = React.useRef()
 
-            useOnFocusReportValidity(ref)
+              useOnFocusReportValidity(ref)
 
-            return <input {...props} ref={ref} />
-          }
+              return <input {...props} ref={ref} />
+            }
 
-          <Input type="email" />
-        `}
+            <Input type="email" />
+          `
+        }
       />
     }
   />

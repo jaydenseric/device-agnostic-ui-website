@@ -1,4 +1,3 @@
-import { jsx } from 'babel-plugin-syntax-highlight'
 import { Para, Table } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -25,22 +24,24 @@ const TableComponentPage = () => (
       <>
         <CodeExample
           caption="With row headers."
-          code={jsx`
-            import { Table } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Table } from 'device-agnostic-ui'
 
-            <Table>
-              <tbody>
-                <tr>
-                  <th scope="row">Country</th>
-                  <td>Australia</td>
-                </tr>
-                <tr>
-                  <th scope="row">Capital</th>
-                  <td>Canberra</td>
-                </tr>
-              </tbody>
-            </Table>
-          `}
+              <Table>
+                <tbody>
+                  <tr>
+                    <th scope="row">Country</th>
+                    <td>Australia</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Capital</th>
+                    <td>Canberra</td>
+                  </tr>
+                </tbody>
+              </Table>
+            `
+          }
           result={
             <Table>
               <tbody>
@@ -58,28 +59,30 @@ const TableComponentPage = () => (
         />
         <CodeExample
           caption="With column headers."
-          code={jsx`
-            import { Table } from 'device-agnostic-ui'
+          code={
+            /* syntax-highlight jsx */ `
+              import { Table } from 'device-agnostic-ui'
 
-            <Table>
-              <thead>
-                <tr>
-                  <th scope="col">Country</th>
-                  <th scope="col">Capital</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Australia</td>
-                  <td>Canberra</td>
-                </tr>
-                <tr>
-                  <td>New Zealand</td>
-                  <td>Wellington</td>
-                </tr>
-              </tbody>
-            </Table>
-          `}
+              <Table>
+                <thead>
+                  <tr>
+                    <th scope="col">Country</th>
+                    <th scope="col">Capital</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Australia</td>
+                    <td>Canberra</td>
+                  </tr>
+                  <tr>
+                    <td>New Zealand</td>
+                    <td>Wellington</td>
+                  </tr>
+                </tbody>
+              </Table>
+            `
+          }
           result={
             <Table>
               <thead>
