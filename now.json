@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "scope": "jaydenseric",
+  "alias": ["deviceagnosticui.com"],
+  "build": {
+    "env": {
+      "ORIGIN": "https://deviceagnosticui.com"
+    }
+  }
+}

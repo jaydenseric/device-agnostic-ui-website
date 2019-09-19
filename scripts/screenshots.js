@@ -2,10 +2,15 @@ const childProcess = require('child_process')
 const fs = require('fs')
 const path = require('path')
 const util = require('util')
+// eslint-disable-next-line node/no-unpublished-require
 const imagemin = require('imagemin')
+// eslint-disable-next-line node/no-unpublished-require
 const imageminPngquant = require('imagemin-pngquant')
+// eslint-disable-next-line node/no-unpublished-require
 const imageminWebp = require('imagemin-webp')
+// eslint-disable-next-line node/no-unpublished-require
 const imageminZopfli = require('imagemin-zopfli')
+// eslint-disable-next-line node/no-unpublished-require
 const puppeteer = require('puppeteer')
 
 const exec = util.promisify(childProcess.exec)
