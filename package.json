@@ -15,7 +15,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "device-agnostic-ui": "^1.0.0",
+    "device-agnostic-ui": "^1.0.1",
     "next": "^9.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
@@ -40,7 +40,7 @@
     "imagemin-pngquant": "^8.0.0",
     "imagemin-webp": "^5.1.0",
     "imagemin-zopfli": "^6.0.0",
-    "lint-staged": "^9.2.5",
+    "lint-staged": "^9.3.0",
     "now": "^16.2.0",
     "prettier": "^1.18.2",
     "prismjs": "^1.17.1",
