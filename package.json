@@ -53,6 +53,8 @@
     "start": "next start",
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "eslint .",
-    "test:prettier": "prettier '**/*.{json,yml,md}' -l"
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "now:dev": "now dev",
+    "now:deploy": "now --prod"
   }
 }
