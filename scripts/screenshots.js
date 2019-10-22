@@ -184,6 +184,6 @@ const componentNames = process.argv.slice(2).reduce((accumulator, arg) => {
 updateScreenshots(
   'pages/components',
   'daui-screenshot-target',
-  'static/screenshots',
+  'public/static/screenshots',
   componentNames.length ? componentNames : undefined
 )
