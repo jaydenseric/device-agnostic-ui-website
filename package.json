@@ -47,13 +47,13 @@
     "puppeteer": "^1.20.0"
   },
   "scripts": {
-    "screenshots": "node scripts/screenshots",
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "eslint .",
     "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "screenshots": "node scripts/screenshots",
+    "build": "next build",
+    "start": "next start",
+    "dev": "next",
     "now:dev": "now dev",
     "now:deploy": "now --prod"
   }
