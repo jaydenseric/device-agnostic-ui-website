@@ -1,6 +1,7 @@
 {
   "version": 2,
   "scope": "jaydenseric",
+  "name": "device-agnostic-ui-website",
   "alias": ["deviceagnosticui.com"],
   "build": {
     "env": {
