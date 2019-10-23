@@ -13,7 +13,19 @@ const StylesPage = () => (
       title="Styles"
       description="How to setup Device Agnostic UI styles."
     />
-    <PageHeader heading="Styles" />
+    <PageHeader heading="Styles">
+      <Para>
+        Styles are handled using{' '}
+        <LinkText href="https://github.com/zeit/styled-jsx">
+          <Code>{`styled-jsx`}</Code>
+        </LinkText>
+        , which{' '}
+        <LinkText href="https://nextjs.org/docs#built-in-css-support">
+          Next.js supports out of the box
+        </LinkText>
+        .
+      </Para>
+    </PageHeader>
     <Section heading="Global styles" id="global-styles">
       <Inset>
         <Para>
