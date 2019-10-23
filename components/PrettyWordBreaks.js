@@ -2,12 +2,15 @@ import PropTypes from 'prop-types'
 import { Fragment } from 'react'
 
 export const PrettyWordBreaks = ({ children }) => {
-  const parts = children.split(/(?=[A-Z])/)
+  const parts = children.split(
+    /(?<!(?:^|[A-Z0-9]))(?=[A-Z0-9])|(?<!^)(?=[A-Z][a-z])/gm
+  )
+
   return (
     <>
       {parts.map((part, index) => (
         <Fragment key={`${index}${part}`}>
-          <wbr />
+          {!!index && <wbr />}
           {part}
         </Fragment>
       ))}

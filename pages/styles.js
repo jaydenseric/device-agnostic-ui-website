@@ -4,6 +4,7 @@ import { Inset } from '../components/Inset'
 import { LinkElement } from '../components/LinkElement'
 import { PageHeader } from '../components/PageHeader'
 import { PageMeta } from '../components/PageMeta'
+import { PrettyWordBreaks } from '../components/PrettyWordBreaks'
 import { Section } from '../components/Section'
 
 const StylesPage = () => (
@@ -70,7 +71,7 @@ const StylesPage = () => (
       </Inset>
       <Section
         headingLevel={3}
-        heading="stylesGlobalTheme"
+        heading={<PrettyWordBreaks>stylesGlobalTheme</PrettyWordBreaks>}
         id="stylesGlobalTheme"
       >
         <Inset>
@@ -108,7 +109,11 @@ const StylesPage = () => (
           />
         </Inset>
       </Section>
-      <Section headingLevel={3} heading="stylesGlobal" id="stylesGlobal">
+      <Section
+        headingLevel={3}
+        heading={<PrettyWordBreaks>stylesGlobal</PrettyWordBreaks>}
+        id="stylesGlobal"
+      >
         <Inset>
           <Para>
             Sets essential <LinkElement element="html" /> and{' '}

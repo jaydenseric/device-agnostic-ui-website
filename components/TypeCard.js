@@ -1,5 +1,6 @@
 import { Code, Heading, Para, Table } from 'device-agnostic-ui'
 import PropTypes from 'prop-types'
+import { PrettyWordBreaks } from './PrettyWordBreaks'
 
 export const TypeCard = ({
   identity,
@@ -14,7 +15,9 @@ export const TypeCard = ({
         style={{ fontSize: '110%' }}
         id={`${identity.idPrefix}-${identity.name}`}
       >
-        <Code>{identity.name}</Code>
+        <Code>
+          <PrettyWordBreaks>{identity.name}</PrettyWordBreaks>
+        </Code>
       </Heading>
     )}
     <Table style={{ fontSize: '95%' }}>
