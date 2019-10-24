@@ -40,6 +40,22 @@ const HeadingComponentPage = () => (
           }
         />
         <TypeCard
+          identity={{ name: 'children', idPrefix: 'prop' }}
+          type={
+            <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
+              JSX children
+            </LinkText>
+          }
+          required
+          description={
+            <>
+              Content contained in the <LinkElement element="h1" /> element, or
+              in a <LinkComponent component="LinkText" /> if the{' '}
+              <LinkComponent component="Heading" prop="id" /> prop is specified.
+            </>
+          }
+        />
+        <TypeCard
           identity={{ name: '...props', idPrefix: 'prop' }}
           type="…*"
           description={

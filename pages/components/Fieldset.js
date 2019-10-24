@@ -34,6 +34,21 @@ const FieldsetComponentPage = () => (
           }
         />
         <TypeCard
+          identity={{ name: 'children', idPrefix: 'prop' }}
+          type={
+            <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
+              JSX children
+            </LinkText>
+          }
+          required
+          description={
+            <>
+              Main content, contained in a <LinkElement element="div" />{' '}
+              element.
+            </>
+          }
+        />
+        <TypeCard
           identity={{ name: '...props', idPrefix: 'prop' }}
           type="…*"
           description={

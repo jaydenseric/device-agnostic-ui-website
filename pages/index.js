@@ -39,13 +39,13 @@ const IndexPage = () => (
           <LinkText href="https://bundlephobia.com/result?p=device-agnostic-ui">
             &lt; 7 KB
           </LinkText>{' '}
-          or smaller with{' '}
+          with{' '}
           <LinkText href="https://webpack.js.org/guides/tree-shaking">
             tree shaking
           </LinkText>
           ,{' '}
-          <LinkText href="https://npm.im/size-limit">
-            <Code>size-limit</Code>
+          <LinkText href="https://github.com/ai/size-limit">
+            Size Limit
           </LinkText>{' '}
           tested.
         </EmojiCard>

@@ -1,8 +1,8 @@
-import { Heading, List, Para, Scroll } from 'device-agnostic-ui'
+import { Code, Heading, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
+import { TypeCard } from '../../components/TypeCard'
 import { Scroll as ScrollComponentMeta } from '../../meta/components'
 
 const ScrollComponentPage = () => (
@@ -25,20 +25,47 @@ const ScrollComponentPage = () => (
       </>
     }
     componentPropsContent={
-      <Inset>
-        <Para>
-          Use any valid <LinkElement element="div" /> props.
-        </Para>
-      </Inset>
+      <Scroll>
+        <TypeCard
+          identity={{ name: 'children', idPrefix: 'prop' }}
+          type={
+            <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
+              JSX children
+            </LinkText>
+          }
+          required
+          description={
+            <>
+              CSS Grid items to be horizontally spaced and vertically top
+              aligned in a <LinkElement element="div" /> element.
+            </>
+          }
+        />
+        <TypeCard
+          identity={{ name: '...props', idPrefix: 'prop' }}
+          type="…*"
+          description={
+            <>
+              Additional props for the container; a{' '}
+              <LinkElement element="div" /> element.
+            </>
+          }
+        />
+      </Scroll>
     }
     componentExamplesContent={
       <CodeExample
-        caption="Several articles."
+        caption={
+          <>
+            Several articles. The <Code>maxWidth</Code> style is only to demo
+            demo scrolling; limiting the width isn’t recommended.
+          </>
+        }
         code={
           /* syntax-highlight jsx */ `
             import { Heading, Scroll } from 'device-agnostic-ui'
 
-            <Scroll>
+            <Scroll style={{ maxWidth: '15rem' }}>
               <article>
                 <Heading>First</Heading>
               </article>
@@ -55,7 +82,7 @@ const ScrollComponentPage = () => (
           `
         }
         result={
-          <Scroll>
+          <Scroll style={{ maxWidth: '15rem' }}>
             <article>
               <Heading>First</Heading>
             </article>

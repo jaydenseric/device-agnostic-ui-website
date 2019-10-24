@@ -1,4 +1,4 @@
-import { ButtonSubmit, Code, Para, Scroll } from 'device-agnostic-ui'
+import { ButtonSubmit, Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
 import { LinkComponent } from '../../components/LinkComponent'
@@ -42,6 +42,21 @@ const ButtonSubmitComponentPage = () => (
               <Code>false</Code>, sets the <LinkElement element="button" />{' '}
               element’s <LinkElement element="button" attribute="disabled" />{' '}
               attribute and indicates success with a tick icon.
+            </>
+          }
+        />
+        <TypeCard
+          identity={{ name: 'children', idPrefix: 'prop' }}
+          type={
+            <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
+              JSX children
+            </LinkText>
+          }
+          required
+          description={
+            <>
+              Content to the left of the loading or success icon, contained in a{' '}
+              <LinkElement element="span" /> element.
             </>
           }
         />

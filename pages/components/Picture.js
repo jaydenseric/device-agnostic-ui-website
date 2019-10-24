@@ -60,7 +60,7 @@ const PictureComponentPage = () => (
           }
           description={
             <>
-              <LinkElement element="picture" /> children,{' '}
+              <LinkElement element="picture" /> children;{' '}
               <LinkElement element="source" /> elements.
             </>
           }

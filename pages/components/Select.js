@@ -36,7 +36,14 @@ const SelectComponentPage = () => (
               JSX children
             </LinkText>
           }
-          description={<>Select children.</>}
+          required
+          description={
+            <>
+              <LinkElement element="select" /> element children;{' '}
+              <LinkElement element="optgroup" /> or{' '}
+              <LinkElement element="option" /> elements.
+            </>
+          }
         />
         <TypeCard
           identity={{ name: '...props', idPrefix: 'prop' }}

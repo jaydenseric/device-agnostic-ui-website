@@ -1,8 +1,8 @@
-import { Html, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
+import { Html, List, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
+import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
 import { Html as HtmlComponentMeta } from '../../meta/components'
 
 const HtmlComponentPage = () => (
@@ -41,31 +41,17 @@ const HtmlComponentPage = () => (
             <LinkElement element="th" />, <LinkElement element="td" />
           </li>
         </List>
+        <Para>
+          It implements the <LinkElement element="div" /> element.
+        </Para>
       </>
     }
     componentPropsContent={
-      <Scroll>
-        <TypeCard
-          identity={{ name: 'children', idPrefix: 'prop' }}
-          type={
-            <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
-              JSX children
-            </LinkText>
-          }
-          required
-          description="HTML to render, either a string or JSX."
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; a{' '}
-              <LinkElement element="div" /> element.
-            </>
-          }
-        />
-      </Scroll>
+      <Inset>
+        <Para>
+          Use any valid <LinkElement element="div" /> props.
+        </Para>
+      </Inset>
     }
     componentExamplesContent={
       <>
@@ -168,10 +154,12 @@ const HtmlComponentPage = () => (
             /* syntax-highlight jsx */ `
               import { Html } from 'device-agnostic-ui'
 
-              <Html>{'<h1>Heading 1</h1>'}</Html>
+              <Html dangerouslySetInnerHTML={{ __html: '<h1>Heading 1</h1>' }} />
             `
           }
-          result={<Html>{'<h1>Heading 1</h1>'}</Html>}
+          result={
+            <Html dangerouslySetInnerHTML={{ __html: '<h1>Heading 1</h1>' }} />
+          }
         />
       </>
     }
