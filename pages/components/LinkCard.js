@@ -96,7 +96,6 @@ const LinkCardComponentPage = () => (
               />
             </LinkCard>
           }
-          screenshot
         />
       </>
     }
