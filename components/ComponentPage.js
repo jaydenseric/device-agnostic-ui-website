@@ -17,7 +17,7 @@ export const ComponentPage = ({
     <PageMeta
       title={`${componentMeta.name} component`}
       description={componentMeta.description}
-      imageUrl={`${process.env.ORIGIN}/static/components/${componentMeta.name}.png`}
+      imageUrl={`${process.env.ORIGIN}/static/screenshots/${componentMeta.name}-light.png`}
     />
     <PageHeader
       heading={<PrettyWordBreaks>{componentMeta.name}</PrettyWordBreaks>}
