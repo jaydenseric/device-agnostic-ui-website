@@ -15,7 +15,7 @@
     "node": ">=10"
   },
   "dependencies": {
-    "device-agnostic-ui": "^2.0.0",
+    "device-agnostic-ui": "^2.0.1",
     "next": "^9.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
@@ -44,7 +44,7 @@
     "now": "^16.4.0",
     "prettier": "^1.18.2",
     "prismjs": "^1.17.1",
-    "puppeteer": "^1.20.0"
+    "puppeteer": "^2.0.0"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier",

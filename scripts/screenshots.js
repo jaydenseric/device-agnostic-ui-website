@@ -30,28 +30,55 @@ async function deleteDirectory(path) {
 }
 
 /**
+ * Optimizes a PNG, creating an adjacent optimized WebM file.
+ * @param {string} pngPath PNG path.
+ * @param {string} destinationPath Destination directory path for the optimized images.
+ */
+async function optimizePngToPngAndWebm(pngPath, destinationPath) {
+  try {
+    // Optimize the screenshot PNG.
+    await imagemin([pngPath], {
+      destination: destinationPath,
+      plugins: [
+        imageminPngquant({ quality: [0.85, 0.85], speed: 1, strip: true }),
+        imageminZopfli({ more: true })
+      ]
+    })
+
+    // Create the screenshot WebP from the PNG.
+    await imagemin([pngPath], {
+      destination: destinationPath,
+      plugins: [imageminWebp({ nearLossless: 85 })]
+    })
+  } catch (error) {
+    console.error(`Failed to optimize PNG “${pngPath}”:`, error)
+  }
+}
+
+/**
  * Screenshots an element on a page.
  * @param {object} browser Puppeteer browser instance.
  * @param {string} pageUrl Page URL.
  * @param {string} elementId Element ID to screenshot.
  * @param {string} screenshotPath Screenshot directory path.
- * @param {string} screenshotFilename Screenshot filename, without an extension.
+ * @param {string} screenshotFilenamePrefix Screenshot filename prefix.
  */
 async function screenshotPageElement(
   browser,
   pageUrl,
   elementId,
   screenshotPath,
-  screenshotFilename
+  screenshotFilenamePrefix
 ) {
   console.info(`Screenshotting ${pageUrl}`)
 
-  const pngPath = `${screenshotPath}/${screenshotFilename}.png`
+  const pngPathLight = `${screenshotPath}/${screenshotFilenamePrefix}-light.png`
+  const pngPathDark = `${screenshotPath}/${screenshotFilenamePrefix}-dark.png`
   const page = await browser.newPage()
 
   try {
-    await page.goto(pageUrl)
     await page.setViewport({ width: 720, height: 720, deviceScaleFactor: 4 })
+    await page.goto(pageUrl)
 
     const targetElement = await page.$(`#${elementId}`)
     if (!targetElement)
@@ -69,8 +96,9 @@ async function screenshotPageElement(
       sheet.innerHTML = `
         #${elementId} {
           position: fixed;
-          left: 100vh;
+          left: 0;
           top: 0;
+          z-index: 3;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -78,6 +106,11 @@ async function screenshotPageElement(
           width: 300px;
           height: 100px;
           padding: 20px;
+          background-color: hsl(
+            var(--daui-background-hue),
+            var(--daui-background-saturation),
+            var(--daui-background-lightness)
+          );
           overflow: hidden;
         }
       `
@@ -86,26 +119,32 @@ async function screenshotPageElement(
       document.body.appendChild(sheet)
     }, elementId)
 
-    // Create the screenshot PNG.
-    await targetElement.screenshot({ path: pngPath })
+    // Create the light mode screenshot PNG.
+    await page.emulateMediaFeatures([
+      {
+        name: 'prefers-color-scheme',
+        value: 'light'
+      }
+    ])
+    await targetElement.screenshot({ path: pngPathLight })
+
+    // Create the dark mode screenshot PNG.
+    await page.emulateMediaFeatures([
+      {
+        name: 'prefers-color-scheme',
+        value: 'dark'
+      }
+    ])
+    await targetElement.screenshot({ path: pngPathDark })
   } finally {
     await page.close()
   }
 
-  // Optimize the screenshot PNG.
-  await imagemin([pngPath], {
-    destination: screenshotPath,
-    plugins: [
-      imageminPngquant({ quality: [0.85, 0.85], speed: 1, strip: true }),
-      imageminZopfli({ more: true })
-    ]
-  })
-
-  // Create the screenshot WebP from the PNG.
-  await imagemin([pngPath], {
-    destination: screenshotPath,
-    plugins: [imageminWebp({ nearLossless: 85 })]
-  })
+  // Convert the PNG images to optimized PNG and WebM images.
+  await Promise.all([
+    optimizePngToPngAndWebm(pngPathLight, screenshotPath),
+    optimizePngToPngAndWebm(pngPathDark, screenshotPath)
+  ])
 }
 
 /**
@@ -149,7 +188,7 @@ async function updateScreenshots(
       `Screenshotting element with ID “${elementId}” in ${componentNames.length} pages…`
     )
 
-    const browser = await puppeteer.launch({ args: ['--force-dark-mode'] })
+    const browser = await puppeteer.launch()
 
     try {
       for (let name of componentNames) {
