@@ -45,7 +45,6 @@ export const ComponentLinkCard = React.forwardRef(
 
         figure {
           margin: 0;
-          background-color: white;
         }
 
         div {
