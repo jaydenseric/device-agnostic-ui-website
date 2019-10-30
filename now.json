@@ -2,7 +2,6 @@
   "version": 2,
   "scope": "jaydenseric",
   "name": "device-agnostic-ui-website",
-  "alias": ["deviceagnosticui.com"],
   "build": {
     "env": {
       "ORIGIN": "https://deviceagnosticui.com"
