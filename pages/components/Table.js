@@ -1,7 +1,6 @@
-import { Para, Table } from 'device-agnostic-ui'
+import { Margin, Para, Table } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
 import { Table as TableComponentMeta } from '../../meta/components'
 
@@ -14,11 +13,11 @@ const TableComponentPage = () => (
       </Para>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkElement element="table" /> props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <>

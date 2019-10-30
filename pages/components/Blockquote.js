@@ -1,7 +1,6 @@
-import { Blockquote, LinkText, Para } from 'device-agnostic-ui'
+import { Blockquote, LinkText, Margin, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
 import { Blockquote as BlockquoteComponentMeta } from '../../meta/components'
 
@@ -14,11 +13,11 @@ const BlockquoteComponentPage = () => (
       </Para>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkElement element="blockquote" /> props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <>

@@ -1,7 +1,6 @@
-import { Html, List, Para } from 'device-agnostic-ui'
+import { Html, List, Margin, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
 import { Html as HtmlComponentMeta } from '../../meta/components'
 
@@ -47,11 +46,11 @@ const HtmlComponentPage = () => (
       </>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkElement element="div" /> props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <>

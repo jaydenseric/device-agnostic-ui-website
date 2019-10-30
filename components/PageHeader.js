@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export const PageHeader = ({ heading, children }) => (
   <header>
-    <Heading style={{ fontSize: 'calc(2rem + 3vw)' }}>{heading}</Heading>
+    <Heading style={{ fontSize: 'calc(200% + 3vw)' }}>{heading}</Heading>
     {children}
     <style jsx>{`
       header {

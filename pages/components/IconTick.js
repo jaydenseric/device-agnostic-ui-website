@@ -1,7 +1,6 @@
-import { IconTick, Para } from 'device-agnostic-ui'
+import { IconTick, Margin, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkComponent } from '../../components/LinkComponent'
 import { IconTick as IconTickComponentMeta } from '../../meta/components'
 
@@ -16,12 +15,12 @@ const IconComponentPage = () => (
       </>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkComponent component="Icon" /> props, except{' '}
           <LinkComponent component="Icon" prop="children" />.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <CodeExample

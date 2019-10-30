@@ -1,7 +1,6 @@
-import { Para } from 'device-agnostic-ui'
+import { Margin, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
 import { Para as ParaComponentMeta } from '../../meta/components'
 
@@ -14,11 +13,11 @@ const ParaComponentPage = () => (
       </Para>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkElement element="p" /> props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <CodeExample

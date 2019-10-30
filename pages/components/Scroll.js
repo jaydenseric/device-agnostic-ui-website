@@ -37,7 +37,7 @@ const ScrollComponentPage = () => (
           description={
             <>
               CSS Grid items to be horizontally spaced and vertically top
-              aligned in a <LinkElement element="div" /> element.
+              aligned.
             </>
           }
         />

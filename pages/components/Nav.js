@@ -1,7 +1,6 @@
-import { LinkActive, LinkNav, Nav, Para } from 'device-agnostic-ui'
+import { LinkActive, LinkNav, Margin, Nav, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkComponent } from '../../components/LinkComponent'
 import { LinkElement } from '../../components/LinkElement'
 import { Nav as NavComponentMeta } from '../../meta/components'
@@ -22,11 +21,11 @@ const NavComponentPage = () => (
       </>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkElement element="nav" /> props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <CodeExample

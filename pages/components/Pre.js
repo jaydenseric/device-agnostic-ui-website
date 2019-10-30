@@ -1,7 +1,6 @@
-import { Code, Para, Pre } from 'device-agnostic-ui'
+import { Code, Margin, Para, Pre } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
 import { Pre as PreComponentMeta } from '../../meta/components'
 
@@ -19,11 +18,11 @@ const PreComponentPage = () => (
       </>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkElement element="pre" /> props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <>

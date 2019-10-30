@@ -1,7 +1,6 @@
-import { Button, Para } from 'device-agnostic-ui'
+import { Button, Margin, Para } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkElement } from '../../components/LinkElement'
 import { Button as ButtonComponentMeta } from '../../meta/components'
 
@@ -26,11 +25,11 @@ const ButtonComponentPage = () => (
       </>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid <LinkElement element="button" /> props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <>

@@ -2,16 +2,16 @@ import {
   Code,
   Html,
   LinkText,
+  Margin,
   Para,
+  WordBreaks,
   stylesSyntaxHighlightingPrism
 } from 'device-agnostic-ui'
 import { CodeExample } from '../components/CodeExample'
-import { Inset } from '../components/Inset'
 import { LinkComponent } from '../components/LinkComponent'
 import { LinkElement } from '../components/LinkElement'
 import { PageHeader } from '../components/PageHeader'
 import { PageMeta } from '../components/PageMeta'
-import { PrettyWordBreaks } from '../components/PrettyWordBreaks'
 import { Section } from '../components/Section'
 
 const linkPrism = <LinkText href="https://prismjs.com">Prism</LinkText>
@@ -50,7 +50,7 @@ const StylesPage = () => (
       </Para>
     </PageHeader>
     <Section heading="Global styles" id="global-styles">
-      <Inset>
+      <Margin>
         <Para>
           Global styles are avoided, except for essential{' '}
           <LinkElement element="html" /> and <LinkElement element="body" />{' '}
@@ -103,13 +103,13 @@ const StylesPage = () => (
             `
           }
         />
-      </Inset>
+      </Margin>
       <Section
         headingLevel={3}
-        heading={<PrettyWordBreaks>stylesGlobalTheme</PrettyWordBreaks>}
+        heading={<WordBreaks>stylesGlobalTheme</WordBreaks>}
         id="stylesGlobalTheme"
       >
-        <Inset>
+        <Margin>
           <Para>
             Establishes the global theme by setting <Code>--daui-</Code>{' '}
             namespaced CSS variables at the{' '}
@@ -142,14 +142,14 @@ const StylesPage = () => (
               `
             }
           />
-        </Inset>
+        </Margin>
       </Section>
       <Section
         headingLevel={3}
-        heading={<PrettyWordBreaks>stylesGlobal</PrettyWordBreaks>}
+        heading={<WordBreaks>stylesGlobal</WordBreaks>}
         id="stylesGlobal"
       >
-        <Inset>
+        <Margin>
           <Para>
             Sets essential <LinkElement element="html" /> and{' '}
             <LinkElement element="body" /> styles to establish the viewport. As
@@ -159,7 +159,7 @@ const StylesPage = () => (
             </LinkText>{' '}
             or a custom theme.
           </Para>
-        </Inset>
+        </Margin>
       </Section>
     </Section>
     <Section
@@ -167,21 +167,19 @@ const StylesPage = () => (
       heading="Syntax highlighting"
       id="syntax-highlighting"
     >
-      <Inset>
+      <Margin>
         <Para>
           {linkPrism} syntax highlighting styles are provided, with accessible
           colors that match the global theme and automatically adjust for light
           and dark mode.
         </Para>
-      </Inset>
+      </Margin>
       <Section
         headingLevel={3}
-        heading={
-          <PrettyWordBreaks>stylesSyntaxHighlightingPrism</PrettyWordBreaks>
-        }
+        heading={<WordBreaks>stylesSyntaxHighlightingPrism</WordBreaks>}
         id="stylesSyntaxHighlightingPrism"
       >
-        <Inset>
+        <Margin>
           <Para>
             For styling syntax highlighting HTML produced by {linkPrism}.
           </Para>
@@ -285,7 +283,7 @@ const StylesPage = () => (
             `
             }
           />
-        </Inset>
+        </Margin>
       </Section>
     </Section>
   </>

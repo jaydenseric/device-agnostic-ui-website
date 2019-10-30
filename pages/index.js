@@ -1,8 +1,7 @@
-import { Code, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
+import { Code, LinkText, List, Margin, Para, Scroll } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeSyntaxHighlighted } from '../components/CodeSyntaxHighlighted'
 import { EmojiCard } from '../components/EmojiCard'
-import { Inset } from '../components/Inset'
 import { LinkComponent } from '../components/LinkComponent'
 import { PageHeader } from '../components/PageHeader'
 import { PageMeta } from '../components/PageMeta'
@@ -109,7 +108,7 @@ const IndexPage = () => (
       </Scroll>
     </Section>
     <Section heading="Setup" id="setup">
-      <Inset>
+      <Margin>
         <List ordered>
           <li>
             <Para>
@@ -140,7 +139,7 @@ const IndexPage = () => (
             !
           </li>
         </List>
-      </Inset>
+      </Margin>
     </Section>
   </>
 )

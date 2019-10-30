@@ -149,3 +149,10 @@ export const Toggle = {
   description: 'A checkbox or radio input.',
   tags: [forms]
 }
+
+export const WordBreaks = {
+  name: 'WordBreaks',
+  description:
+    'Renders text with aesthetically pleasing word break opportunities.',
+  tags: [layout]
+}

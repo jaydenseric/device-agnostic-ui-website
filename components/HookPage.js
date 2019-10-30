@@ -1,9 +1,7 @@
-import { Para } from 'device-agnostic-ui'
+import { Margin, Para, WordBreaks } from 'device-agnostic-ui'
 import PropTypes from 'prop-types'
-import { Inset } from './Inset'
 import { PageHeader } from './PageHeader'
 import { PageMeta } from './PageMeta'
-import { PrettyWordBreaks } from './PrettyWordBreaks'
 import { Section } from './Section'
 
 export const HookPage = ({
@@ -18,7 +16,7 @@ export const HookPage = ({
       title={`${hookMeta.name} hook`}
       description={hookMeta.description}
     />
-    <PageHeader heading={<PrettyWordBreaks>{hookMeta.name}</PrettyWordBreaks>}>
+    <PageHeader heading={<WordBreaks>{hookMeta.name}</WordBreaks>}>
       <Para>{hookMeta.description}</Para>
       {hookIntro}
     </PageHeader>
@@ -31,7 +29,7 @@ export const HookPage = ({
       </Section>
     )}
     <Section heading="Examples" id="examples">
-      <Inset>{hookExamplesContent}</Inset>
+      <Margin>{hookExamplesContent}</Margin>
     </Section>
   </>
 )

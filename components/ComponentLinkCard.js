@@ -1,4 +1,10 @@
-import { Heading, LinkCard, Para, Picture } from 'device-agnostic-ui'
+import {
+  Heading,
+  LinkCard,
+  Para,
+  Picture,
+  WordBreaks
+} from 'device-agnostic-ui'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -30,17 +36,16 @@ export const ComponentLinkCard = React.forwardRef(
           </Picture>
         </figure>
         <div>
-          <Heading style={{ marginBottom: 0, fontSize: '110%' }}>
-            {componentName}
+          <Heading>
+            <WordBreaks>{componentName}</WordBreaks>
           </Heading>
-          <Para style={{ marginTop: '0.5em', fontSize: '95%' }}>
-            {componentDescription}
-          </Para>
+          <Para>{componentDescription}</Para>
         </div>
       </article>
       <style jsx>{`
         article {
           width: 14em;
+          font-size: 90%;
         }
 
         figure {

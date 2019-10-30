@@ -98,11 +98,11 @@ const HeadingComponentPage = () => (
             /* syntax-highlight jsx */ `
               import { Heading } from 'device-agnostic-ui'
 
-              <Heading style={{ fontSize: 'calc(2rem + 3vw)' }}>Heading</Heading>
+              <Heading style={{ fontSize: 'calc(200% + 3vw)' }}>Heading</Heading>
             `
           }
           result={
-            <Heading style={{ fontSize: 'calc(2rem + 3vw)' }}>Heading</Heading>
+            <Heading style={{ fontSize: 'calc(200% + 3vw)' }}>Heading</Heading>
           }
         />
       </>

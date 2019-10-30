@@ -3,12 +3,12 @@ import {
   LinkActive,
   LinkNav,
   LinkText,
+  Margin,
   Nav,
   Para
 } from 'device-agnostic-ui'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
-import { Inset } from '../../components/Inset'
 import { LinkComponent } from '../../components/LinkComponent'
 import { LinkActive as LinkActiveComponentMeta } from '../../meta/components'
 
@@ -25,7 +25,7 @@ const LinkActiveComponentPage = () => (
       </Para>
     }
     componentPropsContent={
-      <Inset>
+      <Margin>
         <Para>
           Use any valid{' '}
           <LinkText href="https://nextjs.org/docs#with-link">
@@ -33,7 +33,7 @@ const LinkActiveComponentPage = () => (
           </LinkText>{' '}
           props.
         </Para>
-      </Inset>
+      </Margin>
     }
     componentExamplesContent={
       <CodeExample

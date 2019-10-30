@@ -1,8 +1,7 @@
-import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
+import { Code, LinkText, Margin, Para, Scroll } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
 import { HookPage } from '../../components/HookPage'
-import { Inset } from '../../components/Inset'
 import { TypeCard } from '../../components/TypeCard'
 import { useMergedRef as useMergedRefMeta } from '../../meta/hooks'
 
@@ -45,7 +44,7 @@ const UseMergedRefHookPage = () => (
       </Scroll>
     }
     hookReturnsContent={
-      <Inset>
+      <Margin>
         <TypeCard
           type={
             <LinkText href="https://reactjs.org/docs/refs-and-the-dom.html">
@@ -55,7 +54,7 @@ const UseMergedRefHookPage = () => (
           required
           description="Merged React ref."
         />
-      </Inset>
+      </Margin>
     }
     hookExamplesContent={
       <CodeExample

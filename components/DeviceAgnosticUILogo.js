@@ -47,6 +47,11 @@ export const DeviceAgnosticUILogo = ({ width, units = 'em' }) => {
         />
         <use xlinkHref="#s" fill="#00E676" />
       </g>
+      <style jsx>{`
+        svg {
+          display: block;
+        }
+      `}</style>
     </svg>
   )
 }

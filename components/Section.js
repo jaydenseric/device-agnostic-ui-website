@@ -5,7 +5,7 @@ export const Section = ({ headingLevel = 2, heading, id, children }) => (
   <section>
     <header>
       <Heading
-        style={headingLevel === 2 ? { fontSize: 'calc(1.5rem + 1.5vw)' } : null}
+        style={headingLevel === 2 ? { fontSize: 'calc(150% + 1.5vw)' } : null}
         id={id}
       >
         {heading}

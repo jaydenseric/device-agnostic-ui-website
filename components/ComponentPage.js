@@ -1,10 +1,8 @@
-import { LinkText, List, Para } from 'device-agnostic-ui'
+import { LinkText, List, Margin, Para, WordBreaks } from 'device-agnostic-ui'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import { Inset } from './Inset'
 import { PageHeader } from './PageHeader'
 import { PageMeta } from './PageMeta'
-import { PrettyWordBreaks } from './PrettyWordBreaks'
 import { Section } from './Section'
 
 export const ComponentPage = ({
@@ -19,9 +17,7 @@ export const ComponentPage = ({
       description={componentMeta.description}
       imageUrl={`${process.env.ORIGIN}/static/screenshots/${componentMeta.name}-light.png`}
     />
-    <PageHeader
-      heading={<PrettyWordBreaks>{componentMeta.name}</PrettyWordBreaks>}
-    >
+    <PageHeader heading={<WordBreaks>{componentMeta.name}</WordBreaks>}>
       <Para>{componentMeta.description}</Para>
       {componentIntro}
     </PageHeader>
@@ -29,11 +25,11 @@ export const ComponentPage = ({
       {componentPropsContent}
     </Section>
     <Section heading="Examples" id="examples">
-      <Inset>{componentExamplesContent}</Inset>
+      <Margin>{componentExamplesContent}</Margin>
     </Section>
     {!!componentMeta.tags.length && (
       <Section heading="Tags" id="tags">
-        <Inset>
+        <Margin>
           <List>
             {componentMeta.tags.map(({ tag, label, description }) => (
               <li key={tag}>
@@ -43,7 +39,7 @@ export const ComponentPage = ({
               </li>
             ))}
           </List>
-        </Inset>
+        </Margin>
       </Section>
     )}
   </>

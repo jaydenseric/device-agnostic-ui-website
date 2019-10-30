@@ -1,22 +1,22 @@
-import { Heading, LinkCard, Para } from 'device-agnostic-ui'
+import { Heading, LinkCard, Para, WordBreaks } from 'device-agnostic-ui'
 import PropTypes from 'prop-types'
 import React from 'react'
-import { PrettyWordBreaks } from './PrettyWordBreaks'
 
 export const HookLinkCard = React.forwardRef(
   ({ hookName, hookDescription, ...props }, ref) => (
     <LinkCard {...props} ref={ref}>
       <article>
         <Heading>
-          <PrettyWordBreaks>{hookName}</PrettyWordBreaks>
+          <WordBreaks>{hookName}</WordBreaks>
         </Heading>
-        <Para style={{ fontSize: '95%' }}>{hookDescription}</Para>
+        <Para>{hookDescription}</Para>
       </article>
       <style jsx>{`
         article {
-          padding: 1em;
-          padding-bottom: 1.5em;
+          margin: 1em;
+          margin-bottom: 1.5em;
           width: 14em;
+          font-size: 90%;
         }
 
         figure {
