@@ -1,8 +1,8 @@
 import { LinkText, List, Margin, Para, WordBreaks } from 'device-agnostic-ui'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
+import { Page } from './Page'
 import { PageHeader } from './PageHeader'
-import { PageMeta } from './PageMeta'
 import { Section } from './Section'
 
 export const ComponentPage = ({
@@ -11,12 +11,11 @@ export const ComponentPage = ({
   componentPropsContent,
   componentExamplesContent
 }) => (
-  <>
-    <PageMeta
-      title={`${componentMeta.name} component`}
-      description={componentMeta.description}
-      imageUrl={`${process.env.ORIGIN}/static/screenshots/${componentMeta.name}-light.png`}
-    />
+  <Page
+    title={`${componentMeta.name} component`}
+    description={componentMeta.description}
+    imageUrl={`${process.env.ORIGIN}/static/screenshots/${componentMeta.name}-light.png`}
+  >
     <PageHeader heading={<WordBreaks>{componentMeta.name}</WordBreaks>}>
       <Para>{componentMeta.description}</Para>
       {componentIntro}
@@ -42,7 +41,7 @@ export const ComponentPage = ({
         </Margin>
       </Section>
     )}
-  </>
+  </Page>
 )
 
 ComponentPage.propTypes = {

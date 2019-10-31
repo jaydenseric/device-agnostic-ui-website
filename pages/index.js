@@ -3,16 +3,15 @@ import Link from 'next/link'
 import { CodeSyntaxHighlighted } from '../components/CodeSyntaxHighlighted'
 import { EmojiCard } from '../components/EmojiCard'
 import { LinkComponent } from '../components/LinkComponent'
+import { Page } from '../components/Page'
 import { PageHeader } from '../components/PageHeader'
-import { PageMeta } from '../components/PageMeta'
 import { Section } from '../components/Section'
 
 const IndexPage = () => (
-  <>
-    <PageMeta
-      title="Overview"
-      description="A library of device agnostic styles, components and hooks for Next.js projects."
-    />
+  <Page
+    title="Overview"
+    description="A library of device agnostic styles, components and hooks for Next.js projects."
+  >
     <PageHeader heading="Device Agnostic&nbsp;UI">
       <Para>
         <strong>Device agnostic</strong>{' '}
@@ -141,7 +140,7 @@ const IndexPage = () => (
         </List>
       </Margin>
     </Section>
-  </>
+  </Page>
 )
 
 export default IndexPage

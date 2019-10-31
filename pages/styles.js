@@ -10,8 +10,8 @@ import {
 import { CodeExample } from '../components/CodeExample'
 import { LinkComponent } from '../components/LinkComponent'
 import { LinkElement } from '../components/LinkElement'
+import { Page } from '../components/Page'
 import { PageHeader } from '../components/PageHeader'
-import { PageMeta } from '../components/PageMeta'
 import { Section } from '../components/Section'
 
 const linkPrism = <LinkText href="https://prismjs.com">Prism</LinkText>
@@ -31,11 +31,10 @@ const HtmlSyntaxHighlighted = props => (
 )
 
 const StylesPage = () => (
-  <>
-    <PageMeta
-      title="Styles"
-      description="How to setup and use Device Agnostic UI styles."
-    />
+  <Page
+    title="Styles"
+    description="How to setup and use Device Agnostic UI styles."
+  >
     <PageHeader heading="Styles">
       <Para>
         Styles are handled using{' '}
@@ -286,7 +285,7 @@ const StylesPage = () => (
         </Margin>
       </Section>
     </Section>
-  </>
+  </Page>
 )
 
 export default StylesPage

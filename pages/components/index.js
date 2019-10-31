@@ -2,8 +2,8 @@ import { LinkActive, Scroll, Toggle } from 'device-agnostic-ui'
 import { useRouter } from 'next/router'
 import React from 'react'
 import { ComponentLinkCard } from '../../components/ComponentLinkCard'
+import { Page } from '../../components/Page'
 import { PageHeader } from '../../components/PageHeader'
-import { PageMeta } from '../../components/PageMeta'
 import * as componentsMeta from '../../meta/components'
 import * as componentsTags from '../../meta/tags'
 
@@ -34,11 +34,7 @@ const ComponentsPage = () => {
     : Object.values(componentsMeta)
 
   return (
-    <>
-      <PageMeta
-        title="Components"
-        description="Device Agnostic UI components."
-      />
+    <Page title="Components" description="Device Agnostic UI components.">
       <PageHeader heading="Components">
         {Object.values(componentsTags).map(({ tag, label, description }) => (
           <Toggle
@@ -67,7 +63,7 @@ const ComponentsPage = () => {
           ))}
         </Scroll>
       )}
-    </>
+    </Page>
   )
 }
 
