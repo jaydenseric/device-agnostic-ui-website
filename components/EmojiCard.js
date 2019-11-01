@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export const EmojiCard = ({ emoji, heading, children }) => (
   <article>
     <div>{emoji}</div>
-    <Heading style={{ marginTop: 0 }}>{heading}</Heading>
+    <Heading style={{ marginTop: '0.25em' }}>{heading}</Heading>
     <Para>{children}</Para>
     <style jsx>{`
       article {
