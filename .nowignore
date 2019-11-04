@@ -1,7 +1,6 @@
 .github
 scripts
 .editorconfig
-.env
 .eslintignore
 .eslintrc.json
 .huskyrc.json
