@@ -13,12 +13,7 @@ export const ComponentLinkCard = React.forwardRef(
     <LinkCard {...props} ref={ref}>
       <article>
         <figure>
-          <Picture
-            src={`/static/screenshots/${componentName}-light.png`}
-            width={1360}
-            height={560}
-            alt={`${componentName} component screenshot`}
-          >
+          <Picture width={1360} height={560}>
             <source
               type="image/webp"
               srcSet={`/static/screenshots/${componentName}-dark.webp`}
@@ -32,6 +27,10 @@ export const ComponentLinkCard = React.forwardRef(
             <source
               type="image/webp"
               srcSet={`/static/screenshots/${componentName}-light.webp`}
+            />
+            <img
+              src={`/static/screenshots/${componentName}-light.png`}
+              alt={`${componentName} component screenshot`}
             />
           </Picture>
         </figure>

@@ -39,6 +39,9 @@ const HtmlComponentPage = () => (
             <LinkElement element="tbody" />, <LinkElement element="tr" />,{' '}
             <LinkElement element="th" />, <LinkElement element="td" />
           </li>
+          <li>
+            <LinkElement element="img" />
+          </li>
         </List>
         <Para>
           It implements the <LinkElement element="div" /> element.
@@ -97,6 +100,13 @@ const HtmlComponentPage = () => (
                   </tr>
                   </tbody>
                 </table>
+                <p>
+                  <img
+                    src="/static/example-picture/example.png"
+                    width="180"
+                    alt="Alternate text."
+                  />
+                </p>
               </Html>
             `
           }
@@ -143,6 +153,13 @@ const HtmlComponentPage = () => (
                   </tr>
                 </tbody>
               </table>
+              <p>
+                <img
+                  src="/static/example-picture/example.png"
+                  width="180"
+                  alt="Alternate text."
+                />
+              </p>
             </Html>
           }
           screenshot

@@ -49,23 +49,23 @@ const LinkCardComponentPage = () => (
             import { LinkCard, Table } from 'device-agnostic-ui'
 
             <LinkCard href="/static/example-picture/example.svg">
-              <Picture
-                width={157}
-                height={100}
-                alt="Alternate text."
-                src="/static/example-picture/example.svg"
-              />
+              <Picture width={157} height={100} style={{ width: '157px' }}>
+                <img
+                  src="/static/example-picture/example.svg"
+                  alt="Device Agnostic UI logo."
+                />
+              </Picture>
             </LinkCard>
           `
           }
           result={
             <LinkCard href="/static/example-picture/example.svg">
-              <Picture
-                width={157}
-                height={100}
-                alt="Alternate text."
-                src="/static/example-picture/example.svg"
-              />
+              <Picture width={157} height={100} style={{ width: '157px' }}>
+                <img
+                  src="/static/example-picture/example.svg"
+                  alt="Device Agnostic UI logo."
+                />
+              </Picture>
             </LinkCard>
           }
           screenshot
@@ -77,23 +77,23 @@ const LinkCardComponentPage = () => (
             import { LinkCard, Table } from 'device-agnostic-ui'
 
             <LinkCard active href="/static/example-picture/example.svg">
-              <Picture
-                width={157}
-                height={100}
-                alt="Alternate text."
-                src="/static/example-picture/example.svg"
-              />
+              <Picture width={157} height={100} style={{ width: '157px' }}>
+                <img
+                  src="/static/example-picture/example.svg"
+                  alt="Device Agnostic UI logo."
+                />
+              </Picture>
             </LinkCard>
           `
           }
           result={
             <LinkCard active href="/static/example-picture/example.svg">
-              <Picture
-                width={157}
-                height={100}
-                alt="Alternate text."
-                src="/static/example-picture/example.svg"
-              />
+              <Picture width={157} height={100} style={{ width: '157px' }}>
+                <img
+                  src="/static/example-picture/example.svg"
+                  alt="Device Agnostic UI logo."
+                />
+              </Picture>
             </LinkCard>
           }
         />
