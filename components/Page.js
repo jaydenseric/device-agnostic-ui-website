@@ -6,7 +6,6 @@ export const Page = ({
   title,
   description,
   imageUrl = `${process.env.ORIGIN}/static/thumbnail.png`,
-  robots = true,
   children
 }) => (
   <>
@@ -17,7 +16,6 @@ export const Page = ({
           {title}
         </title>
       )}
-      {!robots && <meta name="robots" content="noindex" />}
       {description && <meta name="description" content={description} />}
       {title && (
         <meta
@@ -44,6 +42,5 @@ Page.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
-  robots: PropTypes.bool,
   children: PropTypes.node
 }
