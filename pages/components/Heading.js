@@ -1,4 +1,5 @@
-import { Heading, LinkText, Para, Scroll } from 'device-agnostic-ui'
+import { Code, Heading, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
+import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
 import { LinkComponent } from '../../components/LinkComponent'
@@ -23,6 +24,34 @@ const HeadingComponentPage = () => (
           </LinkText>
           .
         </Para>
+        <Para>
+          The{' '}
+          <Link href="/styles#stylesGlobalTheme" passHref>
+            <LinkText>global theme</LinkText>
+          </Link>{' '}
+          provides a range of responsive heading font size CSS variables that
+          can be manually applied:
+        </Para>
+        <List ordered>
+          <li>
+            <Code>--daui-h1-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h2-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h3-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h4-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h5-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h6-font-size</Code>
+          </li>
+        </List>
       </>
     }
     componentPropsContent={
@@ -70,39 +99,42 @@ const HeadingComponentPage = () => (
     componentExamplesContent={
       <>
         <CodeExample
-          caption="Simple heading."
+          caption="Suitable for a primary page heading."
           code={
             /* syntax-highlight jsx */ `
               import { Heading } from 'device-agnostic-ui'
 
-              <Heading>Heading</Heading>
-            `
-          }
-          result={<Heading>Heading</Heading>}
-          screenshot
-        />
-        <CodeExample
-          caption="With an ID."
-          code={
-            /* syntax-highlight jsx */ `
-              import { Heading } from 'device-agnostic-ui'
-
-              <Heading id="heading">Heading</Heading>
-            `
-          }
-          result={<Heading id="heading">Heading</Heading>}
-        />
-        <CodeExample
-          caption="Large, responsive font size suitable for a primary page heading."
-          code={
-            /* syntax-highlight jsx */ `
-              import { Heading } from 'device-agnostic-ui'
-
-              <Heading style={{ fontSize: 'calc(200% + 3vw)' }}>Heading</Heading>
+              <Heading style={{ fontSize: 'var(--daui-h1-font-size)' }}>Heading</Heading>
             `
           }
           result={
-            <Heading style={{ fontSize: 'calc(200% + 3vw)' }}>Heading</Heading>
+            <Heading style={{ fontSize: 'var(--daui-h1-font-size)' }}>
+              Heading
+            </Heading>
+          }
+          screenshot
+        />
+        <CodeExample
+          caption="Suitable for a secondary page heading, with an ID."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Heading } from 'device-agnostic-ui'
+
+              <Heading
+                id="heading"
+                style={{ fontSize: 'var(--daui-h2-font-size)' }}
+              >
+                Heading
+              </Heading>
+            `
+          }
+          result={
+            <Heading
+              id="heading"
+              style={{ fontSize: 'var(--daui-h2-font-size)' }}
+            >
+              Heading
+            </Heading>
           }
         />
       </>

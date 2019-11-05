@@ -16,15 +16,15 @@ export const HookPage = ({
       <Para>{hookMeta.description}</Para>
       {hookIntro}
     </PageHeader>
-    <Section heading="Parameters" id="parameters">
+    <Section level={2} heading="Parameters" id="parameters">
       {hookParametersContent}
     </Section>
     {hookReturnsContent && (
-      <Section heading="Returns" id="returns">
+      <Section level={2} heading="Returns" id="returns">
         {hookReturnsContent}
       </Section>
     )}
-    <Section heading="Examples" id="examples">
+    <Section level={2} heading="Examples" id="examples">
       <Margin>{hookExamplesContent}</Margin>
     </Section>
   </Page>

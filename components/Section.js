@@ -1,13 +1,10 @@
 import { Heading } from 'device-agnostic-ui'
 import PropTypes from 'prop-types'
 
-export const Section = ({ headingLevel = 2, heading, id, children }) => (
+export const Section = ({ level, heading, id, children }) => (
   <section>
     <header>
-      <Heading
-        style={headingLevel === 2 ? { fontSize: 'calc(150% + 1.5vw)' } : null}
-        id={id}
-      >
+      <Heading style={{ fontSize: `var(--daui-h${level}-font-size)` }} id={id}>
         {heading}
       </Heading>
     </header>
@@ -25,7 +22,7 @@ export const Section = ({ headingLevel = 2, heading, id, children }) => (
 )
 
 Section.propTypes = {
-  headingLevel: PropTypes.number,
+  level: PropTypes.number.isRequired,
   heading: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
   children: PropTypes.node

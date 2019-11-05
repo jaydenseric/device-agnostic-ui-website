@@ -31,7 +31,7 @@ const IndexPage = () => (
         mouse) or network speed. Simple to build, test and use.
       </Para>
     </PageHeader>
-    <Section heading="Features" id="features">
+    <Section level={2} heading="Features" id="features">
       <Scroll>
         <EmojiCard emoji="📦" heading="Tiny bundle size">
           <LinkText href="https://bundlephobia.com/result?p=device-agnostic-ui">
@@ -106,7 +106,7 @@ const IndexPage = () => (
         </EmojiCard>
       </Scroll>
     </Section>
-    <Section heading="Setup" id="setup">
+    <Section level={2} heading="Setup" id="setup">
       <Margin>
         <List ordered>
           <li>

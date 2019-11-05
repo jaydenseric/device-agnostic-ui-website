@@ -1,4 +1,5 @@
-import { Html, List, Margin, Para } from 'device-agnostic-ui'
+import { Code, Html, LinkText, List, Margin, Para } from 'device-agnostic-ui'
+import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
 import { LinkElement } from '../../components/LinkElement'
@@ -46,6 +47,34 @@ const HtmlComponentPage = () => (
         <Para>
           It implements the <LinkElement element="div" /> element.
         </Para>
+        <Para>
+          The{' '}
+          <Link href="/styles#stylesGlobalTheme" passHref>
+            <LinkText>global theme</LinkText>
+          </Link>{' '}
+          provides a range of responsive heading font size CSS variables that
+          can be locally overridden:
+        </Para>
+        <List ordered>
+          <li>
+            <Code>--daui-h1-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h2-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h3-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h4-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h5-font-size</Code>
+          </li>
+          <li>
+            <Code>--daui-h6-font-size</Code>
+          </li>
+        </List>
       </>
     }
     componentPropsContent={
@@ -67,6 +96,9 @@ const HtmlComponentPage = () => (
                 <h1>Heading 1</h1>
                 <h2>Heading 2</h2>
                 <h3>Heading 3</h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
                 <p>Paragraph containing <code>code</code> and a <a href="/">link</a>.</p>
                 <blockquote>Blockquote containing text.</blockquote>
                 <blockquote>
@@ -115,6 +147,9 @@ const HtmlComponentPage = () => (
               <h1>Heading 1</h1>
               <h2>Heading 2</h2>
               <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
               <p>
                 Paragraph containing <code>code</code> and a{' '}
                 <a href="/">link</a>.
@@ -175,6 +210,23 @@ const HtmlComponentPage = () => (
           }
           result={
             <Html dangerouslySetInnerHTML={{ __html: '<h1>Heading 1</h1>' }} />
+          }
+        />
+        <CodeExample
+          caption="How to locally override heading font sizes."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Html } from 'device-agnostic-ui'
+
+              <Html style={{ '--daui-h1-font-size': '150%' }}>
+                <h1>Heading 1</h1>
+              </Html>
+            `
+          }
+          result={
+            <Html style={{ '--daui-h1-font-size': '150%' }}>
+              <h1>Heading 1</h1>
+            </Html>
           }
         />
       </>

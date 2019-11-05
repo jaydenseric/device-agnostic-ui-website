@@ -48,7 +48,7 @@ const StylesPage = () => (
         .
       </Para>
     </PageHeader>
-    <Section heading="Global styles" id="global-styles">
+    <Section level={2} heading="Global styles" id="global-styles">
       <Margin>
         <Para>
           Global styles are avoided, except for essential{' '}
@@ -104,7 +104,7 @@ const StylesPage = () => (
         />
       </Margin>
       <Section
-        headingLevel={3}
+        level={3}
         heading={<WordBreaks>stylesGlobalTheme</WordBreaks>}
         id="stylesGlobalTheme"
       >
@@ -144,7 +144,7 @@ const StylesPage = () => (
         </Margin>
       </Section>
       <Section
-        headingLevel={3}
+        level={3}
         heading={<WordBreaks>stylesGlobal</WordBreaks>}
         id="stylesGlobal"
       >
@@ -161,11 +161,7 @@ const StylesPage = () => (
         </Margin>
       </Section>
     </Section>
-    <Section
-      headingLevel={2}
-      heading="Syntax highlighting"
-      id="syntax-highlighting"
-    >
+    <Section level={2} heading="Syntax highlighting" id="syntax-highlighting">
       <Margin>
         <Para>
           {linkPrism} syntax highlighting styles are provided, with accessible
@@ -174,7 +170,7 @@ const StylesPage = () => (
         </Para>
       </Margin>
       <Section
-        headingLevel={3}
+        level={3}
         heading={<WordBreaks>stylesSyntaxHighlightingPrism</WordBreaks>}
         id="stylesSyntaxHighlightingPrism"
       >

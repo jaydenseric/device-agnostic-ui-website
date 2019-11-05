@@ -20,14 +20,14 @@ export const ComponentPage = ({
       <Para>{componentMeta.description}</Para>
       {componentIntro}
     </PageHeader>
-    <Section heading="Props" id="props">
+    <Section level={2} heading="Props" id="props">
       {componentPropsContent}
     </Section>
-    <Section heading="Examples" id="examples">
+    <Section level={2} heading="Examples" id="examples">
       <Margin>{componentExamplesContent}</Margin>
     </Section>
     {!!componentMeta.tags.length && (
-      <Section heading="Tags" id="tags">
+      <Section level={2} heading="Tags" id="tags">
         <Margin>
           <List>
             {componentMeta.tags.map(({ tag, label, description }) => (
