@@ -15,7 +15,7 @@ export const Section = ({ level, heading, id, children }) => (
       }
 
       section header {
-        margin: 1.5rem;
+        margin: var(--daui-spacing);
       }
     `}</style>
   </section>

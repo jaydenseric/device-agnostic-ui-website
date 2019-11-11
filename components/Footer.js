@@ -5,7 +5,7 @@ export const Footer = ({ children }) => (
     {children}
     <style jsx>{`
       footer {
-        margin: 3rem 1.5rem 4.5rem;
+        margin: 3rem var(--daui-spacing) 4.5rem;
       }
     `}</style>
   </footer>
