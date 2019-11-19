@@ -35,7 +35,7 @@ const IndexPage = () => (
       <Scroll>
         <EmojiCard emoji="📦" heading="Tiny bundle size">
           <LinkText href="https://bundlephobia.com/result?p=device-agnostic-ui">
-            &lt; 7 KB
+            &lt; 8 KB
           </LinkText>{' '}
           with{' '}
           <LinkText href="https://webpack.js.org/guides/tree-shaking">
