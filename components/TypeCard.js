@@ -1,4 +1,4 @@
-import { Code, Heading, Para, Table, WordBreaks } from 'device-agnostic-ui'
+import { Code, Heading, Table, WordBreaks } from 'device-agnostic-ui'
 import PropTypes from 'prop-types'
 
 export const TypeCard = ({
@@ -6,7 +6,7 @@ export const TypeCard = ({
   type,
   required,
   defaultValue,
-  description
+  children
 }) => (
   <article>
     {identity && (
@@ -37,7 +37,7 @@ export const TypeCard = ({
         )}
       </tbody>
     </Table>
-    <Para>{description}</Para>
+    {children}
     <style jsx>{`
       article {
         width: 14em;
@@ -55,5 +55,5 @@ TypeCard.propTypes = {
   type: PropTypes.node.isRequired,
   required: PropTypes.bool,
   defaultValue: PropTypes.string,
-  description: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired
 }

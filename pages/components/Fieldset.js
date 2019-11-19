@@ -22,17 +22,16 @@ const FieldsetComponentPage = () => (
               JSX children
             </LinkText>
           }
-          description={
-            <>
-              Children for the <LinkElement element="legend" /> element. It may
-              only render{' '}
-              <LinkText href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">
-                phrasing content
-              </LinkText>
-              .
-            </>
-          }
-        />
+        >
+          <Para>
+            Children for the <LinkElement element="legend" /> element. It may
+            only render{' '}
+            <LinkText href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">
+              phrasing content
+            </LinkText>
+            .
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'children', idPrefix: 'prop' }}
           type={
@@ -41,23 +40,17 @@ const FieldsetComponentPage = () => (
             </LinkText>
           }
           required
-          description={
-            <>
-              Main content, contained in a <LinkElement element="div" />{' '}
-              element.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; a{' '}
-              <LinkElement element="fieldset" /> element.
-            </>
-          }
-        />
+        >
+          <Para>
+            Main content, contained in a <LinkElement element="div" /> element.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; a{' '}
+            <LinkElement element="fieldset" /> element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

@@ -34,23 +34,17 @@ const ScrollComponentPage = () => (
             </LinkText>
           }
           required
-          description={
-            <>
-              CSS Grid items to be horizontally spaced and vertically top
-              aligned.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; a{' '}
-              <LinkElement element="div" /> element.
-            </>
-          }
-        />
+        >
+          <Para>
+            CSS Grid items to be horizontally spaced and vertically top aligned.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; a <LinkElement element="div" />{' '}
+            element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

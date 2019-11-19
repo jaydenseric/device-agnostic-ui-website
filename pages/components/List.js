@@ -20,26 +20,21 @@ const ListComponentPage = () => (
           identity={{ name: 'ordered', idPrefix: 'prop' }}
           type="Boolean"
           defaultValue="false"
-          description={
-            <>
-              If <Code>false</Code>, a <LinkElement element="ul" /> element is
-              used to display a bulleted list. Otherwise, a{' '}
-              <LinkElement element="ol" /> element is used to display a numbered
-              list
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; either a{' '}
-              <LinkElement element="ul" /> or <LinkElement element="ol" />{' '}
-              element.
-            </>
-          }
-        />
+        >
+          <Para>
+            If <Code>false</Code>, a <LinkElement element="ul" /> element is
+            used to display a bulleted list. Otherwise, a{' '}
+            <LinkElement element="ol" /> element is used to display a numbered
+            list
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; either a{' '}
+            <LinkElement element="ul" /> or <LinkElement element="ol" />{' '}
+            element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

@@ -46,8 +46,9 @@ const UseOnFocusReportValidityHookPage = () => (
             </LinkText>
           }
           required
-          description="React ref for the HTML form control element."
-        />
+        >
+          <Para>React ref for the HTML form control element.</Para>
+        </TypeCard>
       </Scroll>
     }
     hookExamplesContent={

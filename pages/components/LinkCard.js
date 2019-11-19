@@ -26,18 +26,15 @@ const LinkCardComponentPage = () => (
           identity={{ name: 'active', idPrefix: 'prop' }}
           type="Boolean"
           defaultValue="false"
-          description="Does the link refer to the current page."
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; an <LinkElement element="a" />{' '}
-              element.
-            </>
-          }
-        />
+        >
+          <Para>Does the link refer to the current page.</Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; an <LinkElement element="a" />{' '}
+            element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

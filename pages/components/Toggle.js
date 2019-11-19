@@ -46,28 +46,26 @@ const ToggleComponentPage = () => (
         <TypeCard
           identity={{ name: 'validationMessage', idPrefix: 'prop' }}
           type="String"
-          description={
-            <>
-              Sets the <LinkElement element="input" />{' '}
-              <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
-                <Code>validationMessage</Code>
-              </LinkText>
-              .
-            </>
-          }
-        />
+        >
+          <Para>
+            Sets the <LinkElement element="input" />{' '}
+            <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
+              <Code>validationMessage</Code>
+            </LinkText>
+            .
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'inputProps', idPrefix: 'prop' }}
           type="Object"
-          description={
-            <>
-              Props for the <LinkElement element="input" /> element. Must
-              contain either <Code>{`type: 'checkbox'`}</Code> or{' '}
-              <Code>{`type: 'radio'`}</Code>.
-            </>
-          }
           required
-        />
+        >
+          <Para>
+            Props for the <LinkElement element="input" /> element. Must contain
+            either <Code>{`type: 'checkbox'`}</Code> or{' '}
+            <Code>{`type: 'radio'`}</Code>.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'children', idPrefix: 'prop' }}
           type={
@@ -75,27 +73,22 @@ const ToggleComponentPage = () => (
               JSX children
             </LinkText>
           }
-          description={
-            <>
-              Label children. Due to the ancestor{' '}
-              <LinkElement element="label" /> element, it may only render{' '}
-              <LinkText href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">
-                phrasing content
-              </LinkText>{' '}
-              without <LinkElement element="label" /> elements.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; a{' '}
-              <LinkElement element="label" /> element.
-            </>
-          }
-        />
+        >
+          <Para>
+            Label children. Due to the ancestor <LinkElement element="label" />{' '}
+            element, it may only render{' '}
+            <LinkText href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">
+              phrasing content
+            </LinkText>{' '}
+            without <LinkElement element="label" /> elements.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; a{' '}
+            <LinkElement element="label" /> element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

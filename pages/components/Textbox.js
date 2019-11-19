@@ -16,40 +16,33 @@ const TextboxComponentPage = () => (
     }
     componentPropsContent={
       <Scroll>
-        <TypeCard
-          identity={{ name: 'type', idPrefix: 'prop' }}
-          type="String"
-          description={
-            <>
-              Either <Code>textarea</Code> to create a{' '}
-              <LinkElement element="textarea" />, or a suitable{' '}
-              <LinkElement element="input" attribute="type" /> for a text or
-              number <LinkElement element="input" />.
-            </>
-          }
-        />
+        <TypeCard identity={{ name: 'type', idPrefix: 'prop' }} type="String">
+          <Para>
+            Either <Code>textarea</Code> to create a{' '}
+            <LinkElement element="textarea" />, or a suitable{' '}
+            <LinkElement element="input" attribute="type" /> for a text or
+            number <LinkElement element="input" />.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'validationMessage', idPrefix: 'prop' }}
           type="String"
-          description={
-            <>
-              Sets the <LinkElement element="input" />{' '}
-              <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
-                <Code>validationMessage</Code>
-              </LinkText>
-              .
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the <LinkElement element="input" /> element.
-            </>
-          }
-        />
+        >
+          <Para>
+            Sets the <LinkElement element="input" /> or{' '}
+            <LinkElement element="textarea" />{' '}
+            <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
+              <Code>validationMessage</Code>
+            </LinkText>
+            .
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the <LinkElement element="input" /> or{' '}
+            <LinkElement element="textarea" /> element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

@@ -27,14 +27,19 @@ const WordBreaksComponentPage = () => (
           identity={{ name: 'placeholder', idPrefix: 'prop' }}
           type="String"
           defaultValue="<wbr />"
-          description="Arbitrary; used in the processing of the text. Only needs to be customized if the text might contain the default value."
-        />
+        >
+          <Para>
+            Arbitrary; used in the processing of the text. Only needs to be
+            customized if the text might contain the default value.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'children', idPrefix: 'prop' }}
           type="String"
           required
-          description="Text to render with word break opportunities."
-        />
+        >
+          <Para>Text to render with word break opportunities.</Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

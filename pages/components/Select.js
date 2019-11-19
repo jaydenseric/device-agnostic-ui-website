@@ -19,16 +19,15 @@ const SelectComponentPage = () => (
         <TypeCard
           identity={{ name: 'validationMessage', idPrefix: 'prop' }}
           type="String"
-          description={
-            <>
-              Sets the <LinkElement element="select" />{' '}
-              <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
-                <Code>validationMessage</Code>
-              </LinkText>
-              .
-            </>
-          }
-        />
+        >
+          <Para>
+            Sets the <LinkElement element="select" />{' '}
+            <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
+              <Code>validationMessage</Code>
+            </LinkText>
+            .
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'children', idPrefix: 'prop' }}
           type={
@@ -37,24 +36,19 @@ const SelectComponentPage = () => (
             </LinkText>
           }
           required
-          description={
-            <>
-              <LinkElement element="select" /> element children;{' '}
-              <LinkElement element="optgroup" /> or{' '}
-              <LinkElement element="option" /> elements.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; a{' '}
-              <LinkElement element="select" /> element.
-            </>
-          }
-        />
+        >
+          <Para>
+            <LinkElement element="select" /> element children;{' '}
+            <LinkElement element="optgroup" /> or{' '}
+            <LinkElement element="option" /> elements.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; a{' '}
+            <LinkElement element="select" /> element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

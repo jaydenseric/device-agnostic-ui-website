@@ -26,22 +26,20 @@ const PictureComponentPage = () => (
           identity={{ name: 'width', idPrefix: 'prop' }}
           type="Number"
           required
-          description={
-            <>
-              The picture’s ratio width; typically it’s intrinsic pixel width.
-            </>
-          }
-        />
+        >
+          <Para>
+            The picture’s ratio width; typically it’s intrinsic pixel width.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'height', idPrefix: 'prop' }}
           type="Number"
           required
-          description={
-            <>
-              The picture’s ratio height; typically it’s intrinsic pixel height.
-            </>
-          }
-        />
+        >
+          <Para>
+            The picture’s ratio height; typically it’s intrinsic pixel height.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'children', idPrefix: 'prop' }}
           type={
@@ -50,24 +48,19 @@ const PictureComponentPage = () => (
             </LinkText>
           }
           required
-          description={
-            <>
-              <LinkElement element="picture" /> children; optional{' '}
-              <LinkElement element="source" /> elements and a required{' '}
-              <LinkElement element="img" /> element.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; a{' '}
-              <LinkElement element="picture" /> element.
-            </>
-          }
-        />
+        >
+          <Para>
+            <LinkElement element="picture" /> children; optional{' '}
+            <LinkElement element="source" /> elements and a required{' '}
+            <LinkElement element="img" /> element.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; a{' '}
+            <LinkElement element="picture" /> element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

@@ -39,8 +39,9 @@ const UseMergedRefHookPage = () => (
             </>
           }
           required
-          description="Array of React refs to merge into one."
-        />
+        >
+          <Para>Array of React refs to merge into one.</Para>
+        </TypeCard>
       </Scroll>
     }
     hookReturnsContent={
@@ -52,8 +53,9 @@ const UseMergedRefHookPage = () => (
             </LinkText>
           }
           required
-          description="Merged React ref."
-        />
+        >
+          <Para>Merged React ref.</Para>
+        </TypeCard>
       </Margin>
     }
     hookExamplesContent={

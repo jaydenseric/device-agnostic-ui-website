@@ -46,28 +46,26 @@ const IconComponentPage = () => (
           identity={{ name: 'size', idPrefix: 'prop' }}
           type="String"
           defaultValue="'1em'"
-          description={
-            <>
-              Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
-              <LinkElement type="SVG" element="svg" attribute="width" /> and{' '}
-              <LinkElement type="SVG" element="svg" attribute="height" />{' '}
-              attributes. Some browser versions don’t support <Code>rem</Code>{' '}
-              units.
-            </>
-          }
-        />
+        >
+          <Para>
+            Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
+            <LinkElement type="SVG" element="svg" attribute="width" /> and{' '}
+            <LinkElement type="SVG" element="svg" attribute="height" />{' '}
+            attributes. Some browser versions don’t support <Code>rem</Code>{' '}
+            units.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'title', idPrefix: 'prop' }}
           type="String"
           required
-          description={
-            <>
-              Gets suffixed with <Code>{"' icon'"}</Code> to form the{' '}
-              <LinkElement type="SVG" element="svg" /> element’s{' '}
-              <LinkElement type="SVG" element="title" /> children.
-            </>
-          }
-        />
+        >
+          <Para>
+            Gets suffixed with <Code>{"' icon'"}</Code> to form the{' '}
+            <LinkElement type="SVG" element="svg" /> element’s{' '}
+            <LinkElement type="SVG" element="title" /> children.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'children', idPrefix: 'prop' }}
           type={
@@ -76,25 +74,19 @@ const IconComponentPage = () => (
             </LinkText>
           }
           required
-          description={
-            <>
-              SVG content for the icon, such as paths. The{' '}
-              <LinkElement type="SVG" element="svg" /> element has a fixed 32px
-              square{' '}
-              <LinkElement type="SVG" element="svg" attribute="viewBox" />.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; an{' '}
-              <LinkElement type="SVG" element="svg" /> element.
-            </>
-          }
-        />
+        >
+          <Para>
+            SVG content for the icon, such as paths. The{' '}
+            <LinkElement type="SVG" element="svg" /> element has a fixed 32px
+            square <LinkElement type="SVG" element="svg" attribute="viewBox" />.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; an{' '}
+            <LinkElement type="SVG" element="svg" /> element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

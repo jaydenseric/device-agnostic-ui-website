@@ -22,38 +22,32 @@ const LoadingComponentPage = () => (
           identity={{ name: 'size', idPrefix: 'prop' }}
           type="String"
           defaultValue="'1em'"
-          description={
-            <>
-              Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
-              <LinkElement type="SVG" element="svg" attribute="width" /> and{' '}
-              <LinkElement type="SVG" element="svg" attribute="height" />{' '}
-              attributes. Some browser versions don’t support <Code>rem</Code>{' '}
-              units.
-            </>
-          }
-        />
+        >
+          <Para>
+            Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
+            <LinkElement type="SVG" element="svg" attribute="width" /> and{' '}
+            <LinkElement type="SVG" element="svg" attribute="height" />{' '}
+            attributes. Some browser versions don’t support <Code>rem</Code>{' '}
+            units.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'title', idPrefix: 'prop' }}
           type="String"
           defaultValue="'Loading'"
-          description={
-            <>
-              Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
-              <LinkElement type="SVG" element="title" /> children.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; an{' '}
-              <LinkElement type="SVG" element="svg" /> element.{' '}
-              <Code>children</Code> can’t be used.
-            </>
-          }
-        />
+        >
+          <Para>
+            Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
+            <LinkElement type="SVG" element="title" /> children.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; an{' '}
+            <LinkElement type="SVG" element="svg" /> element.{' '}
+            <Code>children</Code> can’t be used.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={

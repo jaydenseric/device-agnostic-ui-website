@@ -46,14 +46,19 @@ const UseCustomValidityHookPage = () => (
             </LinkText>
           }
           required
-          description="React ref for the HTML form control element."
-        />
+        >
+          <Para>React ref for the HTML form control element.</Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'validationMessage', idPrefix: 'parameter' }}
           type="String"
           defaultValue="''"
-          description="Validation message for the HTML form control element. An empty string means valid."
-        />
+        >
+          <Para>
+            Validation message for the HTML form control element. An empty
+            string means valid.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     hookExamplesContent={

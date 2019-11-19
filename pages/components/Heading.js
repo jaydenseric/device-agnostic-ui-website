@@ -56,18 +56,14 @@ const HeadingComponentPage = () => (
     }
     componentPropsContent={
       <Scroll>
-        <TypeCard
-          identity={{ name: 'id', idPrefix: 'prop' }}
-          type="String"
-          description={
-            <>
-              Sets the <LinkElement element="h1" /> element’s{' '}
-              <LinkElement element="h1" attribute="id" /> attribute and wraps
-              children with a <LinkComponent component="LinkText" /> component
-              that links to it.
-            </>
-          }
-        />
+        <TypeCard identity={{ name: 'id', idPrefix: 'prop' }} type="String">
+          <Para>
+            Sets the <LinkElement element="h1" /> element’s{' '}
+            <LinkElement element="h1" attribute="id" /> attribute and wraps
+            children with a <LinkComponent component="LinkText" /> component
+            that links to it.
+          </Para>
+        </TypeCard>
         <TypeCard
           identity={{ name: 'children', idPrefix: 'prop' }}
           type={
@@ -76,24 +72,19 @@ const HeadingComponentPage = () => (
             </LinkText>
           }
           required
-          description={
-            <>
-              Content contained in the <LinkElement element="h1" /> element, or
-              in a <LinkComponent component="LinkText" /> if the{' '}
-              <LinkComponent component="Heading" prop="id" /> prop is specified.
-            </>
-          }
-        />
-        <TypeCard
-          identity={{ name: '...props', idPrefix: 'prop' }}
-          type="…*"
-          description={
-            <>
-              Additional props for the container; a <LinkElement element="h1" />{' '}
-              element.
-            </>
-          }
-        />
+        >
+          <Para>
+            Content contained in the <LinkElement element="h1" /> element, or in
+            a <LinkComponent component="LinkText" /> if the{' '}
+            <LinkComponent component="Heading" prop="id" /> prop is specified.
+          </Para>
+        </TypeCard>
+        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+          <Para>
+            Additional props for the container; a <LinkElement element="h1" />{' '}
+            element.
+          </Para>
+        </TypeCard>
       </Scroll>
     }
     componentExamplesContent={
