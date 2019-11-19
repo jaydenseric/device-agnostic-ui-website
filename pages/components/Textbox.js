@@ -1,9 +1,26 @@
 import { Code, LinkText, Para, Scroll, Textbox } from 'device-agnostic-ui'
+import { Fragment } from 'react'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
 import { LinkElement } from '../../components/LinkElement'
 import { TypeCard } from '../../components/TypeCard'
 import { Textbox as TextboxComponentMeta } from '../../meta/components'
+
+const TEXTBOX_INPUT_TYPES = [
+  'date',
+  'datetime-local',
+  'email',
+  'month',
+  'number',
+  'password',
+  'search',
+  'tel',
+  'text',
+  'textarea',
+  'time',
+  'url',
+  'week'
+]
 
 const TextboxComponentPage = () => (
   <ComponentPage
@@ -19,9 +36,24 @@ const TextboxComponentPage = () => (
         <TypeCard identity={{ name: 'type', idPrefix: 'prop' }} type="String">
           <Para>
             Either <Code>textarea</Code> to create a{' '}
-            <LinkElement element="textarea" />, or a suitable{' '}
-            <LinkElement element="input" attribute="type" /> for a text or
-            number <LinkElement element="input" />.
+            <LinkElement element="textarea" />, or a text based{' '}
+            <LinkElement element="input" />{' '}
+            <LinkElement element="input" attribute="type" />:
+            {TEXTBOX_INPUT_TYPES.map((type, index) => (
+              <Fragment key={type}>
+                {index === 0
+                  ? ' '
+                  : index !== TEXTBOX_INPUT_TYPES.length - 1
+                  ? ', '
+                  : ' or '}
+                <LinkText
+                  href={`https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/${type}`}
+                >
+                  <Code>{type}</Code>
+                </LinkText>
+              </Fragment>
+            ))}
+            .
           </Para>
         </TypeCard>
         <TypeCard
@@ -93,17 +125,6 @@ const TextboxComponentPage = () => (
           result={<Textbox validationMessage="Custom message." />}
         />
         <CodeExample
-          caption="A number input."
-          code={
-            /* syntax-highlight jsx */ `
-              import { Textbox } from 'device-agnostic-ui'
-
-              <Textbox type="number" />
-            `
-          }
-          result={<Textbox type="number" />}
-        />
-        <CodeExample
           caption="A textarea."
           code={
             /* syntax-highlight jsx */ `
@@ -113,6 +134,72 @@ const TextboxComponentPage = () => (
             `
           }
           result={<Textbox type="textarea" />}
+        />
+        <CodeExample
+          caption="A password input."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
+
+              <Textbox type="password" />
+            `
+          }
+          result={<Textbox type="password" />}
+        />
+        <CodeExample
+          caption="A number input."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
+
+              <Textbox type="number" defaultValue="1" />
+            `
+          }
+          result={<Textbox type="number" defaultValue="1" />}
+        />
+        <CodeExample
+          caption="An email input."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
+
+              <Textbox type="email" defaultValue="me@jaydenseric.com" />
+            `
+          }
+          result={<Textbox type="email" defaultValue="me@jaydenseric.com" />}
+        />
+        <CodeExample
+          caption="A telephone number input."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
+
+              <Textbox type="tel" defaultValue="0491 570 156" />
+            `
+          }
+          result={<Textbox type="tel" defaultValue="0491 570 156" />}
+        />
+        <CodeExample
+          caption="A date input."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
+
+              <Textbox type="date" defaultValue="2001-09-11" />
+            `
+          }
+          result={<Textbox type="date" defaultValue="2001-09-11" />}
+        />
+        <CodeExample
+          caption="A search input."
+          code={
+            /* syntax-highlight jsx */ `
+              import { Textbox } from 'device-agnostic-ui'
+
+              <Textbox type="search" defaultValue="Cats" />
+            `
+          }
+          result={<Textbox type="search" defaultValue="Cats" />}
         />
       </>
     }
