@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 
 export const PageHeader = ({ heading, children }) => (
   <header>
-    <Heading style={{ fontSize: 'var(--daui-h1-font-size)' }}>
-      {heading}
-    </Heading>
+    <Heading size={1}>{heading}</Heading>
     {children}
     <style jsx>{`
       header {

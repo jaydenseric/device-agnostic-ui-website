@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export const Section = ({ level, heading, id, children }) => (
   <section>
     <header>
-      <Heading style={{ fontSize: `var(--daui-h${level}-font-size)` }} id={id}>
+      <Heading level={level} size={level} id={id}>
         {heading}
       </Heading>
     </header>

@@ -1,4 +1,4 @@
-import { Code, Heading, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
+import { Code, Heading, LinkText, Para, Scroll } from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeExample } from '../../components/CodeExample'
 import { ComponentPage } from '../../components/ComponentPage'
@@ -7,13 +7,19 @@ import { LinkElement } from '../../components/LinkElement'
 import { TypeCard } from '../../components/TypeCard'
 import { Heading as HeadingComponentMeta } from '../../meta/components'
 
+const HEADING_ELEMENT_URL =
+  'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements'
+
 const HeadingComponentPage = () => (
   <ComponentPage
     componentMeta={HeadingComponentMeta}
     componentIntro={
       <>
         <Para>
-          It implements the <LinkElement element="h1" /> element.
+          It implements the <LinkElement element="h1" />,{' '}
+          <LinkElement element="h2" />, <LinkElement element="h3" />,{' '}
+          <LinkElement element="h4" />, <LinkElement element="h5" />, or{' '}
+          <LinkElement element="h6" /> element.
         </Para>
         <Para>
           It should be nested under a sectioning element such as{' '}
@@ -24,43 +30,53 @@ const HeadingComponentPage = () => (
           </LinkText>
           .
         </Para>
-        <Para>
-          The{' '}
-          <Link href="/styles#stylesGlobalTheme" passHref>
-            <LinkText>global theme</LinkText>
-          </Link>{' '}
-          provides a range of responsive heading font size CSS variables that
-          can be manually applied:
-        </Para>
-        <List ordered>
-          <li>
-            <Code>--daui-h1-font-size</Code>
-          </li>
-          <li>
-            <Code>--daui-h2-font-size</Code>
-          </li>
-          <li>
-            <Code>--daui-h3-font-size</Code>
-          </li>
-          <li>
-            <Code>--daui-h4-font-size</Code>
-          </li>
-          <li>
-            <Code>--daui-h5-font-size</Code>
-          </li>
-          <li>
-            <Code>--daui-h6-font-size</Code>
-          </li>
-        </List>
       </>
     }
     componentPropsContent={
       <Scroll>
+        <TypeCard
+          identity={{ name: 'level', idPrefix: 'prop' }}
+          type={
+            <>
+              <Code>1</Code> | <Code>2</Code> | <Code>3</Code> | <Code>4</Code>{' '}
+              | <Code>5</Code> | <Code>6</Code>
+            </>
+          }
+          defaultValue="1"
+        >
+          <Para>
+            Sets the{' '}
+            <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText>{' '}
+            used, e.g. <LinkElement element="h1" />.
+          </Para>
+        </TypeCard>
+        <TypeCard
+          identity={{ name: 'size', idPrefix: 'prop' }}
+          type={
+            <>
+              <Code>1</Code> | <Code>2</Code> | <Code>3</Code> | <Code>4</Code>{' '}
+              | <Code>5</Code> | <Code>6</Code>
+            </>
+          }
+        >
+          <Para>
+            Sets the CSS <Code>font-size</Code> via a{' '}
+            <Link href="/styles#stylesGlobalTheme" passHref>
+              <LinkText>global theme</LinkText>
+            </Link>{' '}
+            CSS variable, e.g. <Code>--daui-h1-font-size</Code>. Omit if setting
+            a custom <Code>font-size</Code>.
+          </Para>
+        </TypeCard>
         <TypeCard identity={{ name: 'id', idPrefix: 'prop' }} type="String">
           <Para>
-            Sets the <LinkElement element="h1" /> element’s{' '}
-            <LinkElement element="h1" attribute="id" /> attribute and wraps
-            children with a <LinkComponent component="LinkText" /> component
+            Sets an{' '}
+            <LinkText href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">
+              <Code>id</Code>
+            </LinkText>{' '}
+            attribute on the{' '}
+            <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText> and
+            nests children in a <LinkComponent component="LinkText" /> component
             that links to it.
           </Para>
         </TypeCard>
@@ -74,15 +90,16 @@ const HeadingComponentPage = () => (
           required
         >
           <Para>
-            Content contained in the <LinkElement element="h1" /> element, or in
-            a <LinkComponent component="LinkText" /> if the{' '}
+            Content contained in the{' '}
+            <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText>,
+            nested in a <LinkComponent component="LinkText" /> if the{' '}
             <LinkComponent component="Heading" prop="id" /> prop is specified.
           </Para>
         </TypeCard>
         <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
           <Para>
-            Additional props for the container; a <LinkElement element="h1" />{' '}
-            element.
+            Additional props for the container; a{' '}
+            <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText>.
           </Para>
         </TypeCard>
       </Scroll>
@@ -95,14 +112,10 @@ const HeadingComponentPage = () => (
             /* syntax-highlight jsx */ `
               import { Heading } from 'device-agnostic-ui'
 
-              <Heading style={{ fontSize: 'var(--daui-h1-font-size)' }}>Heading</Heading>
+              <Heading size={1}>Heading</Heading>
             `
           }
-          result={
-            <Heading style={{ fontSize: 'var(--daui-h1-font-size)' }}>
-              Heading
-            </Heading>
-          }
+          result={<Heading size={1}>Heading</Heading>}
           screenshot
         />
         <CodeExample
@@ -111,19 +124,13 @@ const HeadingComponentPage = () => (
             /* syntax-highlight jsx */ `
               import { Heading } from 'device-agnostic-ui'
 
-              <Heading
-                id="heading"
-                style={{ fontSize: 'var(--daui-h2-font-size)' }}
-              >
+              <Heading level={2} size={2} id="heading">
                 Heading
               </Heading>
             `
           }
           result={
-            <Heading
-              id="heading"
-              style={{ fontSize: 'var(--daui-h2-font-size)' }}
-            >
+            <Heading level={2} size={2} id="heading">
               Heading
             </Heading>
           }
