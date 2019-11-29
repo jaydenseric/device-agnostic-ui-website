@@ -133,6 +133,41 @@ const IndexPage = () => (
             </Pre>
           </li>
           <li>
+            <Para>
+              <LinkText href="https://nextjs.org/docs#customizing-babel-config">
+                Customize the Babel config
+              </LinkText>
+              :
+            </Para>
+            <Pre>
+              <CodeSyntaxHighlighted
+                code={
+                  /* syntax-highlight json */ `
+                  {
+                    "presets": [
+                      [
+                        "next/babel",
+                        {
+                          "styled-jsx": {
+                            "optimizeForSpeed": false
+                          }
+                        }
+                      ]
+                    ]
+                  }
+                `
+                }
+              />
+            </Pre>
+            <Para>
+              Hopefully this won’t be necessary in the future, see{' '}
+              <LinkText href="https://github.com/zeit/styled-jsx/issues/602">
+                zeit/styled-jsx#602
+              </LinkText>
+              .
+            </Para>
+          </li>
+          <li>
             Setup the essential{' '}
             <Link href="/styles#global-styles" passHref>
               <LinkText>global styles</LinkText>
