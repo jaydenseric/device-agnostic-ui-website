@@ -1,4 +1,12 @@
-import { Code, LinkText, List, Margin, Para, Scroll } from 'device-agnostic-ui'
+import {
+  Code,
+  LinkText,
+  List,
+  Margin,
+  Para,
+  Pre,
+  Scroll
+} from 'device-agnostic-ui'
 import Link from 'next/link'
 import { CodeSyntaxHighlighted } from '../components/CodeSyntaxHighlighted'
 import { EmojiCard } from '../components/EmojiCard'
@@ -112,7 +120,9 @@ const IndexPage = () => (
           <li>
             <Para>
               Install from{' '}
-              <LinkText href="https://www.npmjs.com/">npm</LinkText>:{' '}
+              <LinkText href="https://www.npmjs.com/">npm</LinkText>:
+            </Para>
+            <Pre>
               <CodeSyntaxHighlighted
                 code={
                   /* syntax-highlight shell */ `
@@ -120,8 +130,7 @@ const IndexPage = () => (
                   `
                 }
               />
-              .
-            </Para>
+            </Pre>
           </li>
           <li>
             Setup the essential{' '}
