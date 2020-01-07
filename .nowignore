@@ -3,8 +3,6 @@ scripts
 .editorconfig
 .eslintignore
 .eslintrc.json
-.huskyrc.json
-.lintstagedrc.json
 .nowignore
 .prettierignore
 .prettierrc.json
