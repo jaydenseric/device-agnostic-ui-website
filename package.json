@@ -11,6 +11,7 @@
   "repository": "github:jaydenseric/device-agnostic-ui-website",
   "homepage": "https://github.com/jaydenseric/device-agnostic-ui-website#readme",
   "bugs": "https://github.com/jaydenseric/device-agnostic-ui-website/issues",
+  "funding": "https://github.com/sponsors/jaydenseric",
   "engines": {
     "node": ">=10"
   },
