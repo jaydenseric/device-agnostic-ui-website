@@ -1,12 +1,12 @@
-import { Code, Heading, Table, WordBreaks } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
+import { Code, Heading, Table, WordBreaks } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
 
 export const TypeCard = ({
   identity,
   type,
   required,
   defaultValue,
-  children
+  children,
 }) => (
   <article>
     {identity && (
@@ -45,15 +45,15 @@ export const TypeCard = ({
       }
     `}</style>
   </article>
-)
+);
 
 TypeCard.propTypes = {
   identity: PropTypes.exact({
     name: PropTypes.string.isRequired,
-    idPrefix: PropTypes.string.isRequired
+    idPrefix: PropTypes.string.isRequired,
   }),
   type: PropTypes.node.isRequired,
   required: PropTypes.bool,
   defaultValue: PropTypes.string,
-  children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};

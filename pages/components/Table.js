@@ -1,8 +1,8 @@
-import { Margin, Para, Table } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { Table as TableComponentMeta } from '../../meta/components'
+import { Margin, Para, Table } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { Table as TableComponentMeta } from '../../meta/components';
 
 const TableComponentPage = () => (
   <ComponentPage
@@ -107,6 +107,6 @@ const TableComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default TableComponentPage
+export default TableComponentPage;

@@ -1,5 +1,5 @@
-import { Heading, Para } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
+import { Heading, Para } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
 
 export const EmojiCard = ({ emoji, heading, children }) => (
   <article>
@@ -17,10 +17,10 @@ export const EmojiCard = ({ emoji, heading, children }) => (
       }
     `}</style>
   </article>
-)
+);
 
 EmojiCard.propTypes = {
   emoji: PropTypes.string.isRequired,
   heading: PropTypes.node.isRequired,
-  children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};

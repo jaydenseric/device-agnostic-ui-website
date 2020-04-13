@@ -1,21 +1,21 @@
-import { Code, Icon, LinkText, Para, Scroll } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Icon as IconComponentMeta } from '../../meta/components'
+import { Code, Icon, LinkText, Para, Scroll } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Icon as IconComponentMeta } from '../../meta/components';
 
-const IconCircleFilled = props => (
+const IconCircleFilled = (props) => (
   <Icon title="Circle filled" {...props}>
     <circle cx="50%" cy="50%" r="50%" stroke="none" />
   </Icon>
-)
+);
 
-const IconCircleOutline = props => (
+const IconCircleOutline = (props) => (
   <Icon title="Circle outline" {...props}>
     <circle cx="50%" cy="50%" r="14" strokeWidth="4" fill="none" />
   </Icon>
-)
+);
 
 const IconComponentPage = () => (
   <ComponentPage
@@ -139,6 +139,6 @@ const IconComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default IconComponentPage
+export default IconComponentPage;

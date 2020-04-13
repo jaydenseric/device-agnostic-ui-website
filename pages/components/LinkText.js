@@ -1,9 +1,9 @@
-import { LinkText, Margin, Para } from 'device-agnostic-ui'
-import Link from 'next/link'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { LinkText as LinkTextComponentMeta } from '../../meta/components'
+import { LinkText, Margin, Para } from 'device-agnostic-ui';
+import Link from 'next/link';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { LinkText as LinkTextComponentMeta } from '../../meta/components';
 
 const LinkTextComponentPage = () => (
   <ComponentPage
@@ -55,6 +55,6 @@ const LinkTextComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default LinkTextComponentPage
+export default LinkTextComponentPage;

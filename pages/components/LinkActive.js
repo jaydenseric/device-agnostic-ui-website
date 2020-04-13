@@ -5,12 +5,12 @@ import {
   LinkText,
   Margin,
   Nav,
-  Para
-} from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkActive as LinkActiveComponentMeta } from '../../meta/components'
+  Para,
+} from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkActive as LinkActiveComponentMeta } from '../../meta/components';
 
 const LinkActiveComponentPage = () => (
   <ComponentPage
@@ -71,6 +71,6 @@ const LinkActiveComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default LinkActiveComponentPage
+export default LinkActiveComponentPage;

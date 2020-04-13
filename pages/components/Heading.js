@@ -1,14 +1,14 @@
-import { Code, Heading, LinkText, Para, Scroll } from 'device-agnostic-ui'
-import Link from 'next/link'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Heading as HeadingComponentMeta } from '../../meta/components'
+import { Code, Heading, LinkText, Para, Scroll } from 'device-agnostic-ui';
+import Link from 'next/link';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Heading as HeadingComponentMeta } from '../../meta/components';
 
 const HEADING_ELEMENT_URL =
-  'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements'
+  'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements';
 
 const HeadingComponentPage = () => (
   <ComponentPage
@@ -138,6 +138,6 @@ const HeadingComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default HeadingComponentPage
+export default HeadingComponentPage;

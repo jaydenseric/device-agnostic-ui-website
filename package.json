@@ -40,14 +40,14 @@
     "imagemin-webp": "^5.1.0",
     "imagemin-zopfli": "^6.0.0",
     "now": "^16.7.3",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.4",
     "prismjs": "^1.20.0",
     "puppeteer": "^2.1.1"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier",
     "test:eslint": "eslint .",
-    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "test:prettier": "prettier -c .",
     "screenshots": "node scripts/screenshots",
     "build": "next build",
     "start": "next start",

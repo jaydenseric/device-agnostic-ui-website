@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export const Footer = ({ children }) => (
   <footer>
@@ -9,8 +9,8 @@ export const Footer = ({ children }) => (
       }
     `}</style>
   </footer>
-)
+);
 
 Footer.propTypes = {
-  children: PropTypes.node.isRequired
-}
+  children: PropTypes.node.isRequired,
+};

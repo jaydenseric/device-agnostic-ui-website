@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    ORIGIN: process.env.ORIGIN
+    ORIGIN: process.env.ORIGIN,
   },
   webpack(config, { isServer }) {
     if (!isServer)
@@ -8,13 +8,13 @@ module.exports = {
         name: 'device-agnostic-ui',
         test: /[\\/]node_modules[\\/]device-agnostic-ui[\\/]/,
         reuseExistingChunk: true,
-        priority: 50
-      }
+        priority: 50,
+      };
 
-    return config
+    return config;
   },
   experimental: {
     deferScripts: true,
-    granularChunks: true
-  }
-}
+    granularChunks: true,
+  },
+};

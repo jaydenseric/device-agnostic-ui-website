@@ -3,10 +3,10 @@ import {
   LinkCard,
   Para,
   Picture,
-  WordBreaks
-} from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
-import React from 'react'
+  WordBreaks,
+} from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export const ComponentLinkCard = React.forwardRef(
   ({ componentName, componentDescription, ...props }, ref) => (
@@ -58,11 +58,11 @@ export const ComponentLinkCard = React.forwardRef(
       `}</style>
     </LinkCard>
   )
-)
+);
 
-ComponentLinkCard.displayName = 'ComponentLinkCard'
+ComponentLinkCard.displayName = 'ComponentLinkCard';
 
 ComponentLinkCard.propTypes = {
   componentName: PropTypes.string.isRequired,
-  componentDescription: PropTypes.string.isRequired
-}
+  componentDescription: PropTypes.string.isRequired,
+};

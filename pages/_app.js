@@ -4,11 +4,11 @@ import {
   LinkText,
   Nav,
   stylesGlobal,
-  stylesGlobalTheme
-} from 'device-agnostic-ui'
-import Head from 'next/head'
-import { DeviceAgnosticUILogo } from '../components/DeviceAgnosticUILogo'
-import { Footer } from '../components/Footer'
+  stylesGlobalTheme,
+} from 'device-agnostic-ui';
+import Head from 'next/head';
+import { DeviceAgnosticUILogo } from '../components/DeviceAgnosticUILogo';
+import { Footer } from '../components/Footer';
 
 // eslint-disable-next-line react/prop-types
 const App = ({ Component, pageProps }) => (
@@ -53,6 +53,6 @@ const App = ({ Component, pageProps }) => (
       {stylesGlobal}
     </style>
   </>
-)
+);
 
-export default App
+export default App;

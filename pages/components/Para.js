@@ -1,8 +1,8 @@
-import { Margin, Para } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { Para as ParaComponentMeta } from '../../meta/components'
+import { Margin, Para } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { Para as ParaComponentMeta } from '../../meta/components';
 
 const ParaComponentPage = () => (
   <ComponentPage
@@ -42,6 +42,6 @@ const ParaComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default ParaComponentPage
+export default ParaComponentPage;

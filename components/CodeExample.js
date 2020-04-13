@@ -1,9 +1,9 @@
-import { Pre } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
-import { CodeSyntaxHighlighted } from './CodeSyntaxHighlighted'
+import { Pre } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
+import { CodeSyntaxHighlighted } from './CodeSyntaxHighlighted';
 
-const BORDER_WIDTH = '2px'
-const SPACING = '0.5em'
+const BORDER_WIDTH = '2px';
+const SPACING = '0.5em';
 
 export const CodeExample = ({ caption, code, result, screenshot }) => (
   <figure>
@@ -68,11 +68,11 @@ export const CodeExample = ({ caption, code, result, screenshot }) => (
       }
     `}</style>
   </figure>
-)
+);
 
 CodeExample.propTypes = {
   caption: PropTypes.node,
   code: PropTypes.string.isRequired,
   result: PropTypes.node,
-  screenshot: PropTypes.bool
-}
+  screenshot: PropTypes.bool,
+};

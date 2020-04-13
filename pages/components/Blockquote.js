@@ -1,8 +1,8 @@
-import { Blockquote, LinkText, Margin, Para } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { Blockquote as BlockquoteComponentMeta } from '../../meta/components'
+import { Blockquote, LinkText, Margin, Para } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { Blockquote as BlockquoteComponentMeta } from '../../meta/components';
 
 const BlockquoteComponentPage = () => (
   <ComponentPage
@@ -87,6 +87,6 @@ const BlockquoteComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default BlockquoteComponentPage
+export default BlockquoteComponentPage;

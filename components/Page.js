@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import PropTypes from 'prop-types'
+import Head from 'next/head';
+import PropTypes from 'prop-types';
 
 export const Page = ({
   titlePrefix = 'Device Agnostic UI - ',
   title,
   description,
   imageUrl = `${process.env.ORIGIN}/static/thumbnail.png`,
-  children
+  children,
 }) => (
   <>
     <Head>
@@ -35,12 +35,12 @@ export const Page = ({
     </Head>
     {children}
   </>
-)
+);
 
 Page.propTypes = {
   titlePrefix: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageUrl: PropTypes.string,
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+};

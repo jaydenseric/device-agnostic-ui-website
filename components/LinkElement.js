@@ -1,5 +1,5 @@
-import { Code, LinkText } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
+import { Code, LinkText } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
 
 export const LinkElement = ({ type = 'HTML', element, attribute }) => (
   <LinkText
@@ -13,10 +13,10 @@ export const LinkElement = ({ type = 'HTML', element, attribute }) => (
   >
     <Code>{attribute ? attribute : `<${element}>`}</Code>
   </LinkText>
-)
+);
 
 LinkElement.propTypes = {
   type: PropTypes.oneOf(['HTML', 'SVG']),
   element: PropTypes.string.isRequired,
-  attribute: PropTypes.string
-}
+  attribute: PropTypes.string,
+};

@@ -1,10 +1,10 @@
-import { Code, LinkText, Para, Scroll, Textbox } from 'device-agnostic-ui'
-import { Fragment } from 'react'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Textbox as TextboxComponentMeta } from '../../meta/components'
+import { Code, LinkText, Para, Scroll, Textbox } from 'device-agnostic-ui';
+import { Fragment } from 'react';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Textbox as TextboxComponentMeta } from '../../meta/components';
 
 const TEXTBOX_INPUT_TYPES = [
   'date',
@@ -19,8 +19,8 @@ const TEXTBOX_INPUT_TYPES = [
   'textarea',
   'time',
   'url',
-  'week'
-]
+  'week',
+];
 
 const TextboxComponentPage = () => (
   <ComponentPage
@@ -204,6 +204,6 @@ const TextboxComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default TextboxComponentPage
+export default TextboxComponentPage;

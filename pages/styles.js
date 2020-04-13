@@ -5,30 +5,30 @@ import {
   Margin,
   Para,
   WordBreaks,
-  stylesSyntaxHighlightingPrism
-} from 'device-agnostic-ui'
-import { CodeExample } from '../components/CodeExample'
-import { LinkComponent } from '../components/LinkComponent'
-import { LinkElement } from '../components/LinkElement'
-import { Page } from '../components/Page'
-import { PageHeader } from '../components/PageHeader'
-import { Section } from '../components/Section'
+  stylesSyntaxHighlightingPrism,
+} from 'device-agnostic-ui';
+import { CodeExample } from '../components/CodeExample';
+import { LinkComponent } from '../components/LinkComponent';
+import { LinkElement } from '../components/LinkElement';
+import { Page } from '../components/Page';
+import { PageHeader } from '../components/PageHeader';
+import { Section } from '../components/Section';
 
-const linkPrism = <LinkText href="https://prismjs.com">Prism</LinkText>
+const linkPrism = <LinkText href="https://prismjs.com">Prism</LinkText>;
 
-const CodeSyntaxHighlighted = props => (
+const CodeSyntaxHighlighted = (props) => (
   <>
     <Code {...props} className={stylesSyntaxHighlightingPrism.className} />
     {stylesSyntaxHighlightingPrism.styles}
   </>
-)
+);
 
-const HtmlSyntaxHighlighted = props => (
+const HtmlSyntaxHighlighted = (props) => (
   <>
     <Html {...props} className={stylesSyntaxHighlightingPrism.className} />
     {stylesSyntaxHighlightingPrism.styles}
   </>
-)
+);
 
 const StylesPage = () => (
   <Page
@@ -205,7 +205,7 @@ const StylesPage = () => (
               <CodeSyntaxHighlighted
                 dangerouslySetInnerHTML={{
                   __html:
-                    '<span class="token keyword">scalar</span> <span class="token class-name">Upload</span>'
+                    '<span class="token keyword">scalar</span> <span class="token class-name">Upload</span>',
                 }}
               />
             }
@@ -242,7 +242,7 @@ const StylesPage = () => (
                   __html: `
                     <h3>Example</h3>
                     <pre><code><span class="token keyword">scalar</span> <span class="token class-name">Upload</span></code></pre>
-                  `
+                  `,
                 }}
               />
             }
@@ -282,6 +282,6 @@ const StylesPage = () => (
       </Section>
     </Section>
   </Page>
-)
+);
 
-export default StylesPage
+export default StylesPage;

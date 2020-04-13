@@ -1,10 +1,10 @@
-import { Heading, Para, Scroll, WordBreaks } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { WordBreaks as WordBreaksComponentMeta } from '../../meta/components'
+import { Heading, Para, Scroll, WordBreaks } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { WordBreaks as WordBreaksComponentMeta } from '../../meta/components';
 
 const WordBreaksComponentPage = () => (
   <ComponentPage
@@ -88,6 +88,6 @@ const WordBreaksComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default WordBreaksComponentPage
+export default WordBreaksComponentPage;

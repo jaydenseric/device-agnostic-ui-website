@@ -1,21 +1,21 @@
-const childProcess = require('child_process')
-const fs = require('fs')
-const path = require('path')
-const util = require('util')
+const childProcess = require('child_process');
+const fs = require('fs');
+const path = require('path');
+const util = require('util');
 // eslint-disable-next-line node/no-unpublished-require
-const imagemin = require('imagemin')
+const imagemin = require('imagemin');
 // eslint-disable-next-line node/no-unpublished-require
-const imageminPngquant = require('imagemin-pngquant')
+const imageminPngquant = require('imagemin-pngquant');
 // eslint-disable-next-line node/no-unpublished-require
-const imageminWebp = require('imagemin-webp')
+const imageminWebp = require('imagemin-webp');
 // eslint-disable-next-line node/no-unpublished-require
-const imageminZopfli = require('imagemin-zopfli')
+const imageminZopfli = require('imagemin-zopfli');
 // eslint-disable-next-line node/no-unpublished-require
-const puppeteer = require('puppeteer')
+const puppeteer = require('puppeteer');
 
-const exec = util.promisify(childProcess.exec)
-const readdir = util.promisify(fs.readdir)
-const mkdir = util.promisify(fs.mkdir)
+const exec = util.promisify(childProcess.exec);
+const readdir = util.promisify(fs.readdir);
+const mkdir = util.promisify(fs.mkdir);
 
 /**
  * Recursively deletes a directory, if it exists.
@@ -23,9 +23,9 @@ const mkdir = util.promisify(fs.mkdir)
  */
 async function deleteDirectory(path) {
   try {
-    await exec(`rm -rf ${path}`)
+    await exec(`rm -rf ${path}`);
   } catch (error) {
-    console.error(`Failed to delete directory “${path}”:`, error)
+    console.error(`Failed to delete directory “${path}”:`, error);
   }
 }
 
@@ -41,17 +41,17 @@ async function optimizePngToPngAndWebm(pngPath, destinationPath) {
       destination: destinationPath,
       plugins: [
         imageminPngquant({ quality: [0.85, 0.85], speed: 1, strip: true }),
-        imageminZopfli({ more: true })
-      ]
-    })
+        imageminZopfli({ more: true }),
+      ],
+    });
 
     // Create the screenshot WebP from the PNG.
     await imagemin([pngPath], {
       destination: destinationPath,
-      plugins: [imageminWebp({ nearLossless: 85 })]
-    })
+      plugins: [imageminWebp({ nearLossless: 85 })],
+    });
   } catch (error) {
-    console.error(`Failed to optimize PNG “${pngPath}”:`, error)
+    console.error(`Failed to optimize PNG “${pngPath}”:`, error);
   }
 }
 
@@ -70,28 +70,28 @@ async function screenshotPageElement(
   screenshotPath,
   screenshotFilenamePrefix
 ) {
-  console.info(`Screenshotting ${pageUrl}`)
+  console.info(`Screenshotting ${pageUrl}`);
 
-  const pngPathLight = `${screenshotPath}/${screenshotFilenamePrefix}-light.png`
-  const pngPathDark = `${screenshotPath}/${screenshotFilenamePrefix}-dark.png`
-  const page = await browser.newPage()
+  const pngPathLight = `${screenshotPath}/${screenshotFilenamePrefix}-light.png`;
+  const pngPathDark = `${screenshotPath}/${screenshotFilenamePrefix}-dark.png`;
+  const page = await browser.newPage();
 
   try {
-    await page.setViewport({ width: 720, height: 720, deviceScaleFactor: 4 })
-    await page.goto(pageUrl)
+    await page.setViewport({ width: 720, height: 720, deviceScaleFactor: 4 });
+    await page.goto(pageUrl);
 
-    const targetElement = await page.$(`#${elementId}`)
+    const targetElement = await page.$(`#${elementId}`);
     if (!targetElement)
-      throw new Error(`Element ID “${elementId}” missing at URL ${pageUrl}.`)
+      throw new Error(`Element ID “${elementId}” missing at URL ${pageUrl}.`);
 
-    await page.evaluateHandle(elementId => {
+    await page.evaluateHandle((elementId) => {
       // Width and padding should add up to 320px, the narrowest supported
       // viewport. The padding must be able to contain any box-shadows.
       // Positioning the target element off the viewport guarantees no styles
       // from ancestors make their way into the screenshot.
 
       // eslint-disable-next-line no-undef
-      const sheet = document.createElement('style')
+      const sheet = document.createElement('style');
 
       sheet.innerHTML = `
         #${elementId} {
@@ -113,38 +113,38 @@ async function screenshotPageElement(
           );
           overflow: hidden;
         }
-      `
+      `;
 
       // eslint-disable-next-line no-undef
-      document.body.appendChild(sheet)
-    }, elementId)
+      document.body.appendChild(sheet);
+    }, elementId);
 
     // Create the light mode screenshot PNG.
     await page.emulateMediaFeatures([
       {
         name: 'prefers-color-scheme',
-        value: 'light'
-      }
-    ])
-    await targetElement.screenshot({ path: pngPathLight })
+        value: 'light',
+      },
+    ]);
+    await targetElement.screenshot({ path: pngPathLight });
 
     // Create the dark mode screenshot PNG.
     await page.emulateMediaFeatures([
       {
         name: 'prefers-color-scheme',
-        value: 'dark'
-      }
-    ])
-    await targetElement.screenshot({ path: pngPathDark })
+        value: 'dark',
+      },
+    ]);
+    await targetElement.screenshot({ path: pngPathDark });
   } finally {
-    await page.close()
+    await page.close();
   }
 
   // Convert the PNG images to optimized PNG and WebM images.
   await Promise.all([
     optimizePngToPngAndWebm(pngPathLight, screenshotPath),
-    optimizePngToPngAndWebm(pngPathDark, screenshotPath)
-  ])
+    optimizePngToPngAndWebm(pngPathDark, screenshotPath),
+  ]);
 }
 
 /**
@@ -155,10 +155,10 @@ async function screenshotPageElement(
 async function getComponentNames(componentPath) {
   try {
     return (await readdir(componentPath))
-      .map(filename => path.basename(filename, '.js'))
-      .filter(name => name !== 'index')
+      .map((filename) => path.basename(filename, '.js'))
+      .filter((name) => name !== 'index');
   } catch (error) {
-    console.error(`Failed to get component names:`, error)
+    console.error(`Failed to get component names:`, error);
   }
 }
 
@@ -177,22 +177,23 @@ async function updateScreenshots(
 ) {
   try {
     // If updating all component screenshots, clean the screenshot directory.
-    if (!componentNames) await deleteDirectory(screenshotPath)
+    if (!componentNames) await deleteDirectory(screenshotPath);
 
     // Ensure the screenshot directory exists.
-    await mkdir(screenshotPath, { recursive: true })
+    await mkdir(screenshotPath, { recursive: true });
 
-    if (!componentNames) componentNames = await getComponentNames(componentPath)
+    if (!componentNames)
+      componentNames = await getComponentNames(componentPath);
 
     console.info(
       `Screenshotting element with ID “${elementId}” in ${componentNames.length} pages…`
-    )
+    );
 
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch();
 
     try {
       for (let name of componentNames) {
-        const pageUrl = `http://localhost:3000/components/${name}`
+        const pageUrl = `http://localhost:3000/components/${name}`;
 
         try {
           await screenshotPageElement(
@@ -201,28 +202,28 @@ async function updateScreenshots(
             elementId,
             screenshotPath,
             name
-          )
+          );
         } catch (error) {
-          console.error(`Screenshot failed for URL ${pageUrl}:`, error)
+          console.error(`Screenshot failed for URL ${pageUrl}:`, error);
         }
       }
     } finally {
-      await browser.close()
+      await browser.close();
     }
   } catch (error) {
-    console.error('Update screenshots failed:', error)
+    console.error('Update screenshots failed:', error);
   }
 }
 
 const componentNames = process.argv.slice(2).reduce((accumulator, arg) => {
-  const [key, value] = arg.split('=')
-  if (key === 'component') accumulator.push(value)
-  return accumulator
-}, [])
+  const [key, value] = arg.split('=');
+  if (key === 'component') accumulator.push(value);
+  return accumulator;
+}, []);
 
 updateScreenshots(
   'pages/components',
   'daui-screenshot-target',
   'public/static/screenshots',
   componentNames.length ? componentNames : undefined
-)
+);

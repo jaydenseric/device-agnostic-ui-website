@@ -1,8 +1,8 @@
-import { Code, LinkText, Margin, Para } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { Code as CodeComponentMeta } from '../../meta/components'
+import { Code, LinkText, Margin, Para } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { Code as CodeComponentMeta } from '../../meta/components';
 
 const CodeComponentPage = () => (
   <ComponentPage
@@ -64,6 +64,6 @@ const CodeComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default CodeComponentPage
+export default CodeComponentPage;

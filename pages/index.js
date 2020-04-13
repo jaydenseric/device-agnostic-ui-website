@@ -5,15 +5,15 @@ import {
   Margin,
   Para,
   Pre,
-  Scroll
-} from 'device-agnostic-ui'
-import Link from 'next/link'
-import { CodeSyntaxHighlighted } from '../components/CodeSyntaxHighlighted'
-import { EmojiCard } from '../components/EmojiCard'
-import { LinkComponent } from '../components/LinkComponent'
-import { Page } from '../components/Page'
-import { PageHeader } from '../components/PageHeader'
-import { Section } from '../components/Section'
+  Scroll,
+} from 'device-agnostic-ui';
+import Link from 'next/link';
+import { CodeSyntaxHighlighted } from '../components/CodeSyntaxHighlighted';
+import { EmojiCard } from '../components/EmojiCard';
+import { LinkComponent } from '../components/LinkComponent';
+import { Page } from '../components/Page';
+import { PageHeader } from '../components/PageHeader';
+import { Section } from '../components/Section';
 
 const IndexPage = () => (
   <Page
@@ -185,6 +185,6 @@ const IndexPage = () => (
       </Margin>
     </Section>
   </Page>
-)
+);
 
-export default IndexPage
+export default IndexPage;

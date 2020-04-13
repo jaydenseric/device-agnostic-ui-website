@@ -4,26 +4,26 @@ import {
   LinkText,
   Para,
   Scroll,
-  Toggle
-} from 'device-agnostic-ui'
-import React from 'react'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Toggle as ToggleComponentMeta } from '../../meta/components'
+  Toggle,
+} from 'device-agnostic-ui';
+import React from 'react';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Toggle as ToggleComponentMeta } from '../../meta/components';
 
 const InputRefExample = () => {
-  const ref = React.useRef()
-  const onClick = () => ref.current.focus()
+  const ref = React.useRef();
+  const onClick = () => ref.current.focus();
 
   return (
     <>
       <Toggle inputProps={{ type: 'checkbox', ref }} />{' '}
       <Button onClick={onClick}>Focus</Button>
     </>
-  )
-}
+  );
+};
 
 const ToggleComponentPage = () => (
   <ComponentPage
@@ -178,7 +178,7 @@ const ToggleComponentPage = () => (
                   type: 'radio',
                   name: 'options',
                   value: 'a',
-                  defaultChecked: true
+                  defaultChecked: true,
                 }}
               >
                 Label A
@@ -187,7 +187,7 @@ const ToggleComponentPage = () => (
                 inputProps={{
                   type: 'radio',
                   name: 'options',
-                  value: 'b'
+                  value: 'b',
                 }}
               >
                 Label B
@@ -223,6 +223,6 @@ const ToggleComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default ToggleComponentPage
+export default ToggleComponentPage;

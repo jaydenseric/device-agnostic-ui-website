@@ -1,8 +1,8 @@
-import { IconTick, Margin, Para } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { IconTick as IconTickComponentMeta } from '../../meta/components'
+import { IconTick, Margin, Para } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { IconTick as IconTickComponentMeta } from '../../meta/components';
 
 const IconComponentPage = () => (
   <ComponentPage
@@ -37,6 +37,6 @@ const IconComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default IconComponentPage
+export default IconComponentPage;

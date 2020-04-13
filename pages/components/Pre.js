@@ -1,8 +1,8 @@
-import { Code, Margin, Para, Pre } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { Pre as PreComponentMeta } from '../../meta/components'
+import { Code, Margin, Para, Pre } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { Pre as PreComponentMeta } from '../../meta/components';
 
 const PreComponentPage = () => (
   <ComponentPage
@@ -51,6 +51,6 @@ const PreComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default PreComponentPage
+export default PreComponentPage;

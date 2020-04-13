@@ -1,10 +1,10 @@
-import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
-import Link from 'next/link'
-import { CodeExample } from '../../components/CodeExample'
-import { HookPage } from '../../components/HookPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { TypeCard } from '../../components/TypeCard'
-import { useCustomValidity as useCustomValidityMeta } from '../../meta/hooks'
+import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui';
+import Link from 'next/link';
+import { CodeExample } from '../../components/CodeExample';
+import { HookPage } from '../../components/HookPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { TypeCard } from '../../components/TypeCard';
+import { useCustomValidity as useCustomValidityMeta } from '../../meta/hooks';
 
 const UseCustomValidityHookPage = () => (
   <HookPage
@@ -92,6 +92,6 @@ const UseCustomValidityHookPage = () => (
       />
     }
   />
-)
+);
 
-export default UseCustomValidityHookPage
+export default UseCustomValidityHookPage;

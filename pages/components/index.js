@@ -1,37 +1,37 @@
-import { LinkActive, Scroll, Toggle } from 'device-agnostic-ui'
-import { useRouter } from 'next/router'
-import React from 'react'
-import { ComponentLinkCard } from '../../components/ComponentLinkCard'
-import { Page } from '../../components/Page'
-import { PageHeader } from '../../components/PageHeader'
-import * as componentsMeta from '../../meta/components'
-import * as componentsTags from '../../meta/tags'
+import { LinkActive, Scroll, Toggle } from 'device-agnostic-ui';
+import { useRouter } from 'next/router';
+import React from 'react';
+import { ComponentLinkCard } from '../../components/ComponentLinkCard';
+import { Page } from '../../components/Page';
+import { PageHeader } from '../../components/PageHeader';
+import * as componentsMeta from '../../meta/components';
+import * as componentsTags from '../../meta/tags';
 
 const ComponentsPage = () => {
-  const router = useRouter()
+  const router = useRouter();
   const [filterTags, setFilterTags] = React.useState(
     router.query.tags ? router.query.tags.split(',').sort() : []
-  )
+  );
 
   const onTagToggleChange = ({ target: { value, checked } }) => {
     const newFilterTags = checked
       ? [...filterTags, value].sort()
-      : filterTags.filter(tag => tag !== value)
+      : filterTags.filter((tag) => tag !== value);
 
-    setFilterTags(newFilterTags)
+    setFilterTags(newFilterTags);
 
     const href = newFilterTags.length
       ? `${router.pathname}?tags=${newFilterTags.join(',')}`
-      : router.pathname
+      : router.pathname;
 
-    router.push(href, href, { shallow: true })
-  }
+    router.push(href, href, { shallow: true });
+  };
 
   const componentsMetaFiltered = filterTags.length
     ? Object.values(componentsMeta).filter(({ tags }) =>
         tags.some(({ tag }) => filterTags.includes(tag))
       )
-    : Object.values(componentsMeta)
+    : Object.values(componentsMeta);
 
   return (
     <Page title="Components" description="Device Agnostic UI components.">
@@ -44,7 +44,7 @@ const ComponentsPage = () => {
               type: 'checkbox',
               value: tag,
               checked: filterTags.includes(tag),
-              onChange: onTagToggleChange
+              onChange: onTagToggleChange,
             }}
           >
             {label}
@@ -64,11 +64,11 @@ const ComponentsPage = () => {
         </Scroll>
       )}
     </Page>
-  )
-}
+  );
+};
 
 // Disable Next.js automatic prerendering, as it causes an empty router query
 // object in SSR.
-ComponentsPage.getInitialProps = () => ({})
+ComponentsPage.getInitialProps = () => ({});
 
-export default ComponentsPage
+export default ComponentsPage;

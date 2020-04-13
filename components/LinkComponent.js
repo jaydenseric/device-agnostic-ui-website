@@ -1,6 +1,6 @@
-import { Code, LinkText } from 'device-agnostic-ui'
-import Link from 'next/link'
-import PropTypes from 'prop-types'
+import { Code, LinkText } from 'device-agnostic-ui';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 export const LinkComponent = ({ component, prop }) => (
   <Link
@@ -11,9 +11,9 @@ export const LinkComponent = ({ component, prop }) => (
       <Code>{prop ? prop : `<${component}>`}</Code>
     </LinkText>
   </Link>
-)
+);
 
 LinkComponent.propTypes = {
   component: PropTypes.string.isRequired,
-  prop: PropTypes.string
-}
+  prop: PropTypes.string,
+};

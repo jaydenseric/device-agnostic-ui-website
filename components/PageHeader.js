@@ -1,5 +1,5 @@
-import { Heading } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
+import { Heading } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
 
 export const PageHeader = ({ heading, children }) => (
   <header>
@@ -11,9 +11,9 @@ export const PageHeader = ({ heading, children }) => (
       }
     `}</style>
   </header>
-)
+);
 
 PageHeader.propTypes = {
   heading: PropTypes.node.isRequired,
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+};

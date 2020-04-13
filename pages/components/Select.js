@@ -1,10 +1,10 @@
-import { Code, LinkText, Para, Scroll, Select } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Select as SelectComponentMeta } from '../../meta/components'
+import { Code, LinkText, Para, Scroll, Select } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Select as SelectComponentMeta } from '../../meta/components';
 
 const SelectComponentPage = () => (
   <ComponentPage
@@ -174,6 +174,6 @@ const SelectComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default SelectComponentPage
+export default SelectComponentPage;

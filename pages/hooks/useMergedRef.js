@@ -1,9 +1,9 @@
-import { Code, LinkText, Margin, Para, Scroll } from 'device-agnostic-ui'
-import Link from 'next/link'
-import { CodeExample } from '../../components/CodeExample'
-import { HookPage } from '../../components/HookPage'
-import { TypeCard } from '../../components/TypeCard'
-import { useMergedRef as useMergedRefMeta } from '../../meta/hooks'
+import { Code, LinkText, Margin, Para, Scroll } from 'device-agnostic-ui';
+import Link from 'next/link';
+import { CodeExample } from '../../components/CodeExample';
+import { HookPage } from '../../components/HookPage';
+import { TypeCard } from '../../components/TypeCard';
+import { useMergedRef as useMergedRefMeta } from '../../meta/hooks';
 
 const UseMergedRefHookPage = () => (
   <HookPage
@@ -85,6 +85,6 @@ const UseMergedRefHookPage = () => (
       />
     }
   />
-)
+);
 
-export default UseMergedRefHookPage
+export default UseMergedRefHookPage;

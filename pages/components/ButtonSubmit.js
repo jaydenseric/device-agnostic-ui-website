@@ -1,10 +1,10 @@
-import { ButtonSubmit, Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { ButtonSubmit as ButtonSubmitComponentMeta } from '../../meta/components'
+import { ButtonSubmit, Code, LinkText, Para, Scroll } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { ButtonSubmit as ButtonSubmitComponentMeta } from '../../meta/components';
 
 const ButtonSubmitComponentPage = () => (
   <ComponentPage
@@ -104,6 +104,6 @@ const ButtonSubmitComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default ButtonSubmitComponentPage
+export default ButtonSubmitComponentPage;

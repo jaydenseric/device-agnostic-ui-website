@@ -1,10 +1,10 @@
-import { LinkCard, Para, Picture, Scroll } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { LinkCard as LinkCardComponentMeta } from '../../meta/components'
+import { LinkCard, Para, Picture, Scroll } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { LinkCard as LinkCardComponentMeta } from '../../meta/components';
 
 const LinkCardComponentPage = () => (
   <ComponentPage
@@ -97,6 +97,6 @@ const LinkCardComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default LinkCardComponentPage
+export default LinkCardComponentPage;

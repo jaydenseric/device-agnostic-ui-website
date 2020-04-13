@@ -1,10 +1,10 @@
-import { Code, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
-import React from 'react'
-import stripIndent from 'strip-indent'
+import { Code, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
+import React from 'react';
+import stripIndent from 'strip-indent';
 
 export const CodeSyntaxHighlighted = ({ code }) => {
-  const __html = React.useMemo(() => stripIndent(code).trim(), [code])
+  const __html = React.useMemo(() => stripIndent(code).trim(), [code]);
   return (
     <>
       <Code
@@ -13,9 +13,9 @@ export const CodeSyntaxHighlighted = ({ code }) => {
       />
       {stylesSyntaxHighlightingPrism.styles}
     </>
-  )
-}
+  );
+};
 
 CodeSyntaxHighlighted.propTypes = {
-  code: PropTypes.string.isRequired
-}
+  code: PropTypes.string.isRequired,
+};

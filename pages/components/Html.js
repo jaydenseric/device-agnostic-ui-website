@@ -1,9 +1,9 @@
-import { Code, Html, LinkText, List, Margin, Para } from 'device-agnostic-ui'
-import Link from 'next/link'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { Html as HtmlComponentMeta } from '../../meta/components'
+import { Code, Html, LinkText, List, Margin, Para } from 'device-agnostic-ui';
+import Link from 'next/link';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { Html as HtmlComponentMeta } from '../../meta/components';
 
 const HtmlComponentPage = () => (
   <ComponentPage
@@ -232,6 +232,6 @@ const HtmlComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default HtmlComponentPage
+export default HtmlComponentPage;

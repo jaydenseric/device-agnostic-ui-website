@@ -1,5 +1,5 @@
-import { Heading } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
+import { Heading } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
 
 export const Section = ({ level, heading, id, children }) => (
   <section>
@@ -19,11 +19,11 @@ export const Section = ({ level, heading, id, children }) => (
       }
     `}</style>
   </section>
-)
+);
 
 Section.propTypes = {
   level: PropTypes.number.isRequired,
   heading: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
-  children: PropTypes.node
-}
+  children: PropTypes.node,
+};

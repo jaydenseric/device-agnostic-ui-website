@@ -1,10 +1,10 @@
-import { Code, LinkText, Para, Picture, Scroll } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Picture as PictureComponentMeta } from '../../meta/components'
+import { Code, LinkText, Para, Picture, Scroll } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Picture as PictureComponentMeta } from '../../meta/components';
 
 const PictureComponentPage = () => (
   <ComponentPage
@@ -122,7 +122,7 @@ const PictureComponentPage = () => (
                 style={{
                   borderRadius: '50%',
                   objectFit: 'contain',
-                  backgroundColor: 'gold'
+                  backgroundColor: 'gold',
                 }}
               />
             </Picture>
@@ -214,6 +214,6 @@ const PictureComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default PictureComponentPage
+export default PictureComponentPage;

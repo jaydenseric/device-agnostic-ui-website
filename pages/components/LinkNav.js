@@ -1,10 +1,10 @@
-import { LinkActive, LinkNav, Nav, Para, Scroll } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { LinkNav as LinkNavComponentMeta } from '../../meta/components'
+import { LinkActive, LinkNav, Nav, Para, Scroll } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { LinkNav as LinkNavComponentMeta } from '../../meta/components';
 
 const LinkNavComponentPage = () => (
   <ComponentPage
@@ -73,6 +73,6 @@ const LinkNavComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default LinkNavComponentPage
+export default LinkNavComponentPage;

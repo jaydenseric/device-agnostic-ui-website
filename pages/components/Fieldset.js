@@ -1,9 +1,9 @@
-import { Fieldset, LinkText, Para, Scroll, Toggle } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Fieldset as FieldsetComponentMeta } from '../../meta/components'
+import { Fieldset, LinkText, Para, Scroll, Toggle } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Fieldset as FieldsetComponentMeta } from '../../meta/components';
 
 const FieldsetComponentPage = () => (
   <ComponentPage
@@ -90,7 +90,7 @@ const FieldsetComponentPage = () => (
                 type: 'radio',
                 name: 'options',
                 value: 'a',
-                defaultChecked: true
+                defaultChecked: true,
               }}
             >
               Label A
@@ -99,7 +99,7 @@ const FieldsetComponentPage = () => (
               inputProps={{
                 type: 'radio',
                 name: 'options',
-                value: 'b'
+                value: 'b',
               }}
             >
               Label B
@@ -110,6 +110,6 @@ const FieldsetComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default FieldsetComponentPage
+export default FieldsetComponentPage;

@@ -1,9 +1,9 @@
-import { LinkActive, LinkNav, Margin, Nav, Para } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { LinkElement } from '../../components/LinkElement'
-import { Nav as NavComponentMeta } from '../../meta/components'
+import { LinkActive, LinkNav, Margin, Nav, Para } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { LinkElement } from '../../components/LinkElement';
+import { Nav as NavComponentMeta } from '../../meta/components';
 
 const NavComponentPage = () => (
   <ComponentPage
@@ -64,6 +64,6 @@ const NavComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default NavComponentPage
+export default NavComponentPage;

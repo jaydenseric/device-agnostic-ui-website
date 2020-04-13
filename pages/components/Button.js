@@ -1,8 +1,8 @@
-import { Button, Margin, Para } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { Button as ButtonComponentMeta } from '../../meta/components'
+import { Button, Margin, Para } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { Button as ButtonComponentMeta } from '../../meta/components';
 
 const ButtonComponentPage = () => (
   <ComponentPage
@@ -59,6 +59,6 @@ const ButtonComponentPage = () => (
       </>
     }
   />
-)
+);
 
-export default ButtonComponentPage
+export default ButtonComponentPage;

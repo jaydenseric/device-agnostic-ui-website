@@ -1,10 +1,10 @@
-import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui'
-import Link from 'next/link'
-import { CodeExample } from '../../components/CodeExample'
-import { HookPage } from '../../components/HookPage'
-import { LinkComponent } from '../../components/LinkComponent'
-import { TypeCard } from '../../components/TypeCard'
-import { useOnFocusReportValidity as useOnFocusReportValidityMeta } from '../../meta/hooks'
+import { Code, LinkText, Para, Scroll } from 'device-agnostic-ui';
+import Link from 'next/link';
+import { CodeExample } from '../../components/CodeExample';
+import { HookPage } from '../../components/HookPage';
+import { LinkComponent } from '../../components/LinkComponent';
+import { TypeCard } from '../../components/TypeCard';
+import { useOnFocusReportValidity as useOnFocusReportValidityMeta } from '../../meta/hooks';
 
 const UseOnFocusReportValidityHookPage = () => (
   <HookPage
@@ -78,6 +78,6 @@ const UseOnFocusReportValidityHookPage = () => (
       />
     }
   />
-)
+);
 
-export default UseOnFocusReportValidityHookPage
+export default UseOnFocusReportValidityHookPage;

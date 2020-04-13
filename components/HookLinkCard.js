@@ -1,6 +1,6 @@
-import { Heading, LinkCard, Para, WordBreaks } from 'device-agnostic-ui'
-import PropTypes from 'prop-types'
-import React from 'react'
+import { Heading, LinkCard, Para, WordBreaks } from 'device-agnostic-ui';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 export const HookLinkCard = React.forwardRef(
   ({ hookName, hookDescription, ...props }, ref) => (
@@ -26,11 +26,11 @@ export const HookLinkCard = React.forwardRef(
       `}</style>
     </LinkCard>
   )
-)
+);
 
-HookLinkCard.displayName = 'HookLinkCard'
+HookLinkCard.displayName = 'HookLinkCard';
 
 HookLinkCard.propTypes = {
   hookName: PropTypes.string.isRequired,
-  hookDescription: PropTypes.string.isRequired
-}
+  hookDescription: PropTypes.string.isRequired,
+};

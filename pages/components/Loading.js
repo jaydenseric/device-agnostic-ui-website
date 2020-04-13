@@ -1,9 +1,9 @@
-import { Code, Loading, Para, Scroll } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Loading as LoadingComponentMeta } from '../../meta/components'
+import { Code, Loading, Para, Scroll } from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Loading as LoadingComponentMeta } from '../../meta/components';
 
 const LoadingComponentPage = () => (
   <ComponentPage
@@ -65,6 +65,6 @@ const LoadingComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default LoadingComponentPage
+export default LoadingComponentPage;

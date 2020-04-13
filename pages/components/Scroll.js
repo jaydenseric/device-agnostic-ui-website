@@ -1,9 +1,16 @@
-import { Code, Heading, LinkText, List, Para, Scroll } from 'device-agnostic-ui'
-import { CodeExample } from '../../components/CodeExample'
-import { ComponentPage } from '../../components/ComponentPage'
-import { LinkElement } from '../../components/LinkElement'
-import { TypeCard } from '../../components/TypeCard'
-import { Scroll as ScrollComponentMeta } from '../../meta/components'
+import {
+  Code,
+  Heading,
+  LinkText,
+  List,
+  Para,
+  Scroll,
+} from 'device-agnostic-ui';
+import { CodeExample } from '../../components/CodeExample';
+import { ComponentPage } from '../../components/ComponentPage';
+import { LinkElement } from '../../components/LinkElement';
+import { TypeCard } from '../../components/TypeCard';
+import { Scroll as ScrollComponentMeta } from '../../meta/components';
 
 const ScrollComponentPage = () => (
   <ComponentPage
@@ -95,6 +102,6 @@ const ScrollComponentPage = () => (
       />
     }
   />
-)
+);
 
-export default ScrollComponentPage
+export default ScrollComponentPage;

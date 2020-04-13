@@ -1,15 +1,15 @@
-import { LinkText, List, Margin, Para, WordBreaks } from 'device-agnostic-ui'
-import Link from 'next/link'
-import PropTypes from 'prop-types'
-import { Page } from './Page'
-import { PageHeader } from './PageHeader'
-import { Section } from './Section'
+import { LinkText, List, Margin, Para, WordBreaks } from 'device-agnostic-ui';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import { Page } from './Page';
+import { PageHeader } from './PageHeader';
+import { Section } from './Section';
 
 export const ComponentPage = ({
   componentMeta,
   componentIntro,
   componentPropsContent,
-  componentExamplesContent
+  componentExamplesContent,
 }) => (
   <Page
     title={`${componentMeta.name} component`}
@@ -42,7 +42,7 @@ export const ComponentPage = ({
       </Section>
     )}
   </Page>
-)
+);
 
 ComponentPage.propTypes = {
   componentMeta: PropTypes.exact({
@@ -52,11 +52,11 @@ ComponentPage.propTypes = {
       PropTypes.exact({
         tag: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
-        description: PropTypes.string.isRequired
+        description: PropTypes.string.isRequired,
       })
-    ).isRequired
+    ).isRequired,
   }),
   componentIntro: PropTypes.node,
   componentPropsContent: PropTypes.node,
-  componentExamplesContent: PropTypes.node
-}
+  componentExamplesContent: PropTypes.node,
+};
