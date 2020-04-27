@@ -14,7 +14,6 @@ module.exports = {
     return config;
   },
   experimental: {
-    deferScripts: true,
     granularChunks: true,
   },
 };
