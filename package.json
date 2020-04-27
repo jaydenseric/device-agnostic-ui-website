@@ -39,7 +39,6 @@
     "imagemin-pngquant": "^8.0.0",
     "imagemin-webp": "^5.1.0",
     "imagemin-zopfli": "^6.0.0",
-    "now": "^17.1.1",
     "prettier": "^2.0.5",
     "prismjs": "^1.20.0",
     "puppeteer": "^3.0.1"
@@ -49,10 +48,8 @@
     "test:eslint": "eslint .",
     "test:prettier": "prettier -c .",
     "screenshots": "node scripts/screenshots",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "dev": "next",
-    "now:dev": "now dev",
-    "now:deploy": "now --prod"
+    "start": "next start"
   }
 }

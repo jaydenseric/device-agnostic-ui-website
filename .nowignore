@@ -1,7 +1,6 @@
 .github
 scripts
 .editorconfig
-.env.build.example
 .eslintignore
 .eslintrc.json
 .nowignore

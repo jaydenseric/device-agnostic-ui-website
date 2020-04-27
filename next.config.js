@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    ORIGIN: process.env.ORIGIN,
+    ORIGIN: process.env.ORIGIN || `https://${process.env.VERCEL_URL}`,
   },
   webpack(config, { isServer }) {
     if (!isServer)
