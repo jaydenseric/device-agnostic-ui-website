@@ -55,13 +55,13 @@ const WordBreaksComponentPage = () => (
             /* syntax-highlight jsx */ `
               import { Heading, WordBreaks } from 'device-agnostic-ui'
 
-              <Heading style={{ maxWidth: '5em' }}>
+              <Heading style={{ maxWidth: '4em' }}>
                 <WordBreaks>learnHTML5WithUs</WordBreaks>
               </Heading>
             `
           }
           result={
-            <Heading style={{ maxWidth: '5em' }}>
+            <Heading style={{ maxWidth: '4em' }}>
               <WordBreaks>learnHTML5WithUs</WordBreaks>
             </Heading>
           }
@@ -78,11 +78,11 @@ const WordBreaksComponentPage = () => (
             /* syntax-highlight jsx */ `
               import { Heading } from 'device-agnostic-ui'
 
-              <Heading style={{ maxWidth: '5em' }}>learnHTML5WithUs</Heading>
+              <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>
             `
           }
           result={
-            <Heading style={{ maxWidth: '5em' }}>learnHTML5WithUs</Heading>
+            <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>
           }
         />
       </>
