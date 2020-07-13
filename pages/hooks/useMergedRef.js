@@ -9,21 +9,19 @@ const UseMergedRefHookPage = () => (
   <HookPage
     hookMeta={useMergedRefMeta}
     hookIntro={
-      <>
-        <Para>
-          Useful when a component allows a consumer to sometimes provide a ref
-          for an element via{' '}
-          <LinkText href="https://reactjs.org/docs/react-api.html#reactforwardref">
-            <Code>React.forwardRef</Code>
-          </LinkText>
-          , but internally the component needs to define it’s own ref for the
-          same element. It’s used by many of the{' '}
-          <Link href="/components?tags=forms" passHref>
-            <LinkText>form components</LinkText>
-          </Link>
-          .
-        </Para>
-      </>
+      <Para>
+        Useful when a component allows a consumer to sometimes provide a ref for
+        an element via{' '}
+        <LinkText href="https://reactjs.org/docs/react-api.html#reactforwardref">
+          <Code>React.forwardRef</Code>
+        </LinkText>
+        , but internally the component needs to define it’s own ref for the same
+        element. It’s used by many of the{' '}
+        <Link href="/components?tags=forms" passHref>
+          <LinkText>form components</LinkText>
+        </Link>
+        .
+      </Para>
     }
     hookParametersContent={
       <Scroll>

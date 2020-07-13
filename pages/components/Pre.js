@@ -25,11 +25,10 @@ const PreComponentPage = () => (
       </Margin>
     }
     componentExamplesContent={
-      <>
-        <CodeExample
-          caption="Multiline HTML code block."
-          code={
-            /* syntax-highlight jsx */ `
+      <CodeExample
+        caption="Multiline HTML code block."
+        code={
+          /* syntax-highlight jsx */ `
               import { Code, Pre } from 'device-agnostic-ui'
 
               <Pre>
@@ -38,17 +37,16 @@ const PreComponentPage = () => (
               </section>\`}</Code>
               </Pre>
             `
-          }
-          result={
-            <Pre>
-              <Code>{`<section>
+        }
+        result={
+          <Pre>
+            <Code>{`<section>
   <h1>Header</h1>
 </section>`}</Code>
-            </Pre>
-          }
-          screenshot
-        />
-      </>
+          </Pre>
+        }
+        screenshot
+      />
     }
   />
 );

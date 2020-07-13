@@ -61,7 +61,7 @@ const IconComponentPage = () => (
           required
         >
           <Para>
-            Gets suffixed with <Code>{"' icon'"}</Code> to form the{' '}
+            Gets suffixed with <Code>&apos; icon&apos;</Code> to form the{' '}
             <LinkElement type="SVG" element="svg" /> element’s{' '}
             <LinkElement type="SVG" element="title" /> children.
           </Para>

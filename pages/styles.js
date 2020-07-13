@@ -39,7 +39,7 @@ const StylesPage = () => (
       <Para>
         Styles are handled using{' '}
         <LinkText href="https://github.com/zeit/styled-jsx">
-          <Code>{`styled-jsx`}</Code>
+          <Code>styled-jsx</Code>
         </LinkText>
         , which{' '}
         <LinkText href="https://nextjs.org/docs#built-in-css-support">
@@ -60,7 +60,7 @@ const StylesPage = () => (
             <>
               How to setup the global styles in{' '}
               <LinkText href="https://nextjs.org/docs#custom-app">
-                <Code>{`pages/_app.js`}</Code>
+                <Code>pages/_app.js</Code>
               </LinkText>
               .{' '}
               <LinkText href="#stylesGlobalTheme">

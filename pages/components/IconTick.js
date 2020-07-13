@@ -8,11 +8,9 @@ const IconComponentPage = () => (
   <ComponentPage
     componentMeta={IconTickComponentMeta}
     componentIntro={
-      <>
-        <Para>
-          It implements the <LinkComponent component="Icon" /> component.
-        </Para>
-      </>
+      <Para>
+        It implements the <LinkComponent component="Icon" /> component.
+      </Para>
     }
     componentPropsContent={
       <Margin>

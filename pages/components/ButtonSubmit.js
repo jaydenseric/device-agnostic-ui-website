@@ -10,11 +10,9 @@ const ButtonSubmitComponentPage = () => (
   <ComponentPage
     componentMeta={ButtonSubmitComponentMeta}
     componentIntro={
-      <>
-        <Para>
-          It implements the <LinkComponent component="Button" /> component.
-        </Para>
-      </>
+      <Para>
+        It implements the <LinkComponent component="Button" /> component.
+      </Para>
     }
     componentPropsContent={
       <Scroll>

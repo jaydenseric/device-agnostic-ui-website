@@ -32,11 +32,11 @@ const ToggleComponentPage = () => (
       <Para>
         It implements the <LinkElement element="input" /> element with a{' '}
         <LinkText href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">
-          <Code>{`type="checkbox"`}</Code>
+          <Code>type=&quot;checkbox&quot;</Code>
         </LinkText>{' '}
         or{' '}
         <LinkText href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">
-          <Code>{`type="radio"`}</Code>
+          <Code>type=&quot;radio&quot;</Code>
         </LinkText>{' '}
         attribute.
       </Para>
@@ -62,8 +62,8 @@ const ToggleComponentPage = () => (
         >
           <Para>
             Props for the <LinkElement element="input" /> element. Must contain
-            either <Code>{`type: 'checkbox'`}</Code> or{' '}
-            <Code>{`type: 'radio'`}</Code>.
+            either <Code>type: &apos;checkbox&apos;</Code> or{' '}
+            <Code>type: &apos;radio&apos;</Code>.
           </Para>
         </TypeCard>
         <TypeCard
