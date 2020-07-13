@@ -13,7 +13,7 @@
   "bugs": "https://github.com/jaydenseric/device-agnostic-ui-website/issues",
   "funding": "https://github.com/sponsors/jaydenseric",
   "engines": {
-    "node": ">=12"
+    "node": "^12.0.0 || >= 13.7.0"
   },
   "dependencies": {
     "device-agnostic-ui": "^5.1.1",
