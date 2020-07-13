@@ -161,8 +161,8 @@ const IndexPage = () => (
             </Pre>
             <Para>
               Hopefully this won’t be necessary in the future, see{' '}
-              <LinkText href="https://github.com/zeit/styled-jsx/issues/602">
-                zeit/styled-jsx#602
+              <LinkText href="https://github.com/vercel/styled-jsx/issues/602">
+                vercel/styled-jsx#602
               </LinkText>
               .
             </Para>

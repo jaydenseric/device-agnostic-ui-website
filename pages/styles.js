@@ -38,7 +38,7 @@ const StylesPage = () => (
     <PageHeader heading="Styles">
       <Para>
         Styles are handled using{' '}
-        <LinkText href="https://github.com/zeit/styled-jsx">
+        <LinkText href="https://github.com/vercel/styled-jsx">
           <Code>styled-jsx</Code>
         </LinkText>
         , which{' '}

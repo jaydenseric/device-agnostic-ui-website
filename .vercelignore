@@ -3,7 +3,7 @@ scripts
 .editorconfig
 .eslintignore
 .eslintrc.json
-.nowignore
 .prettierignore
 .prettierrc.json
+.vercelignore
 readme.md
