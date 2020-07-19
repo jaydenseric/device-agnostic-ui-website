@@ -26,22 +26,22 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "babel-plugin-syntax-highlight": "^2.1.0",
-    "eslint": "^7.4.0",
+    "eslint": "^7.5.0",
     "eslint-config-env": "^15.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^29.1.4",
+    "eslint-plugin-jsdoc": "^29.2.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.7",
+    "eslint-plugin-react-hooks": "^4.0.8",
     "imagemin": "^7.0.1",
     "imagemin-pngquant": "^9.0.0",
     "imagemin-webp": "^6.0.0",
     "imagemin-zopfli": "^7.0.0",
     "prettier": "^2.0.5",
     "prismjs": "^1.20.0",
-    "puppeteer": "^5.0.0"
+    "puppeteer": "^5.2.0"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier",
