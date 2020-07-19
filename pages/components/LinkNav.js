@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import { LinkActive, LinkNav, Nav, Para, Scroll } from 'device-agnostic-ui';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';

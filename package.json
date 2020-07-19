@@ -35,6 +35,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
+    "find-unused-exports": "^1.1.0",
     "imagemin": "^7.0.1",
     "imagemin-pngquant": "^9.0.0",
     "imagemin-webp": "^6.0.0",
@@ -44,9 +45,10 @@
     "puppeteer": "^5.2.0"
   },
   "scripts": {
-    "test": "npm run test:eslint && npm run test:prettier",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:unused-exports",
     "test:eslint": "eslint .",
     "test:prettier": "prettier -c .",
+    "test:unused-exports": "find-unused-exports --resolve-file-extensions mjs,js --resolve-index-files",
     "screenshots": "node scripts/screenshots",
     "dev": "next dev",
     "build": "next build",

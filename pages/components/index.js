@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import { LinkActive, Scroll, Toggle } from 'device-agnostic-ui';
 import { useRouter } from 'next/router';
 import React from 'react';

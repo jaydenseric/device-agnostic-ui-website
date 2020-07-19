@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import { LinkText, Margin, Para } from 'device-agnostic-ui';
 import Link from 'next/link';
 import { CodeExample } from '../../components/CodeExample';

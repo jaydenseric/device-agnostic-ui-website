@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import { Code, LinkText, Para, Scroll, Textbox } from 'device-agnostic-ui';
 import { Fragment } from 'react';
 import { CodeExample } from '../../components/CodeExample';

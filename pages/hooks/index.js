@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import { LinkActive, Scroll } from 'device-agnostic-ui';
 import React from 'react';
 import { HookLinkCard } from '../../components/HookLinkCard';

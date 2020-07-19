@@ -1,3 +1,5 @@
+// ignore unused exports default
+
 import { Heading, Para, Scroll, WordBreaks } from 'device-agnostic-ui';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
