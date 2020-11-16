@@ -26,15 +26,15 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "babel-plugin-syntax-highlight": "^2.1.0",
-    "eslint": "^7.11.0",
+    "eslint": "^7.13.0",
     "eslint-config-env": "^15.0.1",
-    "eslint-config-prettier": "^6.12.0",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^30.6.5",
+    "eslint-plugin-jsdoc": "^30.7.8",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.4",
-    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "find-unused-exports": "^1.1.0",
     "imagemin": "^7.0.1",
     "imagemin-pngquant": "^9.0.1",
@@ -42,7 +42,7 @@
     "imagemin-zopfli": "^7.0.0",
     "prettier": "^2.1.2",
     "prismjs": "^1.22.0",
-    "puppeteer": "^5.3.1"
+    "puppeteer": "^5.5.0"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier && npm run test:unused-exports",
