@@ -25,10 +25,10 @@
     "strip-indent": "^3.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
+    "@babel/eslint-parser": "^7.12.13",
     "babel-plugin-syntax-highlight": "^2.1.0",
     "eslint": "^7.19.0",
-    "eslint-config-env": "^17.0.0",
+    "eslint-config-env": "^18.0.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsdoc": "^31.6.0",

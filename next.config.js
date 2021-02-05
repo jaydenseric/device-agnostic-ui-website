@@ -6,7 +6,7 @@ module.exports = {
     if (!isServer)
       config.optimization.splitChunks.cacheGroups['device-agnostic-ui'] = {
         name: 'device-agnostic-ui',
-        test: /[\\/]node_modules[\\/]device-agnostic-ui[\\/]/,
+        test: /[\\/]node_modules[\\/]device-agnostic-ui[\\/]/u,
         reuseExistingChunk: true,
         priority: 50,
       };
