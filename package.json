@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "device-agnostic-ui": "^6.0.0",
-    "next": "^10.0.4",
+    "next": "^10.0.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -27,14 +27,14 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "babel-plugin-syntax-highlight": "^2.1.0",
-    "eslint": "^7.16.0",
-    "eslint-config-env": "^15.0.1",
-    "eslint-config-prettier": "^7.1.0",
+    "eslint": "^7.19.0",
+    "eslint-config-env": "^17.0.0",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^30.7.9",
+    "eslint-plugin-jsdoc": "^31.6.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.0",
-    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "find-unused-exports": "^1.2.0",
     "imagemin": "^7.0.1",
@@ -42,8 +42,8 @@
     "imagemin-webp": "^6.0.0",
     "imagemin-zopfli": "^7.0.0",
     "prettier": "^2.2.1",
-    "prismjs": "^1.22.0",
-    "puppeteer": "^5.5.0"
+    "prismjs": "^1.23.0",
+    "puppeteer": "^7.0.1"
   },
   "scripts": {
     "test": "npm run test:eslint && npm run test:prettier && npm run test:unused-exports",
