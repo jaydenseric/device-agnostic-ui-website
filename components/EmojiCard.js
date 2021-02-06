@@ -1,21 +1,12 @@
 import { Heading, Para } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
+import styles from './EmojiCard.module.css';
 
 export const EmojiCard = ({ emoji, heading, children }) => (
-  <article>
-    <div>{emoji}</div>
+  <article className={styles.article}>
+    <div className={styles.emoji}>{emoji}</div>
     <Heading style={{ marginTop: '0.25em' }}>{heading}</Heading>
     <Para>{children}</Para>
-    <style jsx>{`
-      article {
-        width: 14em;
-        margin-bottom: 1em;
-      }
-
-      div {
-        font-size: 300%;
-      }
-    `}</style>
   </article>
 );
 

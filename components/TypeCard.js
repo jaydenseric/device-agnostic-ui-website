@@ -1,5 +1,6 @@
 import { Code, Heading, Table, WordBreaks } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
+import styles from './TypeCard.module.css';
 
 export const TypeCard = ({
   identity,
@@ -8,7 +9,7 @@ export const TypeCard = ({
   defaultValue,
   children,
 }) => (
-  <article>
+  <article className={styles.article}>
     {identity && (
       <Heading
         style={{ fontSize: '110%' }}
@@ -38,12 +39,6 @@ export const TypeCard = ({
       </tbody>
     </Table>
     {children}
-    <style jsx>{`
-      article {
-        width: 14em;
-        font-size: 90%;
-      }
-    `}</style>
   </article>
 );
 

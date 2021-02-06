@@ -1,29 +1,17 @@
 import { Heading, LinkCard, Para, WordBreaks } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
 import React from 'react';
+import styles from './HookLinkCard.module.css';
 
 export const HookLinkCard = React.forwardRef(
   ({ hookName, hookDescription, ...props }, ref) => (
     <LinkCard {...props} ref={ref}>
-      <article>
+      <article className={styles.article}>
         <Heading>
           <WordBreaks>{hookName}</WordBreaks>
         </Heading>
         <Para>{hookDescription}</Para>
       </article>
-      <style jsx>{`
-        article {
-          margin: 1em;
-          margin-bottom: 1.5em;
-          width: 14em;
-          font-size: 90%;
-        }
-
-        figure {
-          margin: 0;
-          background-color: white;
-        }
-      `}</style>
     </LinkCard>
   )
 );

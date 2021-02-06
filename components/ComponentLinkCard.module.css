@@ -1,0 +1,13 @@
+.article {
+  width: 14em;
+  font-size: 90%;
+}
+
+.figure {
+  margin: 0;
+}
+
+.content {
+  margin: 1em;
+  margin-bottom: 1.5em;
+}

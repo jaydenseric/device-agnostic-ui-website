@@ -1,23 +1,15 @@
 import { Heading } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
+import styles from './Section.module.css';
 
 export const Section = ({ level, heading, id, children }) => (
-  <section>
-    <header>
+  <section className={styles.section}>
+    <header className={styles.header}>
       <Heading level={level} size={level} id={id}>
         {heading}
       </Heading>
     </header>
     {children}
-    <style jsx>{`
-      section {
-        margin: 3rem 0;
-      }
-
-      section header {
-        margin: var(--daui-spacing);
-      }
-    `}</style>
   </section>
 );
 

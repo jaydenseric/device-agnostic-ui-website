@@ -1,15 +1,11 @@
 import { Heading } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
+import styles from './PageHeader.module.css';
 
 export const PageHeader = ({ heading, children }) => (
-  <header>
+  <header className={styles.header}>
     <Heading size={1}>{heading}</Heading>
     {children}
-    <style jsx>{`
-      header {
-        margin: 2.5rem var(--daui-spacing);
-      }
-    `}</style>
   </header>
 );
 
