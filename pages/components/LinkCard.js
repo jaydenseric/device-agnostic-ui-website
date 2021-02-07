@@ -44,7 +44,7 @@ const LinkCardComponentPage = () => (
         <CodeExample
           caption="A picture link card."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
             import { LinkCard, Table } from 'device-agnostic-ui'
 
             <LinkCard href="/static/example-picture/example.svg">
@@ -72,7 +72,7 @@ const LinkCardComponentPage = () => (
         <CodeExample
           caption="An active picture link card."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
             import { LinkCard, Table } from 'device-agnostic-ui'
 
             <LinkCard active href="/static/example-picture/example.svg">

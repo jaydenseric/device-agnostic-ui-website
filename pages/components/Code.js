@@ -26,7 +26,7 @@ const CodeComponentPage = () => (
         <CodeExample
           caption="Non-HTML code."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Code } from 'device-agnostic-ui'
 
               <Code>window</Code>
@@ -37,7 +37,7 @@ const CodeComponentPage = () => (
         <CodeExample
           caption="Code in a link."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Code, LinkText } from 'device-agnostic-ui'
 
               <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
@@ -54,7 +54,7 @@ const CodeComponentPage = () => (
         <CodeExample
           caption="HTML code."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Code } from 'device-agnostic-ui'
 
               <Code>{'<strong>'}</Code>

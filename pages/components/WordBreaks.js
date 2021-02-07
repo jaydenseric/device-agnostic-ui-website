@@ -54,7 +54,7 @@ const WordBreaksComponentPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Heading, WordBreaks } from 'device-agnostic-ui'
 
               <Heading style={{ maxWidth: '4em' }}>
@@ -77,7 +77,7 @@ const WordBreaksComponentPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Heading } from 'device-agnostic-ui'
 
               <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>

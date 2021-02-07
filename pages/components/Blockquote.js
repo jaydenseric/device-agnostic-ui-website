@@ -26,7 +26,7 @@ const BlockquoteComponentPage = () => (
         <CodeExample
           caption={<>Containing simple text.</>}
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Blockquote } from 'device-agnostic-ui'
 
               <Blockquote>
@@ -53,7 +53,7 @@ const BlockquoteComponentPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Blockquote, LinkText, Para } from 'device-agnostic-ui'
 
               <Blockquote>

@@ -30,7 +30,7 @@ const PreComponentPage = () => (
       <CodeExample
         caption="Multiline HTML code block."
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
               import { Code, Pre } from 'device-agnostic-ui'
 
               <Pre>

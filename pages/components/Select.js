@@ -58,7 +58,7 @@ const SelectComponentPage = () => (
         <CodeExample
           caption="Simple."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Select } from 'device-agnostic-ui'
 
               <Select>
@@ -78,7 +78,7 @@ const SelectComponentPage = () => (
         <CodeExample
           caption="Required, with a placeholder option."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Select } from 'device-agnostic-ui'
 
               <Select required>
@@ -101,7 +101,7 @@ const SelectComponentPage = () => (
         <CodeExample
           caption="With a default value."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Select } from 'device-agnostic-ui'
 
               <Select value="B">
@@ -126,7 +126,7 @@ const SelectComponentPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Select } from 'device-agnostic-ui'
 
               <Select multiple size="2">
@@ -145,7 +145,7 @@ const SelectComponentPage = () => (
         <CodeExample
           caption="With a size matching the count of options + groups."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Select } from 'device-agnostic-ui'
 
               <Select size="6">

@@ -70,7 +70,7 @@ const PictureComponentPage = () => (
         <CodeExample
           caption="With an SVG source."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Picture } from 'device-agnostic-ui'
 
               <Picture width={157} height={100} style={{ width: '157px' }}>
@@ -100,7 +100,7 @@ const PictureComponentPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Picture } from 'device-agnostic-ui'
 
               <Picture width={1} height={1} style={{ width: '6rem' }}>
@@ -134,7 +134,7 @@ const PictureComponentPage = () => (
         <CodeExample
           caption="With WebP and PNG sources."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Picture } from 'device-agnostic-ui'
 
               <Picture width={628} height={400} style={{ width: '157px' }}>
@@ -165,7 +165,7 @@ const PictureComponentPage = () => (
         <CodeExample
           caption="With separate light and dark mode WebP and PNG sources."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Picture } from 'device-agnostic-ui'
 
               <Picture width={1360} height={560} style={{ width: '340px' }}>

@@ -91,7 +91,7 @@ const HtmlComponentPage = () => (
         <CodeExample
           caption="Using JSX HTML."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Html } from 'device-agnostic-ui'
 
               <Html>
@@ -204,7 +204,7 @@ const HtmlComponentPage = () => (
         <CodeExample
           caption="Using a HTML string."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Html } from 'device-agnostic-ui'
 
               <Html dangerouslySetInnerHTML={{ __html: '<h1>Heading 1</h1>' }} />
@@ -217,7 +217,7 @@ const HtmlComponentPage = () => (
         <CodeExample
           caption="How to locally override heading font sizes."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Html } from 'device-agnostic-ui'
 
               <Html style={{ '--daui-h1-font-size': '150%' }}>

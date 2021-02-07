@@ -84,7 +84,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A text input with a placeholder."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox placeholder="Placeholder" />
@@ -95,7 +95,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A text input with text."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox defaultValue="Text" />
@@ -107,7 +107,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A required text input."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox required />
@@ -118,7 +118,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A text input with a custom validation message."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox validationMessage="Custom message." />
@@ -129,7 +129,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A textarea."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox type="textarea" />
@@ -140,7 +140,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A password input."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox type="password" />
@@ -151,7 +151,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A number input."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox type="number" defaultValue="1" />
@@ -162,7 +162,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="An email input."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox type="email" defaultValue="me@jaydenseric.com" />
@@ -173,7 +173,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A telephone number input."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox type="tel" defaultValue="0491 570 156" />
@@ -184,7 +184,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A date input."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox type="date" defaultValue="2001-09-11" />
@@ -195,7 +195,7 @@ const TextboxComponentPage = () => (
         <CodeExample
           caption="A search input."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Textbox } from 'device-agnostic-ui'
 
               <Textbox type="search" defaultValue="Cats" />

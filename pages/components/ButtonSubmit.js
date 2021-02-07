@@ -70,7 +70,7 @@ const ButtonSubmitComponentPage = () => (
         <CodeExample
           caption="Submit button."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { ButtonSubmit } from 'device-agnostic-ui'
 
               <ButtonSubmit>Submit</ButtonSubmit>
@@ -81,7 +81,7 @@ const ButtonSubmitComponentPage = () => (
         <CodeExample
           caption="If the form submission is loading."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { ButtonSubmit } from 'device-agnostic-ui'
 
               <ButtonSubmit loading>Submit</ButtonSubmit>
@@ -92,7 +92,7 @@ const ButtonSubmitComponentPage = () => (
         <CodeExample
           caption="If the form submission was successful."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { ButtonSubmit } from 'device-agnostic-ui'
 
               <ButtonSubmit success>Submit</ButtonSubmit>

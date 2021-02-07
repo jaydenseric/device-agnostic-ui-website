@@ -62,7 +62,7 @@ const UseOnFocusReportValidityHookPage = () => (
           </>
         }
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { useOnFocusReportValidity } from 'device-agnostic-ui'
             import React from 'react'
 

@@ -144,7 +144,7 @@ const IndexPage = () => (
             <Pre>
               <CodeSyntaxHighlighted
                 code={
-                  /* syntax-highlight json */ `
+                  /* syntax-highlight json */ /* JSON */ `
                   {
                     "presets": [
                       [

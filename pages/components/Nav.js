@@ -39,7 +39,7 @@ const NavComponentPage = () => (
           </>
         }
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { LinkActive, LinkNav, Nav } from 'device-agnostic-ui'
 
             <Nav>

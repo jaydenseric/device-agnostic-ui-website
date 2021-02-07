@@ -25,7 +25,7 @@ const ParaComponentPage = () => (
       <CodeExample
         caption="Simple paragraph."
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { Para } from 'device-agnostic-ui'
 
             <Para>

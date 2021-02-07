@@ -73,7 +73,7 @@ const UseCustomValidityHookPage = () => (
           </>
         }
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { useCustomValidity } from 'device-agnostic-ui'
             import React from 'react'
 

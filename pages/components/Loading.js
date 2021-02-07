@@ -56,7 +56,7 @@ const LoadingComponentPage = () => (
       <CodeExample
         caption="A loading indicator."
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { Loading } from 'device-agnostic-ui'
 
             <Loading size="2em" />

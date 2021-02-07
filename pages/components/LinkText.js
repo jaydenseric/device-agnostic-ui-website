@@ -27,7 +27,7 @@ const LinkTextComponentPage = () => (
         <CodeExample
           caption="External link."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { LinkText } from 'device-agnostic-ui'
 
               <LinkText href="https://reactjs.org">React</LinkText>
@@ -39,7 +39,7 @@ const LinkTextComponentPage = () => (
         <CodeExample
           caption="Internal Next.js route link."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { LinkText } from 'device-agnostic-ui'
               import Link from 'next/link'
 

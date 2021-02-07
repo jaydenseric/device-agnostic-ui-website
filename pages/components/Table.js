@@ -26,7 +26,7 @@ const TableComponentPage = () => (
         <CodeExample
           caption="With row headers."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Table } from 'device-agnostic-ui'
 
               <Table>
@@ -61,7 +61,7 @@ const TableComponentPage = () => (
         <CodeExample
           caption="With column headers."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Table } from 'device-agnostic-ui'
 
               <Table>

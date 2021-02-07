@@ -59,7 +59,7 @@ const FieldsetComponentPage = () => (
       <CodeExample
         caption={<>Grouped checkboxes.</>}
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { Fieldset, Textbox } from 'device-agnostic-ui'
 
             <Fieldset legend="Options">

@@ -44,7 +44,7 @@ const ListComponentPage = () => (
         <CodeExample
           caption={<>Bulleted list.</>}
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { List } from 'device-agnostic-ui'
 
               <List>
@@ -66,7 +66,7 @@ const ListComponentPage = () => (
         <CodeExample
           caption={<>Nested paragraphs and bulleted lists.</>}
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { List, Para } from 'device-agnostic-ui'
 
               <List>
@@ -109,7 +109,7 @@ const ListComponentPage = () => (
         <CodeExample
           caption={<>Numbered list.</>}
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { List } from 'device-agnostic-ui'
 
               <List ordered>
@@ -130,7 +130,7 @@ const ListComponentPage = () => (
         <CodeExample
           caption={<>Nested paragraphs and ordered lists.</>}
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { List, Para } from 'device-agnostic-ui'
 
               <List ordered>

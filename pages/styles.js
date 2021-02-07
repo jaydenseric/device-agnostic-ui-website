@@ -76,7 +76,7 @@ const StylesPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui'
               import App from 'next/app'
               import Head from 'next/head'
@@ -131,7 +131,7 @@ const StylesPage = () => (
               </>
             }
             code={
-              /* syntax-highlight jsx */ `
+              /* syntax-highlight jsx */ /* JSX */ `
                 <style jsx global>
                   {stylesGlobalTheme}
                 </style>
@@ -188,7 +188,7 @@ const StylesPage = () => (
               </>
             }
             code={
-              /* syntax-highlight jsx */ `
+              /* syntax-highlight jsx */ /* JSX */ `
               import { Code, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui'
 
               const CodeSyntaxHighlighted = props => (
@@ -220,7 +220,7 @@ const StylesPage = () => (
               </>
             }
             code={
-              /* syntax-highlight jsx */ `
+              /* syntax-highlight jsx */ /* JSX */ `
               import { Html, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui'
 
               const HtmlSyntaxHighlighted = props => (
@@ -273,7 +273,7 @@ const StylesPage = () => (
               </>
             }
             code={
-              /* syntax-highlight jsx */ `
+              /* syntax-highlight jsx */ /* JSX */ `
               const html = /* syntax-highlight graphql */ \`
                 scalar Upload
               \`

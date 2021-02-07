@@ -65,7 +65,7 @@ const ScrollComponentPage = () => (
           </>
         }
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { Heading, Scroll } from 'device-agnostic-ui'
 
             <Scroll style={{ maxWidth: '15rem' }}>

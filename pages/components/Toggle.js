@@ -98,7 +98,7 @@ const ToggleComponentPage = () => (
         <CodeExample
           caption="Simple checkbox."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Toggle } from 'device-agnostic-ui'
 
               <Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>
@@ -109,7 +109,7 @@ const ToggleComponentPage = () => (
         <CodeExample
           caption="Required checkbox."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Toggle } from 'device-agnostic-ui'
 
               <Toggle inputProps={{ type: 'checkbox', required: true }}>
@@ -126,7 +126,7 @@ const ToggleComponentPage = () => (
         <CodeExample
           caption="Checkbox with a custom validation message."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Toggle } from 'device-agnostic-ui'
 
               <Toggle
@@ -149,7 +149,7 @@ const ToggleComponentPage = () => (
         <CodeExample
           caption="Radio group."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Button } from 'device-agnostic-ui'
 
               <Toggle
@@ -201,7 +201,7 @@ const ToggleComponentPage = () => (
         <CodeExample
           caption="Using an input element ref."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Button, Toggle } from 'device-agnostic-ui'
               import React from 'react'
 

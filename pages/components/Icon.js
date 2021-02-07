@@ -101,7 +101,7 @@ const IconComponentPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Icon } from 'device-agnostic-ui'
 
               const IconCircleFilled = props => (
@@ -123,7 +123,7 @@ const IconComponentPage = () => (
             </>
           }
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Icon } from 'device-agnostic-ui'
 
               const IconCircleOutline = props => (

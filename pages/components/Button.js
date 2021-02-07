@@ -38,7 +38,7 @@ const ButtonComponentPage = () => (
         <CodeExample
           caption="Simple button."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Button } from 'device-agnostic-ui'
 
               <Button>Label</Button>
@@ -50,7 +50,7 @@ const ButtonComponentPage = () => (
         <CodeExample
           caption="Disabled button."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Button } from 'device-agnostic-ui'
 
               <Button disabled>Label</Button>

@@ -71,7 +71,7 @@ const UseMergedRefHookPage = () => (
           </>
         }
         code={
-          /* syntax-highlight jsx */ `
+          /* syntax-highlight jsx */ /* JSX */ `
             import { useCustomValidity, useMergedRef } from 'device-agnostic-ui'
             import React from 'react'
 

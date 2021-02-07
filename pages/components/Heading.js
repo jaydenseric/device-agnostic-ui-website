@@ -111,7 +111,7 @@ const HeadingComponentPage = () => (
         <CodeExample
           caption="Suitable for a primary page heading."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Heading } from 'device-agnostic-ui'
 
               <Heading size={1}>Heading</Heading>
@@ -123,7 +123,7 @@ const HeadingComponentPage = () => (
         <CodeExample
           caption="Suitable for a secondary page heading, with an ID."
           code={
-            /* syntax-highlight jsx */ `
+            /* syntax-highlight jsx */ /* JSX */ `
               import { Heading } from 'device-agnostic-ui'
 
               <Heading level={2} size={2} id="heading">
