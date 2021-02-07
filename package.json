@@ -43,11 +43,16 @@
     "imagemin-zopfli": "^7.0.0",
     "prettier": "^2.2.1",
     "prismjs": "^1.23.0",
-    "puppeteer": "^7.0.1"
+    "puppeteer": "^7.0.1",
+    "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.2"
   },
   "scripts": {
-    "test": "npm run test:eslint && npm run test:prettier && npm run test:unused-exports",
+    "test": "npm run test:eslint && npm run test:stylelint && npm run test:prettier && npm run test:unused-exports",
     "test:eslint": "eslint .",
+    "test:stylelint": "stylelint '**/*.css'",
     "test:prettier": "prettier -c .",
     "test:unused-exports": "find-unused-exports --resolve-file-extensions mjs,js --resolve-index-files",
     "screenshots": "node scripts/screenshots",
