@@ -27,20 +27,22 @@ const TableComponentPage = () => (
           caption="With row headers."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Table } from 'device-agnostic-ui'
+              import { Table } from 'device-agnostic-ui';
 
-              <Table>
-                <tbody>
-                  <tr>
-                    <th scope="row">Country</th>
-                    <td>Australia</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Capital</th>
-                    <td>Canberra</td>
-                  </tr>
-                </tbody>
-              </Table>
+              const result = (
+                <Table>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Country</th>
+                      <td>Australia</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Capital</th>
+                      <td>Canberra</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              );
             `
           }
           result={
@@ -62,26 +64,28 @@ const TableComponentPage = () => (
           caption="With column headers."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Table } from 'device-agnostic-ui'
+              import { Table } from 'device-agnostic-ui';
 
-              <Table>
-                <thead>
-                  <tr>
-                    <th scope="col">Country</th>
-                    <th scope="col">Capital</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Australia</td>
-                    <td>Canberra</td>
-                  </tr>
-                  <tr>
-                    <td>New Zealand</td>
-                    <td>Wellington</td>
-                  </tr>
-                </tbody>
-              </Table>
+              const result = (
+                <Table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Country</th>
+                      <th scope="col">Capital</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Australia</td>
+                      <td>Canberra</td>
+                    </tr>
+                    <tr>
+                      <td>New Zealand</td>
+                      <td>Wellington</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              );
             `
           }
           result={

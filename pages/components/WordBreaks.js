@@ -55,11 +55,13 @@ const WordBreaksComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading, WordBreaks } from 'device-agnostic-ui'
+              import { Heading, WordBreaks } from 'device-agnostic-ui';
 
-              <Heading style={{ maxWidth: '4em' }}>
-                <WordBreaks>learnHTML5WithUs</WordBreaks>
-              </Heading>
+              const result = (
+                <Heading style={{ maxWidth: '4em' }}>
+                  <WordBreaks>learnHTML5WithUs</WordBreaks>
+                </Heading>
+              );
             `
           }
           result={
@@ -78,9 +80,9 @@ const WordBreaksComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading } from 'device-agnostic-ui'
+              import { Heading } from 'device-agnostic-ui';
 
-              <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>
+              const result = <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>;
             `
           }
           result={

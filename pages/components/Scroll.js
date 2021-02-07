@@ -66,22 +66,24 @@ const ScrollComponentPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { Heading, Scroll } from 'device-agnostic-ui'
+            import { Heading, Scroll } from 'device-agnostic-ui';
 
-            <Scroll style={{ maxWidth: '15rem' }}>
-              <article>
-                <Heading>First</Heading>
-              </article>
-              <article>
-                <Heading>Second</Heading>
-              </article>
-              <article>
-                <Heading>Third</Heading>
-              </article>
-              <article>
-                <Heading>Fourth</Heading>
-              </article>
-            </Scroll>
+            const result = (
+              <Scroll style={{ maxWidth: '15rem' }}>
+                <article>
+                  <Heading>First</Heading>
+                </article>
+                <article>
+                  <Heading>Second</Heading>
+                </article>
+                <article>
+                  <Heading>Third</Heading>
+                </article>
+                <article>
+                  <Heading>Fourth</Heading>
+                </article>
+              </Scroll>
+            );
           `
         }
         result={

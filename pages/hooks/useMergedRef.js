@@ -72,14 +72,14 @@ const UseMergedRefHookPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { useCustomValidity, useMergedRef } from 'device-agnostic-ui'
-            import React from 'react'
+            import { useCustomValidity, useMergedRef } from 'device-agnostic-ui';
+            import React from 'react';
 
             const Input = React.forwardRef(({ validationMessage, ...props }, ref) => {
-              const mergedRef = useMergedRef([ref])
-              useCustomValidity(mergedRef, validationMessage)
-              return <input {...props} ref={mergedRef} />
-            })
+              const mergedRef = useMergedRef([ref]);
+              useCustomValidity(mergedRef, validationMessage);
+              return <input {...props} ref={mergedRef} />;
+            });
           `
         }
       />

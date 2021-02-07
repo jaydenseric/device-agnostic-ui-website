@@ -112,9 +112,9 @@ const HeadingComponentPage = () => (
           caption="Suitable for a primary page heading."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading } from 'device-agnostic-ui'
+              import { Heading } from 'device-agnostic-ui';
 
-              <Heading size={1}>Heading</Heading>
+              const result = <Heading size={1}>Heading</Heading>;
             `
           }
           result={<Heading size={1}>Heading</Heading>}
@@ -124,11 +124,13 @@ const HeadingComponentPage = () => (
           caption="Suitable for a secondary page heading, with an ID."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading } from 'device-agnostic-ui'
+              import { Heading } from 'device-agnostic-ui';
 
-              <Heading level={2} size={2} id="heading">
-                Heading
-              </Heading>
+              const result = (
+                <Heading level={2} size={2} id="heading">
+                  Heading
+                </Heading>
+              );
             `
           }
           result={

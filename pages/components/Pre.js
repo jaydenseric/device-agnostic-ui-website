@@ -31,14 +31,16 @@ const PreComponentPage = () => (
         caption="Multiline HTML code block."
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-              import { Code, Pre } from 'device-agnostic-ui'
+            import { Code, Pre } from 'device-agnostic-ui';
 
+            const result = (
               <Pre>
                 <Code>{\`<section>
-                <h1>Header</h1>
-              </section>\`}</Code>
+              <h1>Header</h1>
+            </section>\`}</Code>
               </Pre>
-            `
+            );
+          `
         }
         result={
           <Pre>

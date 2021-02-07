@@ -77,13 +77,13 @@ const StylesPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui'
-              import App from 'next/app'
-              import Head from 'next/head'
+              import { stylesGlobal, stylesGlobalTheme } from 'device-agnostic-ui';
+              import App from 'next/app';
+              import Head from 'next/head';
 
               export default class CustomApp extends App {
                 render() {
-                  const { Component, pageProps = {} } = this.props
+                  const { Component, pageProps = {} } = this.props;
                   return (
                     <>
                       <Head>
@@ -98,7 +98,7 @@ const StylesPage = () => (
                         {stylesGlobal}
                       </style>
                     </>
-                  )
+                  );
                 }
               }
             `
@@ -189,19 +189,22 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-              import { Code, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui'
+                import { Code, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui';
 
-              const CodeSyntaxHighlighted = props => (
-                <>
-                  <Code {...props} className={stylesSyntaxHighlightingPrism.className} />
-                  {stylesSyntaxHighlightingPrism.styles}
-                </>
-              )
+                const CodeSyntaxHighlighted = (props) => (
+                  <>
+                    <Code {...props} className={stylesSyntaxHighlightingPrism.className} />
+                    {stylesSyntaxHighlightingPrism.styles}
+                  </>
+                );
 
-              const html = '<span class="token keyword">scalar</span> <span class="token class-name">Upload</span>'
+                const html =
+                  '<span class="token keyword">scalar</span> <span class="token class-name">Upload</span>';
 
-              <CodeSyntaxHighlighted dangerouslySetInnerHTML={{ __html: html }} />
-            `
+                const result = (
+                  <CodeSyntaxHighlighted dangerouslySetInnerHTML={{ __html: html }} />
+                );
+              `
             }
             result={
               <CodeSyntaxHighlighted
@@ -221,22 +224,24 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-              import { Html, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui'
+                import { Html, stylesSyntaxHighlightingPrism } from 'device-agnostic-ui';
 
-              const HtmlSyntaxHighlighted = props => (
-                <>
-                  <Html {...props} className={stylesSyntaxHighlightingPrism.className} />
-                  {stylesSyntaxHighlightingPrism.styles}
-                </>
-              )
+                const HtmlSyntaxHighlighted = (props) => (
+                  <>
+                    <Html {...props} className={stylesSyntaxHighlightingPrism.className} />
+                    {stylesSyntaxHighlightingPrism.styles}
+                  </>
+                );
 
-              const html = \`
-                <h3>Example</h3>
-                <pre><code><span class="token keyword">scalar</span> <span class="token class-name">Upload</span></code></pre>
-              \`
+                const html = \`
+                  <h3>Example</h3>
+                  <pre><code><span class="token keyword">scalar</span> <span class="token class-name">Upload</span></code></pre>
+                \`;
 
-              <HtmlSyntaxHighlighted dangerouslySetInnerHTML={{ __html: html }} />
-            `
+                const result = (
+                  <HtmlSyntaxHighlighted dangerouslySetInnerHTML={{ __html: html }} />
+                );
+              `
             }
             result={
               <HtmlSyntaxHighlighted
@@ -274,10 +279,10 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-              const html = /* syntax-highlight graphql */ \`
-                scalar Upload
-              \`
-            `
+                const html = /* syntax-highlight graphql */ \`
+                  scalar Upload
+                \`;
+              `
             }
           />
         </Margin>

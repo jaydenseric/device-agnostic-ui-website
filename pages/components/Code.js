@@ -27,9 +27,9 @@ const CodeComponentPage = () => (
           caption="Non-HTML code."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Code } from 'device-agnostic-ui'
+              import { Code } from 'device-agnostic-ui';
 
-              <Code>window</Code>
+              const result = <Code>window</Code>;
             `
           }
           result={<Code>window</Code>}
@@ -38,11 +38,13 @@ const CodeComponentPage = () => (
           caption="Code in a link."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Code, LinkText } from 'device-agnostic-ui'
+              import { Code, LinkText } from 'device-agnostic-ui';
 
-              <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
-                <Code>window</Code>
-              </LinkText>
+              const result = (
+                <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
+                  <Code>window</Code>
+                </LinkText>
+              );
             `
           }
           result={
@@ -55,9 +57,9 @@ const CodeComponentPage = () => (
           caption="HTML code."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Code } from 'device-agnostic-ui'
+              import { Code } from 'device-agnostic-ui';
 
-              <Code>{'<strong>'}</Code>
+              const result = <Code>{'<strong>'}</Code>;
             `
           }
           result={<Code>{'<strong>'}</Code>}

@@ -26,12 +26,14 @@ const ParaComponentPage = () => (
         caption="Simple paragraph."
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { Para } from 'device-agnostic-ui'
+            import { Para } from 'device-agnostic-ui';
 
-            <Para>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Para>
+            const result = (
+              <Para>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+              </Para>
+            );
           `
         }
         result={

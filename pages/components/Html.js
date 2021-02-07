@@ -92,56 +92,62 @@ const HtmlComponentPage = () => (
           caption="Using JSX HTML."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Html } from 'device-agnostic-ui'
+              import { Html } from 'device-agnostic-ui';
 
-              <Html>
-                <h1>Heading 1</h1>
-                <h2>Heading 2</h2>
-                <h3>Heading 3</h3>
-                <h4>Heading 4</h4>
-                <h5>Heading 5</h5>
-                <h6>Heading 6</h6>
-                <p>Paragraph containing <code>code</code> and a <a href="/">link</a>.</p>
-                <blockquote>Blockquote containing text.</blockquote>
-                <blockquote>
-                  <p>Blockquote containing paragraphs.</p>
-                  <p>Blockquote containing paragraphs.</p>
-                </blockquote>
-                <ul>
-                  <li>Unordered list item</li>
-                  <li>Unordered list item</li>
-                </ul>
-                <ol>
-                  <li>Ordered list item</li>
-                  <li>Ordered list item</li>
-                </ol>
-                <pre><code>Preformatted code</code></pre>
-                <table>
-                  <thead>
-                    <tr>
-                      <th scope="col">Table header</th>
-                      <th scope="col">Table header</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                  </tr>
-                  <tr>
-                    <td>Table cell</td>
-                    <td>Table cell</td>
-                  </tr>
-                  </tbody>
-                </table>
-                <p>
-                  <img
-                    src="/static/example-picture/example.png"
-                    width="180"
-                    alt="Alternate text."
-                  />
-                </p>
-              </Html>
+              const result = (
+                <Html>
+                  <h1>Heading 1</h1>
+                  <h2>Heading 2</h2>
+                  <h3>Heading 3</h3>
+                  <h4>Heading 4</h4>
+                  <h5>Heading 5</h5>
+                  <h6>Heading 6</h6>
+                  <p>
+                    Paragraph containing <code>code</code> and a <a href="/">link</a>.
+                  </p>
+                  <blockquote>Blockquote containing text.</blockquote>
+                  <blockquote>
+                    <p>Blockquote containing paragraphs.</p>
+                    <p>Blockquote containing paragraphs.</p>
+                  </blockquote>
+                  <ul>
+                    <li>Unordered list item</li>
+                    <li>Unordered list item</li>
+                  </ul>
+                  <ol>
+                    <li>Ordered list item</li>
+                    <li>Ordered list item</li>
+                  </ol>
+                  <pre>
+                    <code>Preformatted code</code>
+                  </pre>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col">Table header</th>
+                        <th scope="col">Table header</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                      </tr>
+                      <tr>
+                        <td>Table cell</td>
+                        <td>Table cell</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p>
+                    <img
+                      src="/static/example-picture/example.png"
+                      width="180"
+                      alt="Alternate text."
+                    />
+                  </p>
+                </Html>
+              );
             `
           }
           result={
@@ -205,9 +211,11 @@ const HtmlComponentPage = () => (
           caption="Using a HTML string."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Html } from 'device-agnostic-ui'
+              import { Html } from 'device-agnostic-ui';
 
-              <Html dangerouslySetInnerHTML={{ __html: '<h1>Heading 1</h1>' }} />
+              const result = (
+                <Html dangerouslySetInnerHTML={{ __html: '<h1>Heading 1</h1>' }} />
+              );
             `
           }
           result={
@@ -218,11 +226,13 @@ const HtmlComponentPage = () => (
           caption="How to locally override heading font sizes."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Html } from 'device-agnostic-ui'
+              import { Html } from 'device-agnostic-ui';
 
-              <Html style={{ '--daui-h1-font-size': '150%' }}>
-                <h1>Heading 1</h1>
-              </Html>
+              const result = (
+                <Html style={{ '--daui-h1-font-size': '150%' }}>
+                  <h1>Heading 1</h1>
+                </Html>
+              );
             `
           }
           result={

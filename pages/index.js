@@ -145,19 +145,19 @@ const IndexPage = () => (
               <CodeSyntaxHighlighted
                 code={
                   /* syntax-highlight json */ /* JSON */ `
-                  {
-                    "presets": [
-                      [
-                        "next/babel",
-                        {
-                          "styled-jsx": {
-                            "optimizeForSpeed": false
+                    {
+                      "presets": [
+                        [
+                          "next/babel",
+                          {
+                            "styled-jsx": {
+                              "optimizeForSpeed": false
+                            }
                           }
-                        }
+                        ]
                       ]
-                    ]
-                  }
-                `
+                    }
+                  `
                 }
               />
             </Pre>

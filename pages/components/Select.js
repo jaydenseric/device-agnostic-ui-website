@@ -59,12 +59,14 @@ const SelectComponentPage = () => (
           caption="Simple."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui'
+              import { Select } from 'device-agnostic-ui';
 
-              <Select>
-                <option>Option A</option>
-                <option>Option B</option>
-              </Select>
+              const result = (
+                <Select>
+                  <option>Option A</option>
+                  <option>Option B</option>
+                </Select>
+              );
             `
           }
           result={
@@ -79,13 +81,17 @@ const SelectComponentPage = () => (
           caption="Required, with a placeholder option."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui'
+              import { Select } from 'device-agnostic-ui';
 
-              <Select required>
-                <option value="" disabled selected>Options</option>
-                <option value="A">Option A</option>
-                <option value="B">Option B</option>
-              </Select>
+              const result = (
+                <Select required>
+                  <option value="" disabled selected>
+                    Options
+                  </option>
+                  <option value="A">Option A</option>
+                  <option value="B">Option B</option>
+                </Select>
+              );
             `
           }
           result={
@@ -102,12 +108,14 @@ const SelectComponentPage = () => (
           caption="With a default value."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui'
+              import { Select } from 'device-agnostic-ui';
 
-              <Select value="B">
-                <option value="A">Option A</option>
-                <option value="B">Option B</option>
-              </Select>
+              const result = (
+                <Select value="B">
+                  <option value="A">Option A</option>
+                  <option value="B">Option B</option>
+                </Select>
+              );
             `
           }
           result={
@@ -127,12 +135,14 @@ const SelectComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui'
+              import { Select } from 'device-agnostic-ui';
 
-              <Select multiple size="2">
-                <option>Option A</option>
-                <option>Option B</option>
-              </Select>
+              const result = (
+                <Select multiple size="2">
+                  <option>Option A</option>
+                  <option>Option B</option>
+                </Select>
+              );
             `
           }
           result={
@@ -146,18 +156,20 @@ const SelectComponentPage = () => (
           caption="With a size matching the count of options + groups."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui'
+              import { Select } from 'device-agnostic-ui';
 
-              <Select size="6">
-                <optgroup label="Group 1">
-                  <option>Option A</option>
-                  <option>Option B</option>
-                </optgroup>
-                <optgroup label="Group 2">
-                  <option>Option C</option>
-                  <option>Option D</option>
-                </optgroup>
-              </Select>
+              const result = (
+                <Select size="6">
+                  <optgroup label="Group 1">
+                    <option>Option A</option>
+                    <option>Option B</option>
+                  </optgroup>
+                  <optgroup label="Group 2">
+                    <option>Option C</option>
+                    <option>Option D</option>
+                  </optgroup>
+                </Select>
+              );
             `
           }
           result={

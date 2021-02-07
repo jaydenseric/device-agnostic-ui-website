@@ -63,18 +63,18 @@ const UseOnFocusReportValidityHookPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { useOnFocusReportValidity } from 'device-agnostic-ui'
-            import React from 'react'
+            import { useOnFocusReportValidity } from 'device-agnostic-ui';
+            import React from 'react';
 
             const Input = ({ validationMessage, ...props }) => {
-              const ref = React.useRef()
+              const ref = React.useRef();
 
-              useOnFocusReportValidity(ref)
+              useOnFocusReportValidity(ref);
 
-              return <input {...props} ref={ref} />
-            }
+              return <input {...props} ref={ref} />;
+            };
 
-            <Input type="email" />
+            const result = <Input type="email" />;
           `
         }
       />

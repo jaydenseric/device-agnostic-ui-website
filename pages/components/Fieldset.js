@@ -60,29 +60,31 @@ const FieldsetComponentPage = () => (
         caption={<>Grouped checkboxes.</>}
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { Fieldset, Textbox } from 'device-agnostic-ui'
+            import { Fieldset, Textbox } from 'device-agnostic-ui';
 
-            <Fieldset legend="Options">
-              <Toggle
-                inputProps={{
-                  type: 'radio',
-                  name: 'options',
-                  value: 'a',
-                  defaultChecked: true
-                }}
-              >
-                Label A
-              </Toggle>
-              <Toggle
-                inputProps={{
-                  type: 'radio',
-                  name: 'options',
-                  value: 'b'
-                }}
-              >
-                Label B
-              </Toggle>
-            </Fieldset>
+            const result = (
+              <Fieldset legend="Options">
+                <Toggle
+                  inputProps={{
+                    type: 'radio',
+                    name: 'options',
+                    value: 'a',
+                    defaultChecked: true,
+                  }}
+                >
+                  Label A
+                </Toggle>
+                <Toggle
+                  inputProps={{
+                    type: 'radio',
+                    name: 'options',
+                    value: 'b',
+                  }}
+                >
+                  Label B
+                </Toggle>
+              </Fieldset>
+            );
           `
         }
         result={

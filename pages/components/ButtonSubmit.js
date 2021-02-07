@@ -71,9 +71,9 @@ const ButtonSubmitComponentPage = () => (
           caption="Submit button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { ButtonSubmit } from 'device-agnostic-ui'
+              import { ButtonSubmit } from 'device-agnostic-ui';
 
-              <ButtonSubmit>Submit</ButtonSubmit>
+              const result = <ButtonSubmit>Submit</ButtonSubmit>;
             `
           }
           result={<ButtonSubmit>Submit</ButtonSubmit>}
@@ -82,9 +82,9 @@ const ButtonSubmitComponentPage = () => (
           caption="If the form submission is loading."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { ButtonSubmit } from 'device-agnostic-ui'
+              import { ButtonSubmit } from 'device-agnostic-ui';
 
-              <ButtonSubmit loading>Submit</ButtonSubmit>
+              const result = <ButtonSubmit loading>Submit</ButtonSubmit>;
             `
           }
           result={<ButtonSubmit loading>Submit</ButtonSubmit>}
@@ -93,9 +93,9 @@ const ButtonSubmitComponentPage = () => (
           caption="If the form submission was successful."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { ButtonSubmit } from 'device-agnostic-ui'
+              import { ButtonSubmit } from 'device-agnostic-ui';
 
-              <ButtonSubmit success>Submit</ButtonSubmit>
+              const result = <ButtonSubmit success>Submit</ButtonSubmit>;
             `
           }
           result={<ButtonSubmit success>Submit</ButtonSubmit>}

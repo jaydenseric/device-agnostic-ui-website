@@ -45,16 +45,18 @@ const LinkCardComponentPage = () => (
           caption="A picture link card."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-            import { LinkCard, Table } from 'device-agnostic-ui'
+            import { LinkCard, Table } from 'device-agnostic-ui';
 
-            <LinkCard href="/static/example-picture/example.svg">
-              <Picture width={157} height={100} style={{ width: '157px' }}>
-                <img
-                  src="/static/example-picture/example.svg"
-                  alt="Device Agnostic UI logo."
-                />
-              </Picture>
-            </LinkCard>
+            const result = (
+              <LinkCard href="/static/example-picture/example.svg">
+                <Picture width={157} height={100} style={{ width: '157px' }}>
+                  <img
+                    src="/static/example-picture/example.svg"
+                    alt="Device Agnostic UI logo."
+                  />
+                </Picture>
+              </LinkCard>
+            );
           `
           }
           result={
@@ -73,17 +75,19 @@ const LinkCardComponentPage = () => (
           caption="An active picture link card."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-            import { LinkCard, Table } from 'device-agnostic-ui'
+              import { LinkCard, Table } from 'device-agnostic-ui';
 
-            <LinkCard active href="/static/example-picture/example.svg">
-              <Picture width={157} height={100} style={{ width: '157px' }}>
-                <img
-                  src="/static/example-picture/example.svg"
-                  alt="Device Agnostic UI logo."
-                />
-              </Picture>
-            </LinkCard>
-          `
+              const result = (
+                <LinkCard active href="/static/example-picture/example.svg">
+                  <Picture width={157} height={100} style={{ width: '157px' }}>
+                    <img
+                      src="/static/example-picture/example.svg"
+                      alt="Device Agnostic UI logo."
+                    />
+                  </Picture>
+                </LinkCard>
+              );
+            `
           }
           result={
             <LinkCard active href="/static/example-picture/example.svg">

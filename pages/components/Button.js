@@ -39,9 +39,9 @@ const ButtonComponentPage = () => (
           caption="Simple button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button } from 'device-agnostic-ui'
+              import { Button } from 'device-agnostic-ui';
 
-              <Button>Label</Button>
+              const result = <Button>Label</Button>;
             `
           }
           result={<Button>Label</Button>}
@@ -51,9 +51,9 @@ const ButtonComponentPage = () => (
           caption="Disabled button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button } from 'device-agnostic-ui'
+              import { Button } from 'device-agnostic-ui';
 
-              <Button disabled>Label</Button>
+              const result = <Button disabled>Label</Button>;
             `
           }
           result={<Button disabled>Label</Button>}

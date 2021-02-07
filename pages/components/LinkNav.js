@@ -49,16 +49,18 @@ const LinkNavComponentPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { LinkActive, LinkNav, Nav } from 'device-agnostic-ui'
+            import { LinkActive, LinkNav, Nav } from 'device-agnostic-ui';
 
-            <Nav>
-              <LinkActive href="/components/LinkNav" passHref>
-                <LinkNav>LinkNav</LinkNav>
-              </LinkActive>
-              <LinkActive href="/components/Nav" passHref>
-                <LinkNav>Nav</LinkNav>
-              </LinkActive>
-            </Nav>
+            const result = (
+              <Nav>
+                <LinkActive href="/components/LinkNav" passHref>
+                  <LinkNav>LinkNav</LinkNav>
+                </LinkActive>
+                <LinkActive href="/components/Nav" passHref>
+                  <LinkNav>Nav</LinkNav>
+                </LinkActive>
+              </Nav>
+            );
           `
         }
         result={

@@ -102,15 +102,15 @@ const IconComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Icon } from 'device-agnostic-ui'
+              import { Icon } from 'device-agnostic-ui';
 
-              const IconCircleFilled = props => (
+              const IconCircleFilled = (props) => (
                 <Icon title="Circle filled" {...props}>
                   <circle cx="50%" cy="50%" r="50%" stroke="none" />
                 </Icon>
-              )
+              );
 
-              <IconCircleFilled size="2em" />
+              const result = <IconCircleFilled size="2em" />;
             `
           }
           result={<IconCircleFilled size="2em" />}
@@ -124,15 +124,15 @@ const IconComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Icon } from 'device-agnostic-ui'
+              import { Icon } from 'device-agnostic-ui';
 
-              const IconCircleOutline = props => (
+              const IconCircleOutline = (props) => (
                 <Icon title="Circle outline" {...props}>
                   <circle cx="50%" cy="50%" r="14" strokeWidth="4" fill="none" />
                 </Icon>
-              )
+              );
 
-              <IconCircleOutline size="2em" />
+              const result = <IconCircleOutline size="2em" />;
             `
           }
           result={<IconCircleOutline size="2em" />}

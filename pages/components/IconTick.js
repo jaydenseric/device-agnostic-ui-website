@@ -27,9 +27,9 @@ const IconComponentPage = () => (
         caption={<>How to use the icon.</>}
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { IconTick } from 'device-agnostic-ui'
+            import { IconTick } from 'device-agnostic-ui';
 
-            <IconTick size="2em" />
+            const result = <IconTick size="2em" />;
           `
         }
         result={<IconTick size="2em" />}

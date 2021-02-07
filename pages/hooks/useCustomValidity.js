@@ -74,21 +74,20 @@ const UseCustomValidityHookPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { useCustomValidity } from 'device-agnostic-ui'
-            import React from 'react'
+            import { useCustomValidity } from 'device-agnostic-ui';
+            import React from 'react';
 
             const Input = ({ validationMessage, ...props }) => {
-              const ref = React.useRef()
+              const ref = React.useRef();
 
-              useCustomValidity(ref, validationMessage)
+              useCustomValidity(ref, validationMessage);
 
-              return <input {...props} ref={ref} />
-            }
+              return <input {...props} ref={ref} />;
+            };
 
-            <Input
-              type="email"
-              validationMessage="Email address already registered."
-            />
+            const result = (
+              <Input type="email" validationMessage="Email address already registered." />
+            );
           `
         }
       />

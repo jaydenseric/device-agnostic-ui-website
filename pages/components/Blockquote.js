@@ -27,12 +27,14 @@ const BlockquoteComponentPage = () => (
           caption={<>Containing simple text.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Blockquote } from 'device-agnostic-ui'
+              import { Blockquote } from 'device-agnostic-ui';
 
-              <Blockquote>
-                Great minds discuss ideas, average minds discuss events, small
-                minds discuss people.
-              </Blockquote>
+              const result = (
+                <Blockquote>
+                  Great minds discuss ideas, average minds discuss events, small minds discuss
+                  people.
+                </Blockquote>
+              );
             `
           }
           result={
@@ -54,20 +56,22 @@ const BlockquoteComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Blockquote, LinkText, Para } from 'device-agnostic-ui'
+              import { Blockquote, LinkText, Para } from 'device-agnostic-ui';
 
-              <Blockquote>
-                <Para>
-                  Great minds discuss ideas, average minds discuss events, small
-                  minds discuss people.
-                </Para>
-                <Para>
-                  —{' '}
-                  <LinkText href="https://en.wikipedia.org/wiki/Henry_Thomas_Buckle">
-                    Henry Thomas Buckle
-                  </LinkText>
-                </Para>
-              </Blockquote>
+              const result = (
+                <Blockquote>
+                  <Para>
+                    Great minds discuss ideas, average minds discuss events, small minds
+                    discuss people.
+                  </Para>
+                  <Para>
+                    —{' '}
+                    <LinkText href="https://en.wikipedia.org/wiki/Henry_Thomas_Buckle">
+                      Henry Thomas Buckle
+                    </LinkText>
+                  </Para>
+                </Blockquote>
+              );
             `
           }
           result={

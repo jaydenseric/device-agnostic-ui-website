@@ -71,14 +71,16 @@ const PictureComponentPage = () => (
           caption="With an SVG source."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui'
+              import { Picture } from 'device-agnostic-ui';
 
-              <Picture width={157} height={100} style={{ width: '157px' }}>
-                <img
-                  src="/static/example-picture/example.svg"
-                  alt="Device Agnostic UI logo."
-                />
-              </Picture>
+              const result = (
+                <Picture width={157} height={100} style={{ width: '157px' }}>
+                  <img
+                    src="/static/example-picture/example.svg"
+                    alt="Device Agnostic UI logo."
+                  />
+                </Picture>
+              );
             `
           }
           result={
@@ -101,19 +103,21 @@ const PictureComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui'
+              import { Picture } from 'device-agnostic-ui';
 
-              <Picture width={1} height={1} style={{ width: '6rem' }}>
-                <img
-                  src="/static/example-picture/example.svg"
-                  alt="Device Agnostic UI logo."
-                  style={{
-                    borderRadius: '50%',
-                    objectFit: 'contain',
-                    backgroundColor: 'gold'
-                  }}
-                />
-              </Picture>
+              const result = (
+                <Picture width={1} height={1} style={{ width: '6rem' }}>
+                  <img
+                    src="/static/example-picture/example.svg"
+                    alt="Device Agnostic UI logo."
+                    style={{
+                      borderRadius: '50%',
+                      objectFit: 'contain',
+                      backgroundColor: 'gold',
+                    }}
+                  />
+                </Picture>
+              );
             `
           }
           result={
@@ -135,18 +139,17 @@ const PictureComponentPage = () => (
           caption="With WebP and PNG sources."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui'
+              import { Picture } from 'device-agnostic-ui';
 
-              <Picture width={628} height={400} style={{ width: '157px' }}>
-                <source
-                  type="image/webp"
-                  srcSet="/static/example-picture/example.webp"
-                />
-                <img
-                  src="/static/example-picture/example.png"
-                  alt="Device Agnostic UI logo."
-                />
-              </Picture>
+              const result = (
+                <Picture width={628} height={400} style={{ width: '157px' }}>
+                  <source type="image/webp" srcSet="/static/example-picture/example.webp" />
+                  <img
+                    src="/static/example-picture/example.png"
+                    alt="Device Agnostic UI logo."
+                  />
+                </Picture>
+              );
             `
           }
           result={
@@ -166,28 +169,27 @@ const PictureComponentPage = () => (
           caption="With separate light and dark mode WebP and PNG sources."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui'
+              import { Picture } from 'device-agnostic-ui';
 
-              <Picture width={1360} height={560} style={{ width: '340px' }}>
-                <source
-                  type="image/webp"
-                  srcSet="/static/screenshots/Button-dark.webp"
-                  media="(prefers-color-scheme: dark)"
-                />
-                <source
-                  type="image/png"
-                  srcSet="/static/screenshots/Button-dark.png"
-                  media="(prefers-color-scheme: dark)"
-                />
-                <source
-                  type="image/webp"
-                  srcSet="/static/screenshots/Button-light.webp"
-                />
-                <img
-                  src="/static/screenshots/Button-light.png"
-                  alt="Button component screenshot"
-                />
-              </Picture>
+              const result = (
+                <Picture width={1360} height={560} style={{ width: '340px' }}>
+                  <source
+                    type="image/webp"
+                    srcSet="/static/screenshots/Button-dark.webp"
+                    media="(prefers-color-scheme: dark)"
+                  />
+                  <source
+                    type="image/png"
+                    srcSet="/static/screenshots/Button-dark.png"
+                    media="(prefers-color-scheme: dark)"
+                  />
+                  <source type="image/webp" srcSet="/static/screenshots/Button-light.webp" />
+                  <img
+                    src="/static/screenshots/Button-light.png"
+                    alt="Button component screenshot"
+                  />
+                </Picture>
+              );
             `
           }
           result={

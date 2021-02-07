@@ -99,9 +99,9 @@ const ToggleComponentPage = () => (
           caption="Simple checkbox."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Toggle } from 'device-agnostic-ui'
+              import { Toggle } from 'device-agnostic-ui';
 
-              <Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>
+              const result = <Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>;
             `
           }
           result={<Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>}
@@ -110,11 +110,11 @@ const ToggleComponentPage = () => (
           caption="Required checkbox."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Toggle } from 'device-agnostic-ui'
+              import { Toggle } from 'device-agnostic-ui';
 
-              <Toggle inputProps={{ type: 'checkbox', required: true }}>
-                Label
-              </Toggle>
+              const result = (
+                <Toggle inputProps={{ type: 'checkbox', required: true }}>Label</Toggle>
+              );
             `
           }
           result={
@@ -127,14 +127,13 @@ const ToggleComponentPage = () => (
           caption="Checkbox with a custom validation message."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Toggle } from 'device-agnostic-ui'
+              import { Toggle } from 'device-agnostic-ui';
 
-              <Toggle
-                validationMessage="Custom message."
-                inputProps={{ type: 'checkbox' }}
-              >
-                Label
-              </Toggle>
+              const result = (
+                <Toggle validationMessage="Custom message." inputProps={{ type: 'checkbox' }}>
+                  Label
+                </Toggle>
+              );
             `
           }
           result={
@@ -150,27 +149,31 @@ const ToggleComponentPage = () => (
           caption="Radio group."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button } from 'device-agnostic-ui'
+              import { Button } from 'device-agnostic-ui';
 
-              <Toggle
-                inputProps={{
-                  type: 'radio',
-                  name: 'options',
-                  value: 'a',
-                  defaultChecked: true
-                }}
-              >
-                Label A
-              </Toggle>
-              <Toggle
-                inputProps={{
-                  type: 'radio',
-                  name: 'options',
-                  value: 'b'
-                }}
-              >
-                Label B
-              </Toggle>
+              const result = (
+                <>
+                  <Toggle
+                    inputProps={{
+                      type: 'radio',
+                      name: 'options',
+                      value: 'a',
+                      defaultChecked: true,
+                    }}
+                  >
+                    Label A
+                  </Toggle>
+                  <Toggle
+                    inputProps={{
+                      type: 'radio',
+                      name: 'options',
+                      value: 'b',
+                    }}
+                  >
+                    Label B
+                  </Toggle>
+                </>
+              );
             `
           }
           result={
@@ -202,22 +205,22 @@ const ToggleComponentPage = () => (
           caption="Using an input element ref."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button, Toggle } from 'device-agnostic-ui'
-              import React from 'react'
+              import { Button, Toggle } from 'device-agnostic-ui';
+              import React from 'react';
 
               const InputRefExample = () => {
-                const ref = React.useRef()
-                const onClick = () => ref.current.focus()
+                const ref = React.useRef();
+                const onClick = () => ref.current.focus();
 
                 return (
                   <>
                     <Toggle inputProps={{ type: 'checkbox', ref }} />{' '}
                     <Button onClick={onClick}>Focus</Button>
                   </>
-                )
-              }
+                );
+              };
 
-              <InputRefExample />
+              const result = <InputRefExample />;
             `
           }
           result={<InputRefExample />}

@@ -28,9 +28,9 @@ const LinkTextComponentPage = () => (
           caption="External link."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { LinkText } from 'device-agnostic-ui'
+              import { LinkText } from 'device-agnostic-ui';
 
-              <LinkText href="https://reactjs.org">React</LinkText>
+              const result = <LinkText href="https://reactjs.org">React</LinkText>;
             `
           }
           result={<LinkText href="https://reactjs.org">React</LinkText>}
@@ -40,12 +40,14 @@ const LinkTextComponentPage = () => (
           caption="Internal Next.js route link."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { LinkText } from 'device-agnostic-ui'
-              import Link from 'next/link'
+              import { LinkText } from 'device-agnostic-ui';
+              import Link from 'next/link';
 
-              <Link href="/" passHref>
-                <LinkText>Home</LinkText>
-              </Link>
+              const result = (
+                <Link href="/" passHref>
+                  <LinkText>Home</LinkText>
+                </Link>
+              );
             `
           }
           result={
