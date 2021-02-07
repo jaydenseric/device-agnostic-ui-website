@@ -61,7 +61,7 @@ const StylesPage = () => (
           caption={
             <>
               How to setup the global styles in{' '}
-              <LinkText href="https://nextjs.org/docs#custom-app">
+              <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
                 <Code>pages/_app.js</Code>
               </LinkText>
               .{' '}
