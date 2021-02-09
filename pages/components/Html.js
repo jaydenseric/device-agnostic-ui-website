@@ -51,7 +51,7 @@ const HtmlComponentPage = () => (
         </Para>
         <Para>
           The{' '}
-          <Link href="/styles#stylesGlobalTheme" passHref>
+          <Link href="/styles#theme-styles" passHref>
             <LinkText>global theme</LinkText>
           </Link>{' '}
           provides a range of responsive heading font size CSS variables that
@@ -78,6 +78,31 @@ const HtmlComponentPage = () => (
           </li>
         </List>
       </>
+    }
+    componentStylesContent={
+      <CodeExample
+        caption={
+          <>
+            Additionally, import the styles for the{' '}
+            <Link href="/components?tags=markdown" passHref>
+              <LinkText>simple HTML components</LinkText>
+            </Link>{' '}
+            relating to the HTML expected to be used within.
+          </>
+        }
+        code={
+          /* syntax-highlight jsx */ /* JSX */ `
+            import 'device-agnostic-ui/public/components/Blockquote.css';
+            import 'device-agnostic-ui/public/components/Code.css';
+            import 'device-agnostic-ui/public/components/Heading.css';
+            import 'device-agnostic-ui/public/components/LinkText.css';
+            import 'device-agnostic-ui/public/components/List.css';
+            import 'device-agnostic-ui/public/components/Para.css';
+            import 'device-agnostic-ui/public/components/Pre.css';
+            import 'device-agnostic-ui/public/components/Table.css';
+          `
+        }
+      />
     }
     componentPropsContent={
       <Margin>

@@ -63,7 +63,7 @@ const HeadingComponentPage = () => (
         >
           <Para>
             Sets the CSS <Code>font-size</Code> via a{' '}
-            <Link href="/styles#stylesGlobalTheme" passHref>
+            <Link href="/styles#theme-styles" passHref>
               <LinkText>global theme</LinkText>
             </Link>{' '}
             CSS variable, e.g. <Code>--daui-h1-font-size</Code>. Omit if setting

@@ -20,7 +20,7 @@ import { Section } from '../components/Section';
 const IndexPage = () => (
   <Page
     title="Overview"
-    description="A library of device agnostic styles, components and hooks for Next.js projects."
+    description="A library of device agnostic styles, components and hooks for React and Next.js apps."
   >
     <PageHeader heading="Device Agnostic&nbsp;UI">
       <Para>
@@ -36,7 +36,8 @@ const IndexPage = () => (
         <Link href="/hooks" passHref>
           <LinkText>hooks</LinkText>
         </Link>{' '}
-        for <LinkText href="https://nextjs.org">Next.js</LinkText>. One design
+        for <LinkText href="https://reactjs.org">React</LinkText> and{' '}
+        <LinkText href="https://nextjs.org">Next.js</LinkText> apps. One design
         for any viewport (size, orientation, resolution), input method (touch,
         mouse) or network speed. Simple to build, test and use.
       </Para>
@@ -44,18 +45,15 @@ const IndexPage = () => (
     <Section level={2} heading="Features" id="features">
       <Scroll>
         <EmojiCard emoji="📦" heading="Tiny bundle size">
+          JS tested to be{' '}
           <LinkText href="https://bundlephobia.com/result?p=device-agnostic-ui">
-            &lt; 8 KB
+            &lt; 3 kB
           </LinkText>{' '}
-          with{' '}
+          minified and gzipped, <em>before</em>{' '}
           <LinkText href="https://webpack.js.org/guides/tree-shaking">
             tree shaking
           </LinkText>
-          ,{' '}
-          <LinkText href="https://github.com/ai/size-limit">
-            Size Limit
-          </LinkText>{' '}
-          tested.
+          .
         </EmojiCard>
         <EmojiCard emoji="📱" heading="Mobile first">
           Intuitive layouts suitable for any screen size,{' '}
@@ -135,44 +133,9 @@ const IndexPage = () => (
             </Pre>
           </li>
           <li>
-            <Para>
-              <LinkText href="https://nextjs.org/docs#customizing-babel-config">
-                Customize the Babel config
-              </LinkText>
-              :
-            </Para>
-            <Pre>
-              <CodeSyntaxHighlighted
-                code={
-                  /* syntax-highlight json */ /* JSON */ `
-                    {
-                      "presets": [
-                        [
-                          "next/babel",
-                          {
-                            "styled-jsx": {
-                              "optimizeForSpeed": false
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  `
-                }
-              />
-            </Pre>
-            <Para>
-              Hopefully this won’t be necessary in the future, see{' '}
-              <LinkText href="https://github.com/vercel/styled-jsx/issues/602">
-                vercel/styled-jsx#602
-              </LinkText>
-              .
-            </Para>
-          </li>
-          <li>
-            Setup the essential{' '}
-            <Link href="/styles#global-styles" passHref>
-              <LinkText>global styles</LinkText>
+            Load the{' '}
+            <Link href="/styles" passHref>
+              <LinkText>styles</LinkText>
             </Link>
             .
           </li>

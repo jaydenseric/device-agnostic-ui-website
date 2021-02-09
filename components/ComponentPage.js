@@ -13,6 +13,10 @@ import { Page } from './Page';
 import { PageHeader } from './PageHeader';
 import { Section } from './Section';
 
+const codeExampleCssImport = /* syntax-highlight jsx */ /* JSX */ `
+  import 'device-agnostic-ui/public/components/NamePlaceholder.css';
+`;
+
 const codeExampleJsDeepImport = /* syntax-highlight jsx */ /* JSX */ `
   import NamePlaceholder from 'device-agnostic-ui/public/components/NamePlaceholder.js';
 `;
@@ -32,6 +36,7 @@ const codeExampleJsIndexRequire = /* syntax-highlight jsx */ /* JSX */ `
 export const ComponentPage = ({
   componentMeta,
   componentIntro,
+  componentStylesContent,
   componentPropsContent,
   componentExamplesContent,
 }) => (
@@ -44,6 +49,30 @@ export const ComponentPage = ({
       <Para>{componentMeta.description}</Para>
       {componentIntro}
     </PageHeader>
+    {(!!componentStylesContent || componentMeta.hasStyles) && (
+      <Section level={2} heading="Styles" id="styles">
+        <Margin>
+          {componentMeta.hasStyles && (
+            <CodeExample
+              caption={
+                <>
+                  Import the styles within a{' '}
+                  <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
+                    Next.js custom app
+                  </LinkText>{' '}
+                  in <Code>pages/_app.js</Code>.
+                </>
+              }
+              code={codeExampleCssImport.replace(
+                'NamePlaceholder',
+                componentMeta.name
+              )}
+            />
+          )}
+          {componentStylesContent}
+        </Margin>
+      </Section>
+    )}
     <Section level={2} heading="Props" id="props">
       {componentPropsContent}
     </Section>
@@ -127,8 +156,10 @@ ComponentPage.propTypes = {
         description: PropTypes.string.isRequired,
       })
     ).isRequired,
+    hasStyles: PropTypes.bool.isRequired,
   }),
   componentIntro: PropTypes.node,
+  componentStylesContent: PropTypes.node,
   componentPropsContent: PropTypes.node,
   componentExamplesContent: PropTypes.node,
 };

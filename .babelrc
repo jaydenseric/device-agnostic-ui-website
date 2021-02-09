@@ -1,4 +1,4 @@
 {
-  "presets": [["next/babel", { "styled-jsx": { "optimizeForSpeed": false } }]],
+  "presets": ["next/babel"],
   "plugins": ["syntax-highlight"]
 }
