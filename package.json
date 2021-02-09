@@ -17,7 +17,7 @@
     "npm": ">= 7"
   },
   "dependencies": {
-    "device-agnostic-ui": "^7.0.0",
+    "device-agnostic-ui": "^7.0.1",
     "next": "^10.0.6",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
