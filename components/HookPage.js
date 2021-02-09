@@ -1,8 +1,25 @@
-import { Margin, Para, WordBreaks } from 'device-agnostic-ui';
+import { Code, Margin, Para, WordBreaks } from 'device-agnostic-ui';
 import PropTypes from 'prop-types';
+import { CodeExample } from './CodeExample';
 import { Page } from './Page';
 import { PageHeader } from './PageHeader';
 import { Section } from './Section';
+
+const codeExampleJsDeepImport = /* syntax-highlight jsx */ /* JSX */ `
+  import NamePlaceholder from 'device-agnostic-ui/public/hooks/NamePlaceholder.js';
+`;
+
+const codeExampleJsDeepRequire = /* syntax-highlight jsx */ /* JSX */ `
+  const NamePlaceholder = require('device-agnostic-ui/public/hooks/NamePlaceholder');
+`;
+
+const codeExampleJsIndexImport = /* syntax-highlight jsx */ /* JSX */ `
+  import { NamePlaceholder } from 'device-agnostic-ui';
+`;
+
+const codeExampleJsIndexRequire = /* syntax-highlight jsx */ /* JSX */ `
+  const { NamePlaceholder } = require('device-agnostic-ui');
+`;
 
 export const HookPage = ({
   hookMeta,
@@ -25,7 +42,55 @@ export const HookPage = ({
       </Section>
     )}
     <Section level={2} heading="Examples" id="examples">
-      <Margin>{hookExamplesContent}</Margin>
+      <Margin>
+        <CodeExample
+          caption={
+            <>
+              Deep <Code>import</Code>.
+            </>
+          }
+          code={codeExampleJsDeepImport.replace(
+            /NamePlaceholder/gu,
+            hookMeta.name
+          )}
+        />
+        <CodeExample
+          caption={
+            <>
+              Deep <Code>require</Code>.
+            </>
+          }
+          code={codeExampleJsDeepRequire.replace(
+            /NamePlaceholder/gu,
+            hookMeta.name
+          )}
+        />
+        <CodeExample
+          caption={
+            <>
+              Index <Code>import</Code>. Convenient, but technically inferior to
+              a deep <Code>import</Code>.
+            </>
+          }
+          code={codeExampleJsIndexImport.replace(
+            /NamePlaceholder/gu,
+            hookMeta.name
+          )}
+        />
+        <CodeExample
+          caption={
+            <>
+              Index <Code>require</Code>. Convenient, but technically inferior
+              to a deep <Code>require</Code>.
+            </>
+          }
+          code={codeExampleJsIndexRequire.replace(
+            /NamePlaceholder/gu,
+            hookMeta.name
+          )}
+        />
+        {hookExamplesContent}
+      </Margin>
     </Section>
   </Page>
 );
