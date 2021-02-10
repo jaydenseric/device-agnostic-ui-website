@@ -19,6 +19,7 @@ export const ButtonSubmit = {
   description: 'A form submit button that displays loading and success state.',
   tags: [forms],
   hasStyles: true,
+  getComponentDependencies: () => [Button, IconTick, Loading],
 };
 
 export const Code = {
@@ -40,6 +41,7 @@ export const Heading = {
   description: 'A text heading.',
   tags: [markdown],
   hasStyles: true,
+  getComponentDependencies: () => [LinkText],
 };
 
 export const Html = {
@@ -62,6 +64,7 @@ export const IconTick = {
   description: 'An inline SVG tick icon.',
   tags: [icons],
   hasStyles: false,
+  getComponentDependencies: () => [Icon],
 };
 
 export const LinkActive = {
@@ -172,6 +175,7 @@ export const Toggle = {
   description: 'A checkbox or radio input.',
   tags: [forms],
   hasStyles: true,
+  getComponentDependencies: () => [IconTick],
 };
 
 export const WordBreaks = {

@@ -39,111 +39,143 @@ export const ComponentPage = ({
   componentStylesContent,
   componentPropsContent,
   componentExamplesContent,
-}) => (
-  <Page
-    title={`${componentMeta.name} component`}
-    description={componentMeta.description}
-    imageUrl={`${process.env.ORIGIN}/static/screenshots/${componentMeta.name}-light.png`}
-  >
-    <PageHeader heading={<WordBreaks>{componentMeta.name}</WordBreaks>}>
-      <Para>{componentMeta.description}</Para>
-      {componentIntro}
-    </PageHeader>
-    {(!!componentStylesContent || componentMeta.hasStyles) && (
-      <Section level={2} heading="Styles" id="styles">
+}) => {
+  let codeExampleDependencyCssImports = '';
+
+  if (componentMeta.getComponentDependencies) {
+    componentMeta.getComponentDependencies().forEach((dependency) => {
+      if (dependency.hasStyles)
+        codeExampleDependencyCssImports += codeExampleCssImport.replace(
+          'NamePlaceholder',
+          dependency.name
+        );
+    });
+
+    codeExampleDependencyCssImports = codeExampleDependencyCssImports.replace(
+      /\n\n/gmu,
+      '\n'
+    );
+  }
+
+  return (
+    <Page
+      title={`${componentMeta.name} component`}
+      description={componentMeta.description}
+      imageUrl={`${process.env.ORIGIN}/static/screenshots/${componentMeta.name}-light.png`}
+    >
+      <PageHeader heading={<WordBreaks>{componentMeta.name}</WordBreaks>}>
+        <Para>{componentMeta.description}</Para>
+        {componentIntro}
+      </PageHeader>
+      {(!!componentStylesContent ||
+        componentMeta.hasStyles ||
+        !!codeExampleDependencyCssImports) && (
+        <Section level={2} heading="Styles" id="styles">
+          <Margin>
+            {componentMeta.hasStyles && (
+              <CodeExample
+                caption={
+                  <>
+                    Import the styles within a{' '}
+                    <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
+                      Next.js custom app
+                    </LinkText>{' '}
+                    in <Code>pages/_app.js</Code>.
+                  </>
+                }
+                code={codeExampleCssImport.replace(
+                  'NamePlaceholder',
+                  componentMeta.name
+                )}
+              />
+            )}
+            {!!codeExampleDependencyCssImports && (
+              <CodeExample
+                caption={
+                  <>
+                    Also import the styles for the components this component
+                    implements.
+                  </>
+                }
+                code={codeExampleDependencyCssImports}
+              />
+            )}
+            {componentStylesContent}
+          </Margin>
+        </Section>
+      )}
+      <Section level={2} heading="Props" id="props">
+        {componentPropsContent}
+      </Section>
+      <Section level={2} heading="Examples" id="examples">
         <Margin>
-          {componentMeta.hasStyles && (
-            <CodeExample
-              caption={
-                <>
-                  Import the styles within a{' '}
-                  <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
-                    Next.js custom app
-                  </LinkText>{' '}
-                  in <Code>pages/_app.js</Code>.
-                </>
-              }
-              code={codeExampleCssImport.replace(
-                'NamePlaceholder',
-                componentMeta.name
-              )}
-            />
-          )}
-          {componentStylesContent}
+          <CodeExample
+            caption={
+              <>
+                Deep <Code>import</Code>.
+              </>
+            }
+            code={codeExampleJsDeepImport.replace(
+              /NamePlaceholder/gu,
+              componentMeta.name
+            )}
+          />
+          <CodeExample
+            caption={
+              <>
+                Deep <Code>require</Code>.
+              </>
+            }
+            code={codeExampleJsDeepRequire.replace(
+              /NamePlaceholder/gu,
+              componentMeta.name
+            )}
+          />
+          <CodeExample
+            caption={
+              <>
+                Index <Code>import</Code>. Convenient, but technically inferior
+                to a deep <Code>import</Code>.
+              </>
+            }
+            code={codeExampleJsIndexImport.replace(
+              /NamePlaceholder/gu,
+              componentMeta.name
+            )}
+          />
+          <CodeExample
+            caption={
+              <>
+                Index <Code>require</Code>. Convenient, but technically inferior
+                to a deep <Code>require</Code>.
+              </>
+            }
+            code={codeExampleJsIndexRequire.replace(
+              /NamePlaceholder/gu,
+              componentMeta.name
+            )}
+          />
+          {componentExamplesContent}
         </Margin>
       </Section>
-    )}
-    <Section level={2} heading="Props" id="props">
-      {componentPropsContent}
-    </Section>
-    <Section level={2} heading="Examples" id="examples">
-      <Margin>
-        <CodeExample
-          caption={
-            <>
-              Deep <Code>import</Code>.
-            </>
-          }
-          code={codeExampleJsDeepImport.replace(
-            /NamePlaceholder/gu,
-            componentMeta.name
-          )}
-        />
-        <CodeExample
-          caption={
-            <>
-              Deep <Code>require</Code>.
-            </>
-          }
-          code={codeExampleJsDeepRequire.replace(
-            /NamePlaceholder/gu,
-            componentMeta.name
-          )}
-        />
-        <CodeExample
-          caption={
-            <>
-              Index <Code>import</Code>. Convenient, but technically inferior to
-              a deep <Code>import</Code>.
-            </>
-          }
-          code={codeExampleJsIndexImport.replace(
-            /NamePlaceholder/gu,
-            componentMeta.name
-          )}
-        />
-        <CodeExample
-          caption={
-            <>
-              Index <Code>require</Code>. Convenient, but technically inferior
-              to a deep <Code>require</Code>.
-            </>
-          }
-          code={codeExampleJsIndexRequire.replace(
-            /NamePlaceholder/gu,
-            componentMeta.name
-          )}
-        />
-        {componentExamplesContent}
-      </Margin>
-    </Section>
-    {!!componentMeta.tags.length && (
-      <Section level={2} heading="Tags" id="tags">
-        <Margin>
-          <List>
-            {componentMeta.tags.map(({ tag, label, description }) => (
-              <li key={tag}>
-                <Link href={`/components?tags=${tag}`} passHref>
-                  <LinkText title={description}>{label}</LinkText>
-                </Link>
-              </li>
-            ))}
-          </List>
-        </Margin>
-      </Section>
-    )}
-  </Page>
-);
+      {!!componentMeta.tags.length && (
+        <Section level={2} heading="Tags" id="tags">
+          <Margin>
+            <List>
+              {componentMeta.tags.map(({ tag, label, description }) => (
+                <li key={tag}>
+                  <Link href={`/components?tags=${tag}`} passHref>
+                    <LinkText title={description}>{label}</LinkText>
+                  </Link>
+                </li>
+              ))}
+            </List>
+          </Margin>
+        </Section>
+      )}
+    </Page>
+  );
+};
 
 ComponentPage.propTypes = {
   componentMeta: PropTypes.exact({
@@ -157,7 +189,8 @@ ComponentPage.propTypes = {
       })
     ).isRequired,
     hasStyles: PropTypes.bool.isRequired,
-  }),
+    getComponentDependencies: PropTypes.func,
+  }).isRequired,
   componentIntro: PropTypes.node,
   componentStylesContent: PropTypes.node,
   componentPropsContent: PropTypes.node,
