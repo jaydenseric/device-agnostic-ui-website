@@ -118,6 +118,7 @@ async function screenshotPageElement(
     }, elementId);
 
     // Create the light mode screenshot PNG.
+
     await page.emulateMediaFeatures([
       {
         name: 'prefers-color-scheme',
@@ -127,12 +128,17 @@ async function screenshotPageElement(
     await targetElement.screenshot({ path: pngPathLight });
 
     // Create the dark mode screenshot PNG.
+
     await page.emulateMediaFeatures([
       {
         name: 'prefers-color-scheme',
         value: 'dark',
       },
     ]);
+
+    // Wait for any CSS transitions going from light to dark mode to finish.
+    await page.waitFor(300);
+
     await targetElement.screenshot({ path: pngPathDark });
   } finally {
     await page.close();
