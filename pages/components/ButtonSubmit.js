@@ -1,6 +1,10 @@
 // ignore unused exports default
 
-import { ButtonSubmit, Code, LinkText, Para, Scroll } from 'device-agnostic-ui';
+import ButtonSubmit from 'device-agnostic-ui/public/components/ButtonSubmit.js';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';

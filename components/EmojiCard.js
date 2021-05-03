@@ -1,4 +1,5 @@
-import { Heading, Para } from 'device-agnostic-ui';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
 import PropTypes from 'prop-types';
 import styles from './EmojiCard.module.css';
 

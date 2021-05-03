@@ -1,6 +1,7 @@
 // ignore unused exports default
 
-import { LinkActive, Scroll } from 'device-agnostic-ui';
+import LinkActive from 'device-agnostic-ui/public/components/LinkActive.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
 import React from 'react';
 import { HookLinkCard } from '../../components/HookLinkCard';
 import { Page } from '../../components/Page';

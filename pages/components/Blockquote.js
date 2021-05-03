@@ -1,6 +1,9 @@
 // ignore unused exports default
 
-import { Blockquote, LinkText, Margin, Para } from 'device-agnostic-ui';
+import Blockquote from 'device-agnostic-ui/public/components/Blockquote.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
+import Margin from 'device-agnostic-ui/public/components/Margin.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';

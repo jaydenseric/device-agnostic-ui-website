@@ -1,11 +1,9 @@
-import {
-  Code,
-  LinkText,
-  List,
-  Margin,
-  Para,
-  WordBreaks,
-} from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
+import List from 'device-agnostic-ui/public/components/List.js';
+import Margin from 'device-agnostic-ui/public/components/Margin.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import WordBreaks from 'device-agnostic-ui/public/components/WordBreaks.js';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { CodeExample } from './CodeExample';

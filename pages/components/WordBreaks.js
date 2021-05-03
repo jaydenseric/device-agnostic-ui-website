@@ -1,6 +1,9 @@
 // ignore unused exports default
 
-import { Heading, Para, Scroll, WordBreaks } from 'device-agnostic-ui';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import WordBreaks from 'device-agnostic-ui/public/components/WordBreaks.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';

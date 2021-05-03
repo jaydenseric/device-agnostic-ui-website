@@ -1,6 +1,9 @@
 // ignore unused exports default
 
-import { Code, Loading, Para, Scroll } from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import Loading from 'device-agnostic-ui/public/components/Loading.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';

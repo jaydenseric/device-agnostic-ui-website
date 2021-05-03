@@ -1,4 +1,7 @@
-import { Heading, LinkCard, Para, WordBreaks } from 'device-agnostic-ui';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
+import LinkCard from 'device-agnostic-ui/public/components/LinkCard.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import WordBreaks from 'device-agnostic-ui/public/components/WordBreaks.js';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styles from './HookLinkCard.module.css';

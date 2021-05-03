@@ -1,4 +1,7 @@
-import { Code, Heading, Table, WordBreaks } from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
+import Table from 'device-agnostic-ui/public/components/Table.js';
+import WordBreaks from 'device-agnostic-ui/public/components/WordBreaks.js';
 import PropTypes from 'prop-types';
 import styles from './TypeCard.module.css';
 

@@ -1,6 +1,10 @@
 // ignore unused exports default
 
-import { LinkActive, LinkNav, Nav, Para, Scroll } from 'device-agnostic-ui';
+import LinkActive from 'device-agnostic-ui/public/components/LinkActive.js';
+import LinkNav from 'device-agnostic-ui/public/components/LinkNav.js';
+import Nav from 'device-agnostic-ui/public/components/Nav.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';

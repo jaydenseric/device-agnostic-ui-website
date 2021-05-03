@@ -1,6 +1,9 @@
 // ignore unused exports default
 
-import { LinkCard, Para, Picture, Scroll } from 'device-agnostic-ui';
+import LinkCard from 'device-agnostic-ui/public/components/LinkCard.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Picture from 'device-agnostic-ui/public/components/Picture.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';

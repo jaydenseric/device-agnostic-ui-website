@@ -1,4 +1,4 @@
-import { Code } from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
 import PropTypes from 'prop-types';
 import React from 'react';
 import stripIndent from 'strip-indent';

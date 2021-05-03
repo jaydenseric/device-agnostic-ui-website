@@ -1,4 +1,4 @@
-import { Heading } from 'device-agnostic-ui';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
 import PropTypes from 'prop-types';
 import styles from './Section.module.css';
 

@@ -1,13 +1,11 @@
 // ignore unused exports default
 
-import {
-  Button,
-  Code,
-  LinkText,
-  Para,
-  Scroll,
-  Toggle,
-} from 'device-agnostic-ui';
+import Button from 'device-agnostic-ui/public/components/Button.js';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Toggle from 'device-agnostic-ui/public/components/Toggle.js';
 import React from 'react';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';

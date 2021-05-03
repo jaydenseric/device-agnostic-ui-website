@@ -1,6 +1,10 @@
 // ignore unused exports default
 
-import { Code, LinkText, Para, Scroll, Textbox } from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Textbox from 'device-agnostic-ui/public/components/Textbox.js';
 import { Fragment } from 'react';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';

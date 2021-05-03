@@ -1,13 +1,11 @@
 // ignore unused exports default
 
-import {
-  Code,
-  Heading,
-  LinkText,
-  List,
-  Para,
-  Scroll,
-} from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import Heading from 'device-agnostic-ui/public/components/Heading.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
+import List from 'device-agnostic-ui/public/components/List.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';

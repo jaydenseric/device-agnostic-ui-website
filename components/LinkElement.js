@@ -1,4 +1,5 @@
-import { Code, LinkText } from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
 import PropTypes from 'prop-types';
 
 export const LinkElement = ({ type = 'HTML', element, attribute }) => (

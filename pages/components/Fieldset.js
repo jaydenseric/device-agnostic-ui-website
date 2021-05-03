@@ -1,6 +1,10 @@
 // ignore unused exports default
 
-import { Fieldset, LinkText, Para, Scroll, Toggle } from 'device-agnostic-ui';
+import Fieldset from 'device-agnostic-ui/public/components/Fieldset.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
+import Para from 'device-agnostic-ui/public/components/Para.js';
+import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Toggle from 'device-agnostic-ui/public/components/Toggle.js';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';

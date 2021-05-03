@@ -1,4 +1,5 @@
-import { Code, LinkText } from 'device-agnostic-ui';
+import Code from 'device-agnostic-ui/public/components/Code.js';
+import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
