@@ -1,21 +1,19 @@
-const childProcess = require('child_process');
-const fs = require('fs');
-const path = require('path');
-const util = require('util');
-// eslint-disable-next-line node/no-unpublished-require
-const imagemin = require('imagemin');
-// eslint-disable-next-line node/no-unpublished-require
-const imageminPngquant = require('imagemin-pngquant');
-// eslint-disable-next-line node/no-unpublished-require
-const imageminWebp = require('imagemin-webp');
-// eslint-disable-next-line node/no-unpublished-require
-const imageminZopfli = require('imagemin-zopfli');
-// eslint-disable-next-line node/no-unpublished-require
-const puppeteer = require('puppeteer');
+import { exec } from 'child_process';
+import fs from 'fs';
+import { basename } from 'path';
+import { promisify } from 'util';
+// eslint-disable-next-line node/no-unpublished-import
+import imagemin from 'imagemin';
+// eslint-disable-next-line node/no-unpublished-import
+import imageminPngquant from 'imagemin-pngquant';
+// eslint-disable-next-line node/no-unpublished-import
+import imageminWebp from 'imagemin-webp';
+// eslint-disable-next-line node/no-unpublished-import
+import imageminZopfli from 'imagemin-zopfli';
+// eslint-disable-next-line node/no-unpublished-import
+import puppeteer from 'puppeteer';
 
-const exec = util.promisify(childProcess.exec);
-const readdir = util.promisify(fs.readdir);
-const mkdir = util.promisify(fs.mkdir);
+const execPromise = promisify(exec);
 
 /**
  * Recursively deletes a directory, if it exists.
@@ -23,7 +21,7 @@ const mkdir = util.promisify(fs.mkdir);
  */
 async function deleteDirectory(path) {
   try {
-    await exec(`rm -rf ${path}`);
+    await execPromise(`rm -rf ${path}`);
   } catch (error) {
     console.error(`Failed to delete directory “${path}”:`, error);
   }
@@ -154,8 +152,8 @@ async function screenshotPageElement(
  */
 async function getComponentNames(componentPath) {
   try {
-    return (await readdir(componentPath))
-      .map((filename) => path.basename(filename, '.js'))
+    return (await fs.promises.readdir(componentPath))
+      .map((filename) => basename(filename, '.js'))
       .filter((name) => name !== 'index');
   } catch (error) {
     console.error(`Failed to get component names:`, error);
@@ -180,7 +178,7 @@ async function updateScreenshots(
     if (!componentNames) await deleteDirectory(screenshotPath);
 
     // Ensure the screenshot directory exists.
-    await mkdir(screenshotPath, { recursive: true });
+    await fs.promises.mkdir(screenshotPath, { recursive: true });
 
     if (!componentNames)
       componentNames = await getComponentNames(componentPath);
