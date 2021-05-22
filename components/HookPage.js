@@ -13,7 +13,7 @@ const codeExampleJsDeepImport = /* syntax-highlight jsx */ /* JSX */ `
 `;
 
 const codeExampleJsDeepRequire = /* syntax-highlight jsx */ /* JSX */ `
-  const NamePlaceholder = require('device-agnostic-ui/public/hooks/NamePlaceholder');
+  const NamePlaceholder = require('device-agnostic-ui/public/hooks/NamePlaceholder.js');
 `;
 
 const codeExampleJsIndexImport = /* syntax-highlight jsx */ /* JSX */ `
