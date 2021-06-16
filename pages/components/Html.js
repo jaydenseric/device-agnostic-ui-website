@@ -133,7 +133,8 @@ const HtmlComponentPage = () => (
                   <h5>Heading 5</h5>
                   <h6>Heading 6</h6>
                   <p>
-                    Paragraph containing <code>code</code> and a <a href="/">link</a>.
+                    Paragraph containing <code>code</code> and a{' '}
+                    <a href="https://deviceagnosticui.com">link</a>.
                   </p>
                   <blockquote>Blockquote containing text.</blockquote>
                   <blockquote>
@@ -190,7 +191,7 @@ const HtmlComponentPage = () => (
               <h6>Heading 6</h6>
               <p>
                 Paragraph containing <code>code</code> and a{' '}
-                <a href="/">link</a>.
+                <a href="https://deviceagnosticui.com">link</a>.
               </p>
               <blockquote>Blockquote containing text.</blockquote>
               <blockquote>
