@@ -19,7 +19,7 @@
   "browserslist": "Node 12.20 - 13 and Node < 13, Node >= 14.13, > 0.5%, not OperaMini all, not IE > 0, not dead",
   "dependencies": {
     "device-agnostic-ui": "^8.0.1",
-    "next": "^11.0.0",
+    "next": "^11.1.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
