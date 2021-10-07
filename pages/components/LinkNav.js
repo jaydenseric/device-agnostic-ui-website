@@ -21,7 +21,7 @@ const LinkNavComponentPage = () => (
           It implements the <LinkElement element="a" /> element.
         </Para>
         <Para>
-          It should be wrapped in the <LinkComponent component="LinkNav" />{' '}
+          It should be wrapped in the <LinkComponent component="LinkActive" />{' '}
           component for an internal Next.js route link.
         </Para>
       </>
