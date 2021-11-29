@@ -1,27 +1,14 @@
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import WordBreaks from 'device-agnostic-ui/public/components/WordBreaks.js';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
 import PropTypes from 'prop-types';
 import { CodeExample } from './CodeExample';
 import { Page } from './Page';
 import { PageHeader } from './PageHeader';
 import { Section } from './Section';
 
-const codeExampleJsDeepImport = /* syntax-highlight jsx */ /* JSX */ `
-  import NamePlaceholder from 'device-agnostic-ui/public/hooks/NamePlaceholder.js';
-`;
-
-const codeExampleJsDeepRequire = /* syntax-highlight jsx */ /* JSX */ `
-  const NamePlaceholder = require('device-agnostic-ui/public/hooks/NamePlaceholder.js');
-`;
-
-const codeExampleJsIndexImport = /* syntax-highlight jsx */ /* JSX */ `
-  import { NamePlaceholder } from 'device-agnostic-ui';
-`;
-
-const codeExampleJsIndexRequire = /* syntax-highlight jsx */ /* JSX */ `
-  const { NamePlaceholder } = require('device-agnostic-ui');
+const codeExampleEsmImport = /* syntax-highlight jsx */ /* JSX */ `
+  import NamePlaceholder from 'device-agnostic-ui/NamePlaceholder.mjs';
 `;
 
 export const HookPage = ({
@@ -47,47 +34,8 @@ export const HookPage = ({
     <Section level={2} heading="Examples" id="examples">
       <Margin>
         <CodeExample
-          caption={
-            <>
-              Deep <Code>import</Code>.
-            </>
-          }
-          code={codeExampleJsDeepImport.replace(
-            /NamePlaceholder/gu,
-            hookMeta.name
-          )}
-        />
-        <CodeExample
-          caption={
-            <>
-              Deep <Code>require</Code>.
-            </>
-          }
-          code={codeExampleJsDeepRequire.replace(
-            /NamePlaceholder/gu,
-            hookMeta.name
-          )}
-        />
-        <CodeExample
-          caption={
-            <>
-              Index <Code>import</Code>. Convenient, but technically inferior to
-              a deep <Code>import</Code>.
-            </>
-          }
-          code={codeExampleJsIndexImport.replace(
-            /NamePlaceholder/gu,
-            hookMeta.name
-          )}
-        />
-        <CodeExample
-          caption={
-            <>
-              Index <Code>require</Code>. Convenient, but technically inferior
-              to a deep <Code>require</Code>.
-            </>
-          }
-          code={codeExampleJsIndexRequire.replace(
+          caption="How to import."
+          code={codeExampleEsmImport.replace(
             /NamePlaceholder/gu,
             hookMeta.name
           )}

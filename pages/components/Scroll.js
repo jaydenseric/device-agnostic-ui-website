@@ -1,11 +1,11 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Heading from 'device-agnostic-ui/public/components/Heading.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import List from 'device-agnostic-ui/public/components/List.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Heading from 'device-agnostic-ui/Heading.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import List from 'device-agnostic-ui/List.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -64,7 +64,8 @@ const ScrollComponentPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { Heading, Scroll } from 'device-agnostic-ui';
+            import Heading from 'device-agnostic-ui/Heading.mjs';
+            import Scroll from 'device-agnostic-ui/Scroll.mjs';
 
             const result = (
               <Scroll style={{ maxWidth: '15rem' }}>

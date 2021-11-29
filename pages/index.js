@@ -1,12 +1,12 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import List from 'device-agnostic-ui/public/components/List.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Pre from 'device-agnostic-ui/public/components/Pre.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import List from 'device-agnostic-ui/List.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Pre from 'device-agnostic-ui/Pre.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import Link from 'next/link';
 import { CodeSyntaxHighlighted } from '../components/CodeSyntaxHighlighted';
 import { EmojiCard } from '../components/EmojiCard';

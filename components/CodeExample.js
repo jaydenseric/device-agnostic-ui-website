@@ -1,4 +1,4 @@
-import Pre from 'device-agnostic-ui/public/components/Pre.js';
+import Pre from 'device-agnostic-ui/Pre.mjs';
 import PropTypes from 'prop-types';
 import styles from './CodeExample.module.css';
 import { CodeSyntaxHighlighted } from './CodeSyntaxHighlighted';

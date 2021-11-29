@@ -1,9 +1,9 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Pre from 'device-agnostic-ui/public/components/Pre.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Pre from 'device-agnostic-ui/Pre.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -34,7 +34,8 @@ const PreComponentPage = () => (
         caption="Multiline HTML code block."
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { Code, Pre } from 'device-agnostic-ui';
+            import Code from 'device-agnostic-ui/Code.mjs';
+            import Pre from 'device-agnostic-ui/Pre.mjs';
 
             const result = (
               <Pre>

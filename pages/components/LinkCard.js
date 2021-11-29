@@ -1,9 +1,9 @@
 // ignore unused exports default
 
-import LinkCard from 'device-agnostic-ui/public/components/LinkCard.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Picture from 'device-agnostic-ui/public/components/Picture.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import LinkCard from 'device-agnostic-ui/LinkCard.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Picture from 'device-agnostic-ui/Picture.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';
@@ -48,7 +48,8 @@ const LinkCardComponentPage = () => (
           caption="A picture link card."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-            import { LinkCard, Table } from 'device-agnostic-ui';
+            import LinkCard from 'device-agnostic-ui/LinkCard.mjs';
+            import Table from 'device-agnostic-ui/Table.mjs';
 
             const result = (
               <LinkCard href="/static/example-picture/example.svg">
@@ -78,7 +79,8 @@ const LinkCardComponentPage = () => (
           caption="An active picture link card."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { LinkCard, Table } from 'device-agnostic-ui';
+              import LinkCard from 'device-agnostic-ui/LinkCard.mjs';
+              import Table from 'device-agnostic-ui/Table.mjs';
 
               const result = (
                 <LinkCard active href="/static/example-picture/example.svg">

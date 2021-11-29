@@ -1,8 +1,8 @@
 // ignore unused exports default
 
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Table from 'device-agnostic-ui/public/components/Table.js';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Table from 'device-agnostic-ui/Table.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -29,7 +29,7 @@ const TableComponentPage = () => (
           caption="With row headers."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Table } from 'device-agnostic-ui';
+              import Table from 'device-agnostic-ui/Table.mjs';
 
               const result = (
                 <Table>
@@ -66,7 +66,7 @@ const TableComponentPage = () => (
           caption="With column headers."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Table } from 'device-agnostic-ui';
+              import Table from 'device-agnostic-ui/Table.mjs';
 
               const result = (
                 <Table>

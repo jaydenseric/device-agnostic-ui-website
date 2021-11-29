@@ -1,8 +1,8 @@
 // ignore unused exports default
 
-import Button from 'device-agnostic-ui/public/components/Button.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
+import Button from 'device-agnostic-ui/Button.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -41,7 +41,7 @@ const ButtonComponentPage = () => (
           caption="Simple button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button } from 'device-agnostic-ui';
+              import Button from 'device-agnostic-ui/Button.mjs';
 
               const result = <Button>Label</Button>;
             `
@@ -53,7 +53,7 @@ const ButtonComponentPage = () => (
           caption="Disabled button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button } from 'device-agnostic-ui';
+              import Button from 'device-agnostic-ui/Button.mjs';
 
               const result = <Button disabled>Label</Button>;
             `

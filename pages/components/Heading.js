@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Heading from 'device-agnostic-ui/public/components/Heading.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Heading from 'device-agnostic-ui/Heading.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import Link from 'next/link';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
@@ -116,7 +116,7 @@ const HeadingComponentPage = () => (
           caption="Suitable for a primary page heading."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading } from 'device-agnostic-ui';
+              import Heading from 'device-agnostic-ui/Heading.mjs';
 
               const result = <Heading size={1}>Heading</Heading>;
             `
@@ -128,7 +128,7 @@ const HeadingComponentPage = () => (
           caption="Suitable for a secondary page heading, with an ID."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading } from 'device-agnostic-ui';
+              import Heading from 'device-agnostic-ui/Heading.mjs';
 
               const result = (
                 <Heading level={2} size={2} id="heading">

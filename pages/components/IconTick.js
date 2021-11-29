@@ -1,8 +1,8 @@
 // ignore unused exports default
 
-import IconTick from 'device-agnostic-ui/public/components/IconTick.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
+import IconTick from 'device-agnostic-ui/IconTick.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';
@@ -29,7 +29,7 @@ const IconComponentPage = () => (
         caption={<>How to use the icon.</>}
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { IconTick } from 'device-agnostic-ui';
+            import IconTick from 'device-agnostic-ui/IconTick.mjs';
 
             const result = <IconTick size="2em" />;
           `

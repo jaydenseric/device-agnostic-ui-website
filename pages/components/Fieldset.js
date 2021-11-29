@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import Fieldset from 'device-agnostic-ui/public/components/Fieldset.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
-import Toggle from 'device-agnostic-ui/public/components/Toggle.js';
+import Fieldset from 'device-agnostic-ui/Fieldset.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
+import Toggle from 'device-agnostic-ui/Toggle.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -64,7 +64,8 @@ const FieldsetComponentPage = () => (
         caption={<>Grouped checkboxes.</>}
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { Fieldset, Textbox } from 'device-agnostic-ui';
+            import Fieldset from 'device-agnostic-ui/Fieldset.mjs';
+            import Textbox from 'device-agnostic-ui/Textbox.mjs';
 
             const result = (
               <Fieldset legend="Options">

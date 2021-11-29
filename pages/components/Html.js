@@ -1,11 +1,11 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Html from 'device-agnostic-ui/public/components/Html.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import List from 'device-agnostic-ui/public/components/List.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Html from 'device-agnostic-ui/Html.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import List from 'device-agnostic-ui/List.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
 import Link from 'next/link';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
@@ -97,14 +97,14 @@ const HtmlComponentPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import 'device-agnostic-ui/public/components/Blockquote.css';
-            import 'device-agnostic-ui/public/components/Code.css';
-            import 'device-agnostic-ui/public/components/Heading.css';
-            import 'device-agnostic-ui/public/components/LinkText.css';
-            import 'device-agnostic-ui/public/components/List.css';
-            import 'device-agnostic-ui/public/components/Para.css';
-            import 'device-agnostic-ui/public/components/Pre.css';
-            import 'device-agnostic-ui/public/components/Table.css';
+            import 'device-agnostic-ui/Blockquote.css';
+            import 'device-agnostic-ui/Code.css';
+            import 'device-agnostic-ui/Heading.css';
+            import 'device-agnostic-ui/LinkText.css';
+            import 'device-agnostic-ui/List.css';
+            import 'device-agnostic-ui/Para.css';
+            import 'device-agnostic-ui/Pre.css';
+            import 'device-agnostic-ui/Table.css';
           `
         }
       />
@@ -122,7 +122,7 @@ const HtmlComponentPage = () => (
           caption="Using JSX HTML."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Html } from 'device-agnostic-ui';
+              import Html from 'device-agnostic-ui/Html.mjs';
 
               const result = (
                 <Html>
@@ -242,7 +242,7 @@ const HtmlComponentPage = () => (
           caption="Using a HTML string."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Html } from 'device-agnostic-ui';
+              import Html from 'device-agnostic-ui/Html.mjs';
 
               const result = (
                 <Html dangerouslySetInnerHTML={{ __html: '<h1>Heading 1</h1>' }} />
@@ -257,7 +257,7 @@ const HtmlComponentPage = () => (
           caption="How to locally override heading font sizes."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Html } from 'device-agnostic-ui';
+              import Html from 'device-agnostic-ui/Html.mjs';
 
               const result = (
                 <Html style={{ '--daui-h1-font-size': '150%' }}>

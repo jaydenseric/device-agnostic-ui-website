@@ -1,9 +1,9 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import Link from 'next/link';
 import { CodeExample } from '../../components/CodeExample';
 import { HookPage } from '../../components/HookPage';
@@ -66,7 +66,7 @@ const UseOnFocusReportValidityHookPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { useOnFocusReportValidity } from 'device-agnostic-ui';
+            import useOnFocusReportValidity from 'device-agnostic-ui/useOnFocusReportValidity.mjs';
             import React from 'react';
 
             const Input = ({ validationMessage, ...props }) => {

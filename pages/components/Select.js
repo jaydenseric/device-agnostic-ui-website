@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
-import Select from 'device-agnostic-ui/public/components/Select.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
+import Select from 'device-agnostic-ui/Select.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';
@@ -63,7 +63,7 @@ const SelectComponentPage = () => (
           caption="Simple."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui';
+              import Select from 'device-agnostic-ui/Select.mjs';
 
               const result = (
                 <Select>
@@ -85,7 +85,7 @@ const SelectComponentPage = () => (
           caption="Required, with a placeholder option."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui';
+              import Select from 'device-agnostic-ui/Select.mjs';
 
               const result = (
                 <Select required>
@@ -112,7 +112,7 @@ const SelectComponentPage = () => (
           caption="With a default value."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui';
+              import Select from 'device-agnostic-ui/Select.mjs';
 
               const result = (
                 <Select value="B">
@@ -139,7 +139,7 @@ const SelectComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui';
+              import Select from 'device-agnostic-ui/Select.mjs';
 
               const result = (
                 <Select multiple size="2">
@@ -160,7 +160,7 @@ const SelectComponentPage = () => (
           caption="With a size matching the count of options + groups."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Select } from 'device-agnostic-ui';
+              import Select from 'device-agnostic-ui/Select.mjs';
 
               const result = (
                 <Select size="6">

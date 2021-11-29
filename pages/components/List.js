@@ -1,9 +1,9 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import List from 'device-agnostic-ui/public/components/List.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import List from 'device-agnostic-ui/List.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -48,7 +48,7 @@ const ListComponentPage = () => (
           caption={<>Bulleted list.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { List } from 'device-agnostic-ui';
+              import List from 'device-agnostic-ui/List.mjs';
 
               const result = (
                 <List>
@@ -72,7 +72,8 @@ const ListComponentPage = () => (
           caption={<>Nested paragraphs and bulleted lists.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { List, Para } from 'device-agnostic-ui';
+              import List from 'device-agnostic-ui/List.mjs';
+              import Para from 'device-agnostic-ui/Para.mjs';
 
               const result = (
                 <List>
@@ -117,7 +118,7 @@ const ListComponentPage = () => (
           caption={<>Numbered list.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { List } from 'device-agnostic-ui';
+              import List from 'device-agnostic-ui/List.mjs';
 
               const result = (
                 <List ordered>
@@ -140,7 +141,8 @@ const ListComponentPage = () => (
           caption={<>Nested paragraphs and ordered lists.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { List, Para } from 'device-agnostic-ui';
+              import List from 'device-agnostic-ui/List.mjs';
+              import Para from 'device-agnostic-ui/Para.mjs';
 
               const result = (
                 <List ordered>

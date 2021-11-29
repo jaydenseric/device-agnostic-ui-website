@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Icon from 'device-agnostic-ui/public/components/Icon.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Icon from 'device-agnostic-ui/Icon.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -106,7 +106,7 @@ const IconComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Icon } from 'device-agnostic-ui';
+              import Icon from 'device-agnostic-ui/Icon.mjs';
 
               const IconCircleFilled = (props) => (
                 <Icon title="Circle filled" {...props}>
@@ -128,7 +128,7 @@ const IconComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Icon } from 'device-agnostic-ui';
+              import Icon from 'device-agnostic-ui/Icon.mjs';
 
               const IconCircleOutline = (props) => (
                 <Icon title="Circle outline" {...props}>

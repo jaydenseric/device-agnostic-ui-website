@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import Link from 'next/link';
 import { CodeExample } from '../../components/CodeExample';
 import { HookPage } from '../../components/HookPage';
@@ -76,7 +76,8 @@ const UseMergedRefHookPage = () => (
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { useCustomValidity, useMergedRef } from 'device-agnostic-ui';
+            import useCustomValidity from 'device-agnostic-ui/useCustomValidity.mjs';
+            import useMergedRef from 'device-agnostic-ui/useMergedRef.mjs';
             import React from 'react';
 
             const Input = React.forwardRef(({ validationMessage, ...props }, ref) => {

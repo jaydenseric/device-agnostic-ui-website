@@ -1,9 +1,9 @@
 // ignore unused exports default
 
-import Heading from 'device-agnostic-ui/public/components/Heading.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
-import WordBreaks from 'device-agnostic-ui/public/components/WordBreaks.js';
+import Heading from 'device-agnostic-ui/Heading.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
+import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';
@@ -58,7 +58,8 @@ const WordBreaksComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading, WordBreaks } from 'device-agnostic-ui';
+              import Heading from 'device-agnostic-ui/Heading.mjs';
+              import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
 
               const result = (
                 <Heading style={{ maxWidth: '4em' }}>
@@ -83,7 +84,7 @@ const WordBreaksComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Heading } from 'device-agnostic-ui';
+              import Heading from 'device-agnostic-ui/Heading.mjs';
 
               const result = <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>;
             `

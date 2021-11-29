@@ -1,9 +1,9 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Loading from 'device-agnostic-ui/public/components/Loading.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Loading from 'device-agnostic-ui/Loading.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -60,7 +60,7 @@ const LoadingComponentPage = () => (
         caption="A loading indicator."
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import { Loading } from 'device-agnostic-ui';
+            import Loading from 'device-agnostic-ui/Loading.mjs';
 
             const result = <Loading size="2em" />;
           `

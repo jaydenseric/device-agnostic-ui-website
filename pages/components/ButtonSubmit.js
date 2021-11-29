@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import ButtonSubmit from 'device-agnostic-ui/public/components/ButtonSubmit.js';
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import ButtonSubmit from 'device-agnostic-ui/ButtonSubmit.mjs';
+import Code from 'device-agnostic-ui/Code.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';
@@ -75,7 +75,7 @@ const ButtonSubmitComponentPage = () => (
           caption="Submit button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { ButtonSubmit } from 'device-agnostic-ui';
+              import ButtonSubmit from 'device-agnostic-ui/ButtonSubmit.mjs';
 
               const result = <ButtonSubmit>Submit</ButtonSubmit>;
             `
@@ -86,7 +86,7 @@ const ButtonSubmitComponentPage = () => (
           caption="If the form submission is loading."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { ButtonSubmit } from 'device-agnostic-ui';
+              import ButtonSubmit from 'device-agnostic-ui/ButtonSubmit.mjs';
 
               const result = <ButtonSubmit loading>Submit</ButtonSubmit>;
             `
@@ -97,7 +97,7 @@ const ButtonSubmitComponentPage = () => (
           caption="If the form submission was successful."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { ButtonSubmit } from 'device-agnostic-ui';
+              import ButtonSubmit from 'device-agnostic-ui/ButtonSubmit.mjs';
 
               const result = <ButtonSubmit success>Submit</ButtonSubmit>;
             `

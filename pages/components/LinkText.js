@@ -1,8 +1,8 @@
 // ignore unused exports default
 
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
 import Link from 'next/link';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
@@ -30,7 +30,7 @@ const LinkTextComponentPage = () => (
           caption="External link."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { LinkText } from 'device-agnostic-ui';
+              import LinkText from 'device-agnostic-ui/LinkText.mjs';
 
               const result = <LinkText href="https://reactjs.org">React</LinkText>;
             `
@@ -42,7 +42,7 @@ const LinkTextComponentPage = () => (
           caption="Internal Next.js route link."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { LinkText } from 'device-agnostic-ui';
+              import LinkText from 'device-agnostic-ui/LinkText.mjs';
               import Link from 'next/link';
 
               const result = (

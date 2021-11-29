@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Picture from 'device-agnostic-ui/public/components/Picture.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Picture from 'device-agnostic-ui/Picture.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkComponent } from '../../components/LinkComponent';
@@ -75,7 +75,7 @@ const PictureComponentPage = () => (
           caption="With an SVG source."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui';
+              import Picture from 'device-agnostic-ui/Picture.mjs';
 
               const result = (
                 <Picture width={157} height={100} style={{ width: '157px' }}>
@@ -107,7 +107,7 @@ const PictureComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui';
+              import Picture from 'device-agnostic-ui/Picture.mjs';
 
               const result = (
                 <Picture width={1} height={1} style={{ width: '6rem' }}>
@@ -143,7 +143,7 @@ const PictureComponentPage = () => (
           caption="With WebP and PNG sources."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui';
+              import Picture from 'device-agnostic-ui/Picture.mjs';
 
               const result = (
                 <Picture width={628} height={400} style={{ width: '157px' }}>
@@ -173,7 +173,7 @@ const PictureComponentPage = () => (
           caption="With separate light and dark mode WebP and PNG sources."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Picture } from 'device-agnostic-ui';
+              import Picture from 'device-agnostic-ui/Picture.mjs';
 
               const result = (
                 <Picture width={1360} height={560} style={{ width: '340px' }}>

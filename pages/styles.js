@@ -1,10 +1,10 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import Html from 'device-agnostic-ui/public/components/Html.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
+import Code from 'device-agnostic-ui/Code.mjs';
+import Html from 'device-agnostic-ui/Html.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
 import Link from 'next/link';
 import { CodeExample } from '../components/CodeExample';
 import { LinkComponent } from '../components/LinkComponent';
@@ -64,7 +64,7 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import 'device-agnostic-ui/public/theme.css';
+                import 'device-agnostic-ui/theme.css';
               `
             }
           />
@@ -116,7 +116,7 @@ const StylesPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-                import 'device-agnostic-ui/public/global.css';
+                import 'device-agnostic-ui/global.css';
               `
           }
         />
@@ -145,29 +145,29 @@ const StylesPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import 'device-agnostic-ui/public/components/Blockquote.css';
-              import 'device-agnostic-ui/public/components/Button.css';
-              import 'device-agnostic-ui/public/components/ButtonSubmit.css';
-              import 'device-agnostic-ui/public/components/Code.css';
-              import 'device-agnostic-ui/public/components/Fieldset.css';
-              import 'device-agnostic-ui/public/components/Heading.css';
-              import 'device-agnostic-ui/public/components/Html.css';
-              import 'device-agnostic-ui/public/components/Icon.css';
-              import 'device-agnostic-ui/public/components/LinkCard.css';
-              import 'device-agnostic-ui/public/components/LinkNav.css';
-              import 'device-agnostic-ui/public/components/LinkText.css';
-              import 'device-agnostic-ui/public/components/List.css';
-              import 'device-agnostic-ui/public/components/Loading.css';
-              import 'device-agnostic-ui/public/components/Margin.css';
-              import 'device-agnostic-ui/public/components/Nav.css';
-              import 'device-agnostic-ui/public/components/Para.css';
-              import 'device-agnostic-ui/public/components/Picture.css';
-              import 'device-agnostic-ui/public/components/Pre.css';
-              import 'device-agnostic-ui/public/components/Scroll.css';
-              import 'device-agnostic-ui/public/components/Select.css';
-              import 'device-agnostic-ui/public/components/Table.css';
-              import 'device-agnostic-ui/public/components/Textbox.css';
-              import 'device-agnostic-ui/public/components/Toggle.css';
+              import 'device-agnostic-ui/Blockquote.css';
+              import 'device-agnostic-ui/Button.css';
+              import 'device-agnostic-ui/ButtonSubmit.css';
+              import 'device-agnostic-ui/Code.css';
+              import 'device-agnostic-ui/Fieldset.css';
+              import 'device-agnostic-ui/Heading.css';
+              import 'device-agnostic-ui/Html.css';
+              import 'device-agnostic-ui/Icon.css';
+              import 'device-agnostic-ui/LinkCard.css';
+              import 'device-agnostic-ui/LinkNav.css';
+              import 'device-agnostic-ui/LinkText.css';
+              import 'device-agnostic-ui/List.css';
+              import 'device-agnostic-ui/Loading.css';
+              import 'device-agnostic-ui/Margin.css';
+              import 'device-agnostic-ui/Nav.css';
+              import 'device-agnostic-ui/Para.css';
+              import 'device-agnostic-ui/Picture.css';
+              import 'device-agnostic-ui/Pre.css';
+              import 'device-agnostic-ui/Scroll.css';
+              import 'device-agnostic-ui/Select.css';
+              import 'device-agnostic-ui/Table.css';
+              import 'device-agnostic-ui/Textbox.css';
+              import 'device-agnostic-ui/Toggle.css';
             `
           }
         />
@@ -228,7 +228,7 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import 'device-agnostic-ui/public/syntax-highlighting-prism.css';
+                import 'device-agnostic-ui/syntax-highlighting-prism.css';
               `
             }
           />
@@ -244,7 +244,7 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import { Code } from 'device-agnostic-ui';
+                import Code from 'device-agnostic-ui/Code.mjs';
 
                 const result = (
                   <Code
@@ -275,7 +275,7 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import { Html } from 'device-agnostic-ui';
+                import Html from 'device-agnostic-ui/Html.mjs';
 
                 const result = (
                   <Html

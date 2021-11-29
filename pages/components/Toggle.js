@@ -1,11 +1,11 @@
 // ignore unused exports default
 
-import Button from 'device-agnostic-ui/public/components/Button.js';
-import Code from 'device-agnostic-ui/public/components/Code.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
-import Scroll from 'device-agnostic-ui/public/components/Scroll.js';
-import Toggle from 'device-agnostic-ui/public/components/Toggle.js';
+import Button from 'device-agnostic-ui/Button.mjs';
+import Code from 'device-agnostic-ui/Code.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
+import Scroll from 'device-agnostic-ui/Scroll.mjs';
+import Toggle from 'device-agnostic-ui/Toggle.mjs';
 import React from 'react';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
@@ -97,7 +97,7 @@ const ToggleComponentPage = () => (
           caption="Simple checkbox."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Toggle } from 'device-agnostic-ui';
+              import Toggle from 'device-agnostic-ui/Toggle.mjs';
 
               const result = <Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>;
             `
@@ -108,7 +108,7 @@ const ToggleComponentPage = () => (
           caption="Required checkbox."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Toggle } from 'device-agnostic-ui';
+              import Toggle from 'device-agnostic-ui/Toggle.mjs';
 
               const result = (
                 <Toggle inputProps={{ type: 'checkbox', required: true }}>Label</Toggle>
@@ -125,7 +125,7 @@ const ToggleComponentPage = () => (
           caption="Checkbox with a custom validation message."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Toggle } from 'device-agnostic-ui';
+              import Toggle from 'device-agnostic-ui/Toggle.mjs';
 
               const result = (
                 <Toggle validationMessage="Custom message." inputProps={{ type: 'checkbox' }}>
@@ -147,7 +147,7 @@ const ToggleComponentPage = () => (
           caption="Radio group."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button } from 'device-agnostic-ui';
+              import Button from 'device-agnostic-ui/Button.mjs';
 
               const result = (
                 <>
@@ -203,7 +203,8 @@ const ToggleComponentPage = () => (
           caption="Using an input element ref."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Button, Toggle } from 'device-agnostic-ui';
+              import Button from 'device-agnostic-ui/Button.mjs';
+              import Toggle from 'device-agnostic-ui/Toggle.mjs';
               import React from 'react';
 
               const InputRefExample = () => {

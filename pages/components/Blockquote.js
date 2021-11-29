@@ -1,9 +1,9 @@
 // ignore unused exports default
 
-import Blockquote from 'device-agnostic-ui/public/components/Blockquote.js';
-import LinkText from 'device-agnostic-ui/public/components/LinkText.js';
-import Margin from 'device-agnostic-ui/public/components/Margin.js';
-import Para from 'device-agnostic-ui/public/components/Para.js';
+import Blockquote from 'device-agnostic-ui/Blockquote.mjs';
+import LinkText from 'device-agnostic-ui/LinkText.mjs';
+import Margin from 'device-agnostic-ui/Margin.mjs';
+import Para from 'device-agnostic-ui/Para.mjs';
 import { CodeExample } from '../../components/CodeExample';
 import { ComponentPage } from '../../components/ComponentPage';
 import { LinkElement } from '../../components/LinkElement';
@@ -30,7 +30,7 @@ const BlockquoteComponentPage = () => (
           caption={<>Containing simple text.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Blockquote } from 'device-agnostic-ui';
+              import Blockquote from 'device-agnostic-ui/Blockquote.mjs';
 
               const result = (
                 <Blockquote>
@@ -59,7 +59,9 @@ const BlockquoteComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import { Blockquote, LinkText, Para } from 'device-agnostic-ui';
+              import Blockquote from 'device-agnostic-ui/Blockquote.mjs';
+              import LinkText from 'device-agnostic-ui/LinkText.mjs';
+              import Para from 'device-agnostic-ui/Para.mjs';
 
               const result = (
                 <Blockquote>
