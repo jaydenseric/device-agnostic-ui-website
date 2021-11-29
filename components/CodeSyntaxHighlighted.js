@@ -1,7 +1,7 @@
-import Code from 'device-agnostic-ui/Code.mjs';
-import PropTypes from 'prop-types';
-import React from 'react';
-import stripIndent from 'strip-indent';
+import Code from "device-agnostic-ui/Code.mjs";
+import PropTypes from "prop-types";
+import React from "react";
+import stripIndent from "strip-indent";
 
 export const CodeSyntaxHighlighted = ({ code }) => {
   const __html = React.useMemo(() => stripIndent(code).trim(), [code]);

@@ -1,16 +1,16 @@
 // ignore unused exports default
 
-import LinkActive from 'device-agnostic-ui/LinkActive.mjs';
-import LinkNav from 'device-agnostic-ui/LinkNav.mjs';
-import Nav from 'device-agnostic-ui/Nav.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkComponent } from '../../components/LinkComponent';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { LinkNav as LinkNavComponentMeta } from '../../meta/components';
+import LinkActive from "device-agnostic-ui/LinkActive.mjs";
+import LinkNav from "device-agnostic-ui/LinkNav.mjs";
+import Nav from "device-agnostic-ui/Nav.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkComponent } from "../../components/LinkComponent";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { LinkNav as LinkNavComponentMeta } from "../../meta/components";
 
 const LinkNavComponentPage = () => (
   <ComponentPage
@@ -21,7 +21,7 @@ const LinkNavComponentPage = () => (
           It implements the <LinkElement element="a" /> element.
         </Para>
         <Para>
-          It should be wrapped in the <LinkComponent component="LinkActive" />{' '}
+          It should be wrapped in the <LinkComponent component="LinkActive" />{" "}
           component for an internal Next.js route link.
         </Para>
       </>
@@ -29,15 +29,15 @@ const LinkNavComponentPage = () => (
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'active', idPrefix: 'prop' }}
+          identity={{ name: "active", idPrefix: "prop" }}
           type="Boolean"
           defaultValue="false"
         >
           <Para>Does the link refer to the current page.</Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; an <LinkElement element="a" />{' '}
+            Additional props for the container; an <LinkElement element="a" />{" "}
             element.
           </Para>
         </TypeCard>
@@ -47,15 +47,15 @@ const LinkNavComponentPage = () => (
       <CodeExample
         caption={
           <>
-            With internal Next.js route links (using the{' '}
+            With internal Next.js route links (using the{" "}
             <LinkComponent component="LinkActive" /> component).
           </>
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import LinkActive from 'device-agnostic-ui/LinkActive.mjs';
-            import LinkNav from 'device-agnostic-ui/LinkNav.mjs';
-            import Nav from 'device-agnostic-ui/Nav.mjs';
+            import LinkActive from "device-agnostic-ui/LinkActive.mjs";
+            import LinkNav from "device-agnostic-ui/LinkNav.mjs";
+            import Nav from "device-agnostic-ui/Nav.mjs";
 
             const result = (
               <Nav>

@@ -1,42 +1,42 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import List from 'device-agnostic-ui/List.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { List as ListComponentMeta } from '../../meta/components';
+import Code from "device-agnostic-ui/Code.mjs";
+import List from "device-agnostic-ui/List.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { List as ListComponentMeta } from "../../meta/components";
 
 const ListComponentPage = () => (
   <ComponentPage
     componentMeta={ListComponentMeta}
     componentIntro={
       <Para>
-        It implements the <LinkElement element="ul" /> or{' '}
+        It implements the <LinkElement element="ul" /> or{" "}
         <LinkElement element="ol" /> element.
       </Para>
     }
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'ordered', idPrefix: 'prop' }}
+          identity={{ name: "ordered", idPrefix: "prop" }}
           type="Boolean"
           defaultValue="false"
         >
           <Para>
             If <Code>false</Code>, a <LinkElement element="ul" /> element is
-            used to display a bulleted list. Otherwise, a{' '}
+            used to display a bulleted list. Otherwise, a{" "}
             <LinkElement element="ol" /> element is used to display a numbered
             list
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; either a{' '}
-            <LinkElement element="ul" /> or <LinkElement element="ol" />{' '}
+            Additional props for the container; either a{" "}
+            <LinkElement element="ul" /> or <LinkElement element="ol" />{" "}
             element.
           </Para>
         </TypeCard>
@@ -48,7 +48,7 @@ const ListComponentPage = () => (
           caption={<>Bulleted list.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import List from 'device-agnostic-ui/List.mjs';
+              import List from "device-agnostic-ui/List.mjs";
 
               const result = (
                 <List>
@@ -72,8 +72,8 @@ const ListComponentPage = () => (
           caption={<>Nested paragraphs and bulleted lists.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import List from 'device-agnostic-ui/List.mjs';
-              import Para from 'device-agnostic-ui/Para.mjs';
+              import List from "device-agnostic-ui/List.mjs";
+              import Para from "device-agnostic-ui/Para.mjs";
 
               const result = (
                 <List>
@@ -118,7 +118,7 @@ const ListComponentPage = () => (
           caption={<>Numbered list.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import List from 'device-agnostic-ui/List.mjs';
+              import List from "device-agnostic-ui/List.mjs";
 
               const result = (
                 <List ordered>
@@ -141,8 +141,8 @@ const ListComponentPage = () => (
           caption={<>Nested paragraphs and ordered lists.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import List from 'device-agnostic-ui/List.mjs';
-              import Para from 'device-agnostic-ui/Para.mjs';
+              import List from "device-agnostic-ui/List.mjs";
+              import Para from "device-agnostic-ui/Para.mjs";
 
               const result = (
                 <List ordered>

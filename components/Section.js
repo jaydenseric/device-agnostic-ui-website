@@ -1,6 +1,6 @@
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import PropTypes from 'prop-types';
-import styles from './Section.module.css';
+import Heading from "device-agnostic-ui/Heading.mjs";
+import PropTypes from "prop-types";
+import styles from "./Section.module.css";
 
 export const Section = ({ level, heading, id, children }) => (
   <section className={styles.section}>

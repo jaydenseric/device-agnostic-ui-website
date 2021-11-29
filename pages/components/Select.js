@@ -1,16 +1,16 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import Select from 'device-agnostic-ui/Select.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkComponent } from '../../components/LinkComponent';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { Select as SelectComponentMeta } from '../../meta/components';
+import Code from "device-agnostic-ui/Code.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import Select from "device-agnostic-ui/Select.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkComponent } from "../../components/LinkComponent";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { Select as SelectComponentMeta } from "../../meta/components";
 
 const SelectComponentPage = () => (
   <ComponentPage
@@ -23,11 +23,11 @@ const SelectComponentPage = () => (
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'validationMessage', idPrefix: 'prop' }}
+          identity={{ name: "validationMessage", idPrefix: "prop" }}
           type="String"
         >
           <Para>
-            Sets the <LinkElement element="select" />{' '}
+            Sets the <LinkElement element="select" />{" "}
             <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
               <Code>validationMessage</Code>
             </LinkText>
@@ -35,7 +35,7 @@ const SelectComponentPage = () => (
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'children', idPrefix: 'prop' }}
+          identity={{ name: "children", idPrefix: "prop" }}
           type={
             <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
               JSX children
@@ -44,14 +44,14 @@ const SelectComponentPage = () => (
           required
         >
           <Para>
-            <LinkElement element="select" /> element children;{' '}
-            <LinkElement element="optgroup" /> or{' '}
+            <LinkElement element="select" /> element children;{" "}
+            <LinkElement element="optgroup" /> or{" "}
             <LinkElement element="option" /> elements.
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; a{' '}
+            Additional props for the container; a{" "}
             <LinkElement element="select" /> element.
           </Para>
         </TypeCard>
@@ -63,7 +63,7 @@ const SelectComponentPage = () => (
           caption="Simple."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Select from 'device-agnostic-ui/Select.mjs';
+              import Select from "device-agnostic-ui/Select.mjs";
 
               const result = (
                 <Select>
@@ -85,7 +85,7 @@ const SelectComponentPage = () => (
           caption="Required, with a placeholder option."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Select from 'device-agnostic-ui/Select.mjs';
+              import Select from "device-agnostic-ui/Select.mjs";
 
               const result = (
                 <Select required>
@@ -112,7 +112,7 @@ const SelectComponentPage = () => (
           caption="With a default value."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Select from 'device-agnostic-ui/Select.mjs';
+              import Select from "device-agnostic-ui/Select.mjs";
 
               const result = (
                 <Select value="B">
@@ -139,7 +139,7 @@ const SelectComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Select from 'device-agnostic-ui/Select.mjs';
+              import Select from "device-agnostic-ui/Select.mjs";
 
               const result = (
                 <Select multiple size="2">
@@ -160,7 +160,7 @@ const SelectComponentPage = () => (
           caption="With a size matching the count of options + groups."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Select from 'device-agnostic-ui/Select.mjs';
+              import Select from "device-agnostic-ui/Select.mjs";
 
               const result = (
                 <Select size="6">

@@ -1,12 +1,12 @@
 // ignore unused exports default
 
-import Button from 'device-agnostic-ui/Button.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { Button as ButtonComponentMeta } from '../../meta/components';
+import Button from "device-agnostic-ui/Button.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { Button as ButtonComponentMeta } from "../../meta/components";
 
 const ButtonComponentPage = () => (
   <ComponentPage
@@ -17,7 +17,7 @@ const ButtonComponentPage = () => (
           It implements the <LinkElement element="button" /> element.
         </Para>
         <Para>
-          It automatically has the{' '}
+          It automatically has the{" "}
           <LinkElement element="button" attribute="disabled" /> attribute until
           mounted, to prevent a default action from happening if the user clicks
           quickly after SSR.
@@ -41,7 +41,7 @@ const ButtonComponentPage = () => (
           caption="Simple button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Button from 'device-agnostic-ui/Button.mjs';
+              import Button from "device-agnostic-ui/Button.mjs";
 
               const result = <Button>Label</Button>;
             `
@@ -53,7 +53,7 @@ const ButtonComponentPage = () => (
           caption="Disabled button."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Button from 'device-agnostic-ui/Button.mjs';
+              import Button from "device-agnostic-ui/Button.mjs";
 
               const result = <Button disabled>Label</Button>;
             `

@@ -1,7 +1,7 @@
-import Pre from 'device-agnostic-ui/Pre.mjs';
-import PropTypes from 'prop-types';
-import styles from './CodeExample.module.css';
-import { CodeSyntaxHighlighted } from './CodeSyntaxHighlighted';
+import Pre from "device-agnostic-ui/Pre.mjs";
+import PropTypes from "prop-types";
+import styles from "./CodeExample.module.css";
+import { CodeSyntaxHighlighted } from "./CodeSyntaxHighlighted";
 
 export const CodeExample = ({ caption, code, result, screenshot }) => (
   <figure className={styles.figure}>
@@ -15,7 +15,7 @@ export const CodeExample = ({ caption, code, result, screenshot }) => (
       <div className={styles.result}>
         <div
           className={styles.preview}
-          id={screenshot ? 'daui-screenshot-target' : undefined}
+          id={screenshot ? "daui-screenshot-target" : undefined}
         >
           <div>{result}</div>
         </div>

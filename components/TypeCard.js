@@ -1,9 +1,9 @@
-import Code from 'device-agnostic-ui/Code.mjs';
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import Table from 'device-agnostic-ui/Table.mjs';
-import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
-import PropTypes from 'prop-types';
-import styles from './TypeCard.module.css';
+import Code from "device-agnostic-ui/Code.mjs";
+import Heading from "device-agnostic-ui/Heading.mjs";
+import Table from "device-agnostic-ui/Table.mjs";
+import WordBreaks from "device-agnostic-ui/WordBreaks.mjs";
+import PropTypes from "prop-types";
+import styles from "./TypeCard.module.css";
 
 export const TypeCard = ({
   identity,
@@ -15,7 +15,7 @@ export const TypeCard = ({
   <article className={styles.article}>
     {identity && (
       <Heading
-        style={{ fontSize: '110%' }}
+        style={{ fontSize: "110%" }}
         id={`${identity.idPrefix}-${identity.name}`}
       >
         <Code>
@@ -28,10 +28,10 @@ export const TypeCard = ({
         <tr>
           <th scope="row">Type</th>
           <td>
-            {type} ({required ? 'required' : 'optional'})
+            {type} ({required ? "required" : "optional"})
           </td>
         </tr>
-        {typeof defaultValue !== 'undefined' && (
+        {typeof defaultValue !== "undefined" && (
           <tr>
             <th scope="row">Default</th>
             <td>

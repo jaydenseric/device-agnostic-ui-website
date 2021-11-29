@@ -26,7 +26,7 @@
 }
 
 .result::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 1.5em;
   bottom: 100%;

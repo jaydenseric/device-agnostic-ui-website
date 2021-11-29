@@ -1,15 +1,15 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import Link from 'next/link';
-import { CodeExample } from '../../components/CodeExample';
-import { HookPage } from '../../components/HookPage';
-import { LinkComponent } from '../../components/LinkComponent';
-import { TypeCard } from '../../components/TypeCard';
-import { useCustomValidity as useCustomValidityMeta } from '../../meta/hooks';
+import Code from "device-agnostic-ui/Code.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import Link from "next/link";
+import { CodeExample } from "../../components/CodeExample";
+import { HookPage } from "../../components/HookPage";
+import { LinkComponent } from "../../components/LinkComponent";
+import { TypeCard } from "../../components/TypeCard";
+import { useCustomValidity as useCustomValidityMeta } from "../../meta/hooks";
 
 const UseCustomValidityHookPage = () => (
   <HookPage
@@ -17,23 +17,23 @@ const UseCustomValidityHookPage = () => (
     hookIntro={
       <>
         <Para>
-          It uses the HTML form control element’s{' '}
+          It uses the HTML form control element’s{" "}
           <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-setcustomvalidity">
             <Code>setCustomValidity</Code>
-          </LinkText>{' '}
-          method to set a custom{' '}
+          </LinkText>{" "}
+          method to set a custom{" "}
           <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
             <Code>validationMessage</Code>
-          </LinkText>{' '}
-          that displays a native tooltip and activates the CSS{' '}
+          </LinkText>{" "}
+          that displays a native tooltip and activates the CSS{" "}
           <LinkText href="https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid">
             <Code>:invalid</Code>
-          </LinkText>{' '}
+          </LinkText>{" "}
           pseudo-class.
         </Para>
         <Para>
           Useful when making form control components from scratch; it’s used by
-          many of the{' '}
+          many of the{" "}
           <Link href="/components?tags=forms" passHref>
             <LinkText>form components</LinkText>
           </Link>
@@ -44,7 +44,7 @@ const UseCustomValidityHookPage = () => (
     hookParametersContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'ref', idPrefix: 'parameter' }}
+          identity={{ name: "ref", idPrefix: "parameter" }}
           type={
             <LinkText href="https://reactjs.org/docs/refs-and-the-dom.html">
               React ref
@@ -55,9 +55,9 @@ const UseCustomValidityHookPage = () => (
           <Para>React ref for the HTML form control element.</Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'validationMessage', idPrefix: 'parameter' }}
+          identity={{ name: "validationMessage", idPrefix: "parameter" }}
           type="String"
-          defaultValue="''"
+          defaultValue='""'
         >
           <Para>
             Validation message for the HTML form control element. An empty
@@ -70,15 +70,15 @@ const UseCustomValidityHookPage = () => (
       <CodeExample
         caption={
           <>
-            A contrived usage example; normally you would use{' '}
-            <LinkComponent component="Textbox" /> which has a{' '}
+            A contrived usage example; normally you would use{" "}
+            <LinkComponent component="Textbox" /> which has a{" "}
             <LinkComponent component="Textbox" prop="validationMessage" /> prop.
           </>
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import useCustomValidity from 'device-agnostic-ui/useCustomValidity.mjs';
-            import React from 'react';
+            import useCustomValidity from "device-agnostic-ui/useCustomValidity.mjs";
+            import React from "react";
 
             const Input = ({ validationMessage, ...props }) => {
               const ref = React.useRef();

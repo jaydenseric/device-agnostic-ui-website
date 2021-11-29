@@ -1,17 +1,17 @@
 // ignore unused exports default
 
-import Button from 'device-agnostic-ui/Button.mjs';
-import Code from 'device-agnostic-ui/Code.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import Toggle from 'device-agnostic-ui/Toggle.mjs';
-import React from 'react';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { Toggle as ToggleComponentMeta } from '../../meta/components';
+import Button from "device-agnostic-ui/Button.mjs";
+import Code from "device-agnostic-ui/Code.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import Toggle from "device-agnostic-ui/Toggle.mjs";
+import React from "react";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { Toggle as ToggleComponentMeta } from "../../meta/components";
 
 const InputRefExample = () => {
   const ref = React.useRef();
@@ -19,7 +19,7 @@ const InputRefExample = () => {
 
   return (
     <>
-      <Toggle inputProps={{ type: 'checkbox', ref }} />{' '}
+      <Toggle inputProps={{ type: "checkbox", ref }} />{" "}
       <Button onClick={onClick}>Focus</Button>
     </>
   );
@@ -30,25 +30,25 @@ const ToggleComponentPage = () => (
     componentMeta={ToggleComponentMeta}
     componentIntro={
       <Para>
-        It implements the <LinkElement element="input" /> element with a{' '}
+        It implements the <LinkElement element="input" /> element with a{" "}
         <LinkText href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">
           <Code>type=&quot;checkbox&quot;</Code>
-        </LinkText>{' '}
-        or{' '}
+        </LinkText>{" "}
+        or{" "}
         <LinkText href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">
           <Code>type=&quot;radio&quot;</Code>
-        </LinkText>{' '}
+        </LinkText>{" "}
         attribute.
       </Para>
     }
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'validationMessage', idPrefix: 'prop' }}
+          identity={{ name: "validationMessage", idPrefix: "prop" }}
           type="String"
         >
           <Para>
-            Sets the <LinkElement element="input" />{' '}
+            Sets the <LinkElement element="input" />{" "}
             <LinkText href="https://html.spec.whatwg.org/dev/form-control-infrastructure.html#dom-cva-validationmessage">
               <Code>validationMessage</Code>
             </LinkText>
@@ -56,18 +56,18 @@ const ToggleComponentPage = () => (
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'inputProps', idPrefix: 'prop' }}
+          identity={{ name: "inputProps", idPrefix: "prop" }}
           type="Object"
           required
         >
           <Para>
             Props for the <LinkElement element="input" /> element. Must contain
-            either <Code>type: &apos;checkbox&apos;</Code> or{' '}
+            either <Code>type: &apos;checkbox&apos;</Code> or{" "}
             <Code>type: &apos;radio&apos;</Code>.
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'children', idPrefix: 'prop' }}
+          identity={{ name: "children", idPrefix: "prop" }}
           type={
             <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
               JSX children
@@ -75,17 +75,17 @@ const ToggleComponentPage = () => (
           }
         >
           <Para>
-            Label children. Due to the ancestor <LinkElement element="label" />{' '}
-            element, it may only render{' '}
+            Label children. Due to the ancestor <LinkElement element="label" />{" "}
+            element, it may only render{" "}
             <LinkText href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">
               phrasing content
-            </LinkText>{' '}
+            </LinkText>{" "}
             without <LinkElement element="label" /> elements.
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; a{' '}
+            Additional props for the container; a{" "}
             <LinkElement element="label" /> element.
           </Para>
         </TypeCard>
@@ -97,26 +97,26 @@ const ToggleComponentPage = () => (
           caption="Simple checkbox."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Toggle from 'device-agnostic-ui/Toggle.mjs';
+              import Toggle from "device-agnostic-ui/Toggle.mjs";
 
-              const result = <Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>;
+              const result = <Toggle inputProps={{ type: "checkbox" }}>Label</Toggle>;
             `
           }
-          result={<Toggle inputProps={{ type: 'checkbox' }}>Label</Toggle>}
+          result={<Toggle inputProps={{ type: "checkbox" }}>Label</Toggle>}
         />
         <CodeExample
           caption="Required checkbox."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Toggle from 'device-agnostic-ui/Toggle.mjs';
+              import Toggle from "device-agnostic-ui/Toggle.mjs";
 
               const result = (
-                <Toggle inputProps={{ type: 'checkbox', required: true }}>Label</Toggle>
+                <Toggle inputProps={{ type: "checkbox", required: true }}>Label</Toggle>
               );
             `
           }
           result={
-            <Toggle inputProps={{ type: 'checkbox', required: true }}>
+            <Toggle inputProps={{ type: "checkbox", required: true }}>
               Label
             </Toggle>
           }
@@ -125,10 +125,10 @@ const ToggleComponentPage = () => (
           caption="Checkbox with a custom validation message."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Toggle from 'device-agnostic-ui/Toggle.mjs';
+              import Toggle from "device-agnostic-ui/Toggle.mjs";
 
               const result = (
-                <Toggle validationMessage="Custom message." inputProps={{ type: 'checkbox' }}>
+                <Toggle validationMessage="Custom message." inputProps={{ type: "checkbox" }}>
                   Label
                 </Toggle>
               );
@@ -137,7 +137,7 @@ const ToggleComponentPage = () => (
           result={
             <Toggle
               validationMessage="Custom message."
-              inputProps={{ type: 'checkbox' }}
+              inputProps={{ type: "checkbox" }}
             >
               Label
             </Toggle>
@@ -147,15 +147,15 @@ const ToggleComponentPage = () => (
           caption="Radio group."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Button from 'device-agnostic-ui/Button.mjs';
+              import Button from "device-agnostic-ui/Button.mjs";
 
               const result = (
                 <>
                   <Toggle
                     inputProps={{
-                      type: 'radio',
-                      name: 'options',
-                      value: 'a',
+                      type: "radio",
+                      name: "options",
+                      value: "a",
                       defaultChecked: true,
                     }}
                   >
@@ -163,9 +163,9 @@ const ToggleComponentPage = () => (
                   </Toggle>
                   <Toggle
                     inputProps={{
-                      type: 'radio',
-                      name: 'options',
-                      value: 'b',
+                      type: "radio",
+                      name: "options",
+                      value: "b",
                     }}
                   >
                     Label B
@@ -178,9 +178,9 @@ const ToggleComponentPage = () => (
             <>
               <Toggle
                 inputProps={{
-                  type: 'radio',
-                  name: 'options',
-                  value: 'a',
+                  type: "radio",
+                  name: "options",
+                  value: "a",
                   defaultChecked: true,
                 }}
               >
@@ -188,9 +188,9 @@ const ToggleComponentPage = () => (
               </Toggle>
               <Toggle
                 inputProps={{
-                  type: 'radio',
-                  name: 'options',
-                  value: 'b',
+                  type: "radio",
+                  name: "options",
+                  value: "b",
                 }}
               >
                 Label B
@@ -203,9 +203,9 @@ const ToggleComponentPage = () => (
           caption="Using an input element ref."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Button from 'device-agnostic-ui/Button.mjs';
-              import Toggle from 'device-agnostic-ui/Toggle.mjs';
-              import React from 'react';
+              import Button from "device-agnostic-ui/Button.mjs";
+              import Toggle from "device-agnostic-ui/Toggle.mjs";
+              import React from "react";
 
               const InputRefExample = () => {
                 const ref = React.useRef();
@@ -213,7 +213,7 @@ const ToggleComponentPage = () => (
 
                 return (
                   <>
-                    <Toggle inputProps={{ type: 'checkbox', ref }} />{' '}
+                    <Toggle inputProps={{ type: "checkbox", ref }} />{" "}
                     <Button onClick={onClick}>Focus</Button>
                   </>
                 );

@@ -1,15 +1,15 @@
 // ignore unused exports default
 
-import LinkActive from 'device-agnostic-ui/LinkActive.mjs';
-import LinkNav from 'device-agnostic-ui/LinkNav.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Nav from 'device-agnostic-ui/Nav.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkComponent } from '../../components/LinkComponent';
-import { LinkElement } from '../../components/LinkElement';
-import { Nav as NavComponentMeta } from '../../meta/components';
+import LinkActive from "device-agnostic-ui/LinkActive.mjs";
+import LinkNav from "device-agnostic-ui/LinkNav.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Nav from "device-agnostic-ui/Nav.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkComponent } from "../../components/LinkComponent";
+import { LinkElement } from "../../components/LinkElement";
+import { Nav as NavComponentMeta } from "../../meta/components";
 
 const NavComponentPage = () => (
   <ComponentPage
@@ -20,7 +20,7 @@ const NavComponentPage = () => (
           It implements the <LinkElement element="nav" /> element.
         </Para>
         <Para>
-          The children should be <LinkComponent component="LinkNav" />{' '}
+          The children should be <LinkComponent component="LinkNav" />{" "}
           components, via the <LinkComponent component="LinkActive" /> component
           for internal Next.js route links.
         </Para>
@@ -37,16 +37,16 @@ const NavComponentPage = () => (
       <CodeExample
         caption={
           <>
-            With internal Next.js route link (using the{' '}
+            With internal Next.js route link (using the{" "}
             <LinkComponent component="LinkActive" /> component), and an external
             link.
           </>
         }
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import LinkActive from 'device-agnostic-ui/LinkActive.mjs';
-            import LinkNav from 'device-agnostic-ui/LinkNav.mjs';
-            import Nav from 'device-agnostic-ui/Nav.mjs';
+            import LinkActive from "device-agnostic-ui/LinkActive.mjs";
+            import LinkNav from "device-agnostic-ui/LinkNav.mjs";
+            import Nav from "device-agnostic-ui/Nav.mjs";
 
             const result = (
               <Nav>

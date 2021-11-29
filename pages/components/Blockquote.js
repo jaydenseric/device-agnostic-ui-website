@@ -1,13 +1,13 @@
 // ignore unused exports default
 
-import Blockquote from 'device-agnostic-ui/Blockquote.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { Blockquote as BlockquoteComponentMeta } from '../../meta/components';
+import Blockquote from "device-agnostic-ui/Blockquote.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { Blockquote as BlockquoteComponentMeta } from "../../meta/components";
 
 const BlockquoteComponentPage = () => (
   <ComponentPage
@@ -30,7 +30,7 @@ const BlockquoteComponentPage = () => (
           caption={<>Containing simple text.</>}
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Blockquote from 'device-agnostic-ui/Blockquote.mjs';
+              import Blockquote from "device-agnostic-ui/Blockquote.mjs";
 
               const result = (
                 <Blockquote>
@@ -50,7 +50,7 @@ const BlockquoteComponentPage = () => (
         <CodeExample
           caption={
             <>
-              Containing basic HTML, achievable via{' '}
+              Containing basic HTML, achievable via{" "}
               <LinkText href="https://github.github.com/gfm">
                 GitHub Flavored Markdown (GFM)
               </LinkText>
@@ -59,9 +59,9 @@ const BlockquoteComponentPage = () => (
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Blockquote from 'device-agnostic-ui/Blockquote.mjs';
-              import LinkText from 'device-agnostic-ui/LinkText.mjs';
-              import Para from 'device-agnostic-ui/Para.mjs';
+              import Blockquote from "device-agnostic-ui/Blockquote.mjs";
+              import LinkText from "device-agnostic-ui/LinkText.mjs";
+              import Para from "device-agnostic-ui/Para.mjs";
 
               const result = (
                 <Blockquote>
@@ -70,7 +70,7 @@ const BlockquoteComponentPage = () => (
                     discuss people.
                   </Para>
                   <Para>
-                    —{' '}
+                    —{" "}
                     <LinkText href="https://en.wikipedia.org/wiki/Henry_Thomas_Buckle">
                       Henry Thomas Buckle
                     </LinkText>
@@ -86,7 +86,7 @@ const BlockquoteComponentPage = () => (
                 minds discuss people.
               </Para>
               <Para>
-                —{' '}
+                —{" "}
                 <LinkText href="https://en.wikipedia.org/wiki/Henry_Thomas_Buckle">
                   Henry Thomas Buckle
                 </LinkText>

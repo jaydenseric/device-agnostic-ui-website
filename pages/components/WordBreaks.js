@@ -1,15 +1,15 @@
 // ignore unused exports default
 
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkComponent } from '../../components/LinkComponent';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { WordBreaks as WordBreaksComponentMeta } from '../../meta/components';
+import Heading from "device-agnostic-ui/Heading.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import WordBreaks from "device-agnostic-ui/WordBreaks.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkComponent } from "../../components/LinkComponent";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { WordBreaks as WordBreaksComponentMeta } from "../../meta/components";
 
 const WordBreaksComponentPage = () => (
   <ComponentPage
@@ -29,7 +29,7 @@ const WordBreaksComponentPage = () => (
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'placeholder', idPrefix: 'prop' }}
+          identity={{ name: "placeholder", idPrefix: "prop" }}
           type="String"
           defaultValue="<wbr />"
         >
@@ -39,7 +39,7 @@ const WordBreaksComponentPage = () => (
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'children', idPrefix: 'prop' }}
+          identity={{ name: "children", idPrefix: "prop" }}
           type="String"
           required
         >
@@ -52,24 +52,24 @@ const WordBreaksComponentPage = () => (
         <CodeExample
           caption={
             <>
-              A narrow <LinkComponent component="Heading" /> with{' '}
+              A narrow <LinkComponent component="Heading" /> with{" "}
               <LinkComponent component="WordBreaks" />.
             </>
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Heading from 'device-agnostic-ui/Heading.mjs';
-              import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
+              import Heading from "device-agnostic-ui/Heading.mjs";
+              import WordBreaks from "device-agnostic-ui/WordBreaks.mjs";
 
               const result = (
-                <Heading style={{ maxWidth: '4em' }}>
+                <Heading style={{ maxWidth: "4em" }}>
                   <WordBreaks>learnHTML5WithUs</WordBreaks>
                 </Heading>
               );
             `
           }
           result={
-            <Heading style={{ maxWidth: '4em' }}>
+            <Heading style={{ maxWidth: "4em" }}>
               <WordBreaks>learnHTML5WithUs</WordBreaks>
             </Heading>
           }
@@ -78,19 +78,19 @@ const WordBreaksComponentPage = () => (
         <CodeExample
           caption={
             <>
-              A narrow <LinkComponent component="Heading" /> without{' '}
+              A narrow <LinkComponent component="Heading" /> without{" "}
               <LinkComponent component="WordBreaks" />.
             </>
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Heading from 'device-agnostic-ui/Heading.mjs';
+              import Heading from "device-agnostic-ui/Heading.mjs";
 
-              const result = <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>;
+              const result = <Heading style={{ maxWidth: "4em" }}>learnHTML5WithUs</Heading>;
             `
           }
           result={
-            <Heading style={{ maxWidth: '4em' }}>learnHTML5WithUs</Heading>
+            <Heading style={{ maxWidth: "4em" }}>learnHTML5WithUs</Heading>
           }
         />
       </>

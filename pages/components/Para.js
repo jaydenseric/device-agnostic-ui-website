@@ -1,11 +1,11 @@
 // ignore unused exports default
 
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { Para as ParaComponentMeta } from '../../meta/components';
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { Para as ParaComponentMeta } from "../../meta/components";
 
 const ParaComponentPage = () => (
   <ComponentPage
@@ -27,7 +27,7 @@ const ParaComponentPage = () => (
         caption="Simple paragraph."
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import Para from 'device-agnostic-ui/Para.mjs';
+            import Para from "device-agnostic-ui/Para.mjs";
 
             const result = (
               <Para>

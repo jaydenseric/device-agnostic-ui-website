@@ -1,15 +1,15 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import Icon from 'device-agnostic-ui/Icon.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { Icon as IconComponentMeta } from '../../meta/components';
+import Code from "device-agnostic-ui/Code.mjs";
+import Icon from "device-agnostic-ui/Icon.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { Icon as IconComponentMeta } from "../../meta/components";
 
 const IconCircleFilled = (props) => (
   <Icon title="Circle filled" {...props}>
@@ -32,9 +32,9 @@ const IconComponentPage = () => (
           It implements the <LinkElement type="SVG" element="svg" /> element.
         </Para>
         <Para>
-          By default the <LinkElement type="SVG" element="svg" /> element’s{' '}
-          <LinkElement type="SVG" element="svg" attribute="stroke" /> and{' '}
-          <LinkElement type="SVG" element="svg" attribute="fill" /> is{' '}
+          By default the <LinkElement type="SVG" element="svg" /> element’s{" "}
+          <LinkElement type="SVG" element="svg" attribute="stroke" /> and{" "}
+          <LinkElement type="SVG" element="svg" attribute="fill" /> is{" "}
           <LinkText href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#currentColor_keyword">
             <Code>currentColor</Code>
           </LinkText>
@@ -49,31 +49,31 @@ const IconComponentPage = () => (
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'size', idPrefix: 'prop' }}
+          identity={{ name: "size", idPrefix: "prop" }}
           type="String"
-          defaultValue="'1em'"
+          defaultValue='"1em"'
         >
           <Para>
-            Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
-            <LinkElement type="SVG" element="svg" attribute="width" /> and{' '}
-            <LinkElement type="SVG" element="svg" attribute="height" />{' '}
-            attributes. Some browser versions don’t support <Code>rem</Code>{' '}
+            Sets the <LinkElement type="SVG" element="svg" /> element’s{" "}
+            <LinkElement type="SVG" element="svg" attribute="width" /> and{" "}
+            <LinkElement type="SVG" element="svg" attribute="height" />{" "}
+            attributes. Some browser versions don’t support <Code>rem</Code>{" "}
             units.
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'title', idPrefix: 'prop' }}
+          identity={{ name: "title", idPrefix: "prop" }}
           type="String"
           required
         >
           <Para>
-            Gets suffixed with <Code>&apos; icon&apos;</Code> to form the{' '}
-            <LinkElement type="SVG" element="svg" /> element’s{' '}
+            Gets suffixed with <Code>&apos; icon&apos;</Code> to form the{" "}
+            <LinkElement type="SVG" element="svg" /> element’s{" "}
             <LinkElement type="SVG" element="title" /> children.
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'children', idPrefix: 'prop' }}
+          identity={{ name: "children", idPrefix: "prop" }}
           type={
             <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
               JSX children
@@ -82,14 +82,14 @@ const IconComponentPage = () => (
           required
         >
           <Para>
-            SVG content for the icon, such as paths. The{' '}
+            SVG content for the icon, such as paths. The{" "}
             <LinkElement type="SVG" element="svg" /> element has a fixed 32px
             square <LinkElement type="SVG" element="svg" attribute="viewBox" />.
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; an{' '}
+            Additional props for the container; an{" "}
             <LinkElement type="SVG" element="svg" /> element.
           </Para>
         </TypeCard>
@@ -100,13 +100,13 @@ const IconComponentPage = () => (
         <CodeExample
           caption={
             <>
-              An icon using a <LinkElement type="SVG" element="circle" />{' '}
+              An icon using a <LinkElement type="SVG" element="circle" />{" "}
               element with a fill.
             </>
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Icon from 'device-agnostic-ui/Icon.mjs';
+              import Icon from "device-agnostic-ui/Icon.mjs";
 
               const IconCircleFilled = (props) => (
                 <Icon title="Circle filled" {...props}>
@@ -122,13 +122,13 @@ const IconComponentPage = () => (
         <CodeExample
           caption={
             <>
-              An icon using a <LinkElement type="SVG" element="circle" />{' '}
+              An icon using a <LinkElement type="SVG" element="circle" />{" "}
               element with a stroke.
             </>
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Icon from 'device-agnostic-ui/Icon.mjs';
+              import Icon from "device-agnostic-ui/Icon.mjs";
 
               const IconCircleOutline = (props) => (
                 <Icon title="Circle outline" {...props}>

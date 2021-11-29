@@ -1,14 +1,14 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import Loading from 'device-agnostic-ui/Loading.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { Loading as LoadingComponentMeta } from '../../meta/components';
+import Code from "device-agnostic-ui/Code.mjs";
+import Loading from "device-agnostic-ui/Loading.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { Loading as LoadingComponentMeta } from "../../meta/components";
 
 const LoadingComponentPage = () => (
   <ComponentPage
@@ -24,32 +24,32 @@ const LoadingComponentPage = () => (
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'size', idPrefix: 'prop' }}
+          identity={{ name: "size", idPrefix: "prop" }}
           type="String"
-          defaultValue="'1em'"
+          defaultValue='"1em"'
         >
           <Para>
-            Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
-            <LinkElement type="SVG" element="svg" attribute="width" /> and{' '}
-            <LinkElement type="SVG" element="svg" attribute="height" />{' '}
-            attributes. Some browser versions don’t support <Code>rem</Code>{' '}
+            Sets the <LinkElement type="SVG" element="svg" /> element’s{" "}
+            <LinkElement type="SVG" element="svg" attribute="width" /> and{" "}
+            <LinkElement type="SVG" element="svg" attribute="height" />{" "}
+            attributes. Some browser versions don’t support <Code>rem</Code>{" "}
             units.
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'title', idPrefix: 'prop' }}
+          identity={{ name: "title", idPrefix: "prop" }}
           type="String"
-          defaultValue="'Loading'"
+          defaultValue='"Loading"'
         >
           <Para>
-            Sets the <LinkElement type="SVG" element="svg" /> element’s{' '}
+            Sets the <LinkElement type="SVG" element="svg" /> element’s{" "}
             <LinkElement type="SVG" element="title" /> children.
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; an{' '}
-            <LinkElement type="SVG" element="svg" /> element.{' '}
+            Additional props for the container; an{" "}
+            <LinkElement type="SVG" element="svg" /> element.{" "}
             <Code>children</Code> can’t be used.
           </Para>
         </TypeCard>
@@ -60,7 +60,7 @@ const LoadingComponentPage = () => (
         caption="A loading indicator."
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import Loading from 'device-agnostic-ui/Loading.mjs';
+            import Loading from "device-agnostic-ui/Loading.mjs";
 
             const result = <Loading size="2em" />;
           `

@@ -1,13 +1,13 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { Code as CodeComponentMeta } from '../../meta/components';
+import Code from "device-agnostic-ui/Code.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { Code as CodeComponentMeta } from "../../meta/components";
 
 const CodeComponentPage = () => (
   <ComponentPage
@@ -30,7 +30,7 @@ const CodeComponentPage = () => (
           caption="Non-HTML code."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Code from 'device-agnostic-ui/Code.mjs';
+              import Code from "device-agnostic-ui/Code.mjs";
 
               const result = <Code>window</Code>;
             `
@@ -41,8 +41,8 @@ const CodeComponentPage = () => (
           caption="Code in a link."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Code from 'device-agnostic-ui/Code.mjs';
-              import LinkText from 'device-agnostic-ui/LinkText.mjs';
+              import Code from "device-agnostic-ui/Code.mjs";
+              import LinkText from "device-agnostic-ui/LinkText.mjs";
 
               const result = (
                 <LinkText href="https://developer.mozilla.org/en-US/docs/Web/API/Window">
@@ -61,12 +61,12 @@ const CodeComponentPage = () => (
           caption="HTML code."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Code from 'device-agnostic-ui/Code.mjs';
+              import Code from "device-agnostic-ui/Code.mjs";
 
-              const result = <Code>{'<strong>'}</Code>;
+              const result = <Code>{"<strong>"}</Code>;
             `
           }
-          result={<Code>{'<strong>'}</Code>}
+          result={<Code>{"<strong>"}</Code>}
           screenshot
         />
       </>

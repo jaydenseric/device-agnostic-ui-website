@@ -1,13 +1,13 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Pre from 'device-agnostic-ui/Pre.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { Pre as PreComponentMeta } from '../../meta/components';
+import Code from "device-agnostic-ui/Code.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Pre from "device-agnostic-ui/Pre.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { Pre as PreComponentMeta } from "../../meta/components";
 
 const PreComponentPage = () => (
   <ComponentPage
@@ -34,8 +34,8 @@ const PreComponentPage = () => (
         caption="Multiline HTML code block."
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import Code from 'device-agnostic-ui/Code.mjs';
-            import Pre from 'device-agnostic-ui/Pre.mjs';
+            import Code from "device-agnostic-ui/Code.mjs";
+            import Pre from "device-agnostic-ui/Pre.mjs";
 
             const result = (
               <Pre>

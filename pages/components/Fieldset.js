@@ -1,15 +1,15 @@
 // ignore unused exports default
 
-import Fieldset from 'device-agnostic-ui/Fieldset.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import Toggle from 'device-agnostic-ui/Toggle.mjs';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { Fieldset as FieldsetComponentMeta } from '../../meta/components';
+import Fieldset from "device-agnostic-ui/Fieldset.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import Toggle from "device-agnostic-ui/Toggle.mjs";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { Fieldset as FieldsetComponentMeta } from "../../meta/components";
 
 const FieldsetComponentPage = () => (
   <ComponentPage
@@ -22,7 +22,7 @@ const FieldsetComponentPage = () => (
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'legend', idPrefix: 'prop' }}
+          identity={{ name: "legend", idPrefix: "prop" }}
           type={
             <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
               JSX children
@@ -31,7 +31,7 @@ const FieldsetComponentPage = () => (
         >
           <Para>
             Children for the <LinkElement element="legend" /> element. It may
-            only render{' '}
+            only render{" "}
             <LinkText href="https://html.spec.whatwg.org/dev/dom.html#phrasing-content">
               phrasing content
             </LinkText>
@@ -39,7 +39,7 @@ const FieldsetComponentPage = () => (
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'children', idPrefix: 'prop' }}
+          identity={{ name: "children", idPrefix: "prop" }}
           type={
             <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
               JSX children
@@ -51,9 +51,9 @@ const FieldsetComponentPage = () => (
             Main content, contained in a <LinkElement element="div" /> element.
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; a{' '}
+            Additional props for the container; a{" "}
             <LinkElement element="fieldset" /> element.
           </Para>
         </TypeCard>
@@ -64,16 +64,16 @@ const FieldsetComponentPage = () => (
         caption={<>Grouped checkboxes.</>}
         code={
           /* syntax-highlight jsx */ /* JSX */ `
-            import Fieldset from 'device-agnostic-ui/Fieldset.mjs';
-            import Textbox from 'device-agnostic-ui/Textbox.mjs';
+            import Fieldset from "device-agnostic-ui/Fieldset.mjs";
+            import Textbox from "device-agnostic-ui/Textbox.mjs";
 
             const result = (
               <Fieldset legend="Options">
                 <Toggle
                   inputProps={{
-                    type: 'radio',
-                    name: 'options',
-                    value: 'a',
+                    type: "radio",
+                    name: "options",
+                    value: "a",
                     defaultChecked: true,
                   }}
                 >
@@ -81,9 +81,9 @@ const FieldsetComponentPage = () => (
                 </Toggle>
                 <Toggle
                   inputProps={{
-                    type: 'radio',
-                    name: 'options',
-                    value: 'b',
+                    type: "radio",
+                    name: "options",
+                    value: "b",
                   }}
                 >
                   Label B
@@ -96,9 +96,9 @@ const FieldsetComponentPage = () => (
           <Fieldset legend="Options">
             <Toggle
               inputProps={{
-                type: 'radio',
-                name: 'options',
-                value: 'a',
+                type: "radio",
+                name: "options",
+                value: "a",
                 defaultChecked: true,
               }}
             >
@@ -106,9 +106,9 @@ const FieldsetComponentPage = () => (
             </Toggle>
             <Toggle
               inputProps={{
-                type: 'radio',
-                name: 'options',
-                value: 'b',
+                type: "radio",
+                name: "options",
+                value: "b",
               }}
             >
               Label B

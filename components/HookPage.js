@@ -1,14 +1,14 @@
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
-import PropTypes from 'prop-types';
-import { CodeExample } from './CodeExample';
-import { Page } from './Page';
-import { PageHeader } from './PageHeader';
-import { Section } from './Section';
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import WordBreaks from "device-agnostic-ui/WordBreaks.mjs";
+import PropTypes from "prop-types";
+import { CodeExample } from "./CodeExample";
+import { Page } from "./Page";
+import { PageHeader } from "./PageHeader";
+import { Section } from "./Section";
 
 const codeExampleEsmImport = /* syntax-highlight jsx */ /* JSX */ `
-  import NamePlaceholder from 'device-agnostic-ui/NamePlaceholder.mjs';
+  import NamePlaceholder from "device-agnostic-ui/NamePlaceholder.mjs";
 `;
 
 export const HookPage = ({

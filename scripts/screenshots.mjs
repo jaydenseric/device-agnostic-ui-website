@@ -1,17 +1,17 @@
-import { exec } from 'child_process';
-import fs from 'fs';
-import { basename } from 'path';
-import { promisify } from 'util';
+import { exec } from "child_process";
+import fs from "fs";
+import { basename } from "path";
+import { promisify } from "util";
 // eslint-disable-next-line node/no-unpublished-import
-import imagemin from 'imagemin';
+import imagemin from "imagemin";
 // eslint-disable-next-line node/no-unpublished-import
-import imageminPngquant from 'imagemin-pngquant';
+import imageminPngquant from "imagemin-pngquant";
 // eslint-disable-next-line node/no-unpublished-import
-import imageminWebp from 'imagemin-webp';
+import imageminWebp from "imagemin-webp";
 // eslint-disable-next-line node/no-unpublished-import
-import imageminZopfli from 'imagemin-zopfli';
+import imageminZopfli from "imagemin-zopfli";
 // eslint-disable-next-line node/no-unpublished-import
-import puppeteer from 'puppeteer';
+import puppeteer from "puppeteer";
 
 const execPromise = promisify(exec);
 
@@ -89,7 +89,7 @@ async function screenshotPageElement(
       // from ancestors make their way into the screenshot.
 
       // eslint-disable-next-line no-undef
-      const sheet = document.createElement('style');
+      const sheet = document.createElement("style");
 
       sheet.innerHTML = `
         #${elementId} {
@@ -121,8 +121,8 @@ async function screenshotPageElement(
 
     await page.emulateMediaFeatures([
       {
-        name: 'prefers-color-scheme',
-        value: 'light',
+        name: "prefers-color-scheme",
+        value: "light",
       },
     ]);
     await targetElement.screenshot({ path: pngPathLight });
@@ -131,8 +131,8 @@ async function screenshotPageElement(
 
     await page.emulateMediaFeatures([
       {
-        name: 'prefers-color-scheme',
-        value: 'dark',
+        name: "prefers-color-scheme",
+        value: "dark",
       },
     ]);
 
@@ -159,8 +159,8 @@ async function screenshotPageElement(
 async function getComponentNames(componentPath) {
   try {
     return (await fs.promises.readdir(componentPath))
-      .map((filename) => basename(filename, '.js'))
-      .filter((name) => name !== 'index');
+      .map((filename) => basename(filename, ".js"))
+      .filter((name) => name !== "index");
   } catch (error) {
     console.error(`Failed to get component names:`, error);
   }
@@ -215,19 +215,19 @@ async function updateScreenshots(
       await browser.close();
     }
   } catch (error) {
-    console.error('Update screenshots failed:', error);
+    console.error("Update screenshots failed:", error);
   }
 }
 
 const componentNames = process.argv.slice(2).reduce((accumulator, arg) => {
-  const [key, value] = arg.split('=');
-  if (key === 'component') accumulator.push(value);
+  const [key, value] = arg.split("=");
+  if (key === "component") accumulator.push(value);
   return accumulator;
 }, []);
 
 updateScreenshots(
-  'pages/components',
-  'daui-screenshot-target',
-  'public/static/screenshots',
+  "pages/components",
+  "daui-screenshot-target",
+  "public/static/screenshots",
   componentNames.length ? componentNames : undefined
 );

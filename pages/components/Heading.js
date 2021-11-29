@@ -1,20 +1,20 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Scroll from 'device-agnostic-ui/Scroll.mjs';
-import Link from 'next/link';
-import { CodeExample } from '../../components/CodeExample';
-import { ComponentPage } from '../../components/ComponentPage';
-import { LinkComponent } from '../../components/LinkComponent';
-import { LinkElement } from '../../components/LinkElement';
-import { TypeCard } from '../../components/TypeCard';
-import { Heading as HeadingComponentMeta } from '../../meta/components';
+import Code from "device-agnostic-ui/Code.mjs";
+import Heading from "device-agnostic-ui/Heading.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Scroll from "device-agnostic-ui/Scroll.mjs";
+import Link from "next/link";
+import { CodeExample } from "../../components/CodeExample";
+import { ComponentPage } from "../../components/ComponentPage";
+import { LinkComponent } from "../../components/LinkComponent";
+import { LinkElement } from "../../components/LinkElement";
+import { TypeCard } from "../../components/TypeCard";
+import { Heading as HeadingComponentMeta } from "../../meta/components";
 
 const HEADING_ELEMENT_URL =
-  'https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements';
+  "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements";
 
 const HeadingComponentPage = () => (
   <ComponentPage
@@ -22,15 +22,15 @@ const HeadingComponentPage = () => (
     componentIntro={
       <>
         <Para>
-          It implements the <LinkElement element="h1" />,{' '}
-          <LinkElement element="h2" />, <LinkElement element="h3" />,{' '}
-          <LinkElement element="h4" />, <LinkElement element="h5" />, or{' '}
+          It implements the <LinkElement element="h1" />,{" "}
+          <LinkElement element="h2" />, <LinkElement element="h3" />,{" "}
+          <LinkElement element="h4" />, <LinkElement element="h5" />, or{" "}
           <LinkElement element="h6" /> element.
         </Para>
         <Para>
-          It should be nested under a sectioning element such as{' '}
-          <LinkElement element="section" /> or <LinkElement element="article" />{' '}
-          for a semantic{' '}
+          It should be nested under a sectioning element such as{" "}
+          <LinkElement element="section" /> or <LinkElement element="article" />{" "}
+          for a semantic{" "}
           <LinkText href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">
             HTML document outline
           </LinkText>
@@ -41,53 +41,53 @@ const HeadingComponentPage = () => (
     componentPropsContent={
       <Scroll>
         <TypeCard
-          identity={{ name: 'level', idPrefix: 'prop' }}
+          identity={{ name: "level", idPrefix: "prop" }}
           type={
             <>
-              <Code>1</Code> | <Code>2</Code> | <Code>3</Code> | <Code>4</Code>{' '}
+              <Code>1</Code> | <Code>2</Code> | <Code>3</Code> | <Code>4</Code>{" "}
               | <Code>5</Code> | <Code>6</Code>
             </>
           }
           defaultValue="1"
         >
           <Para>
-            Sets the{' '}
-            <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText>{' '}
+            Sets the{" "}
+            <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText>{" "}
             used, e.g. <LinkElement element="h1" />.
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'size', idPrefix: 'prop' }}
+          identity={{ name: "size", idPrefix: "prop" }}
           type={
             <>
-              <Code>1</Code> | <Code>2</Code> | <Code>3</Code> | <Code>4</Code>{' '}
+              <Code>1</Code> | <Code>2</Code> | <Code>3</Code> | <Code>4</Code>{" "}
               | <Code>5</Code> | <Code>6</Code>
             </>
           }
         >
           <Para>
-            Sets the CSS <Code>font-size</Code> via a{' '}
+            Sets the CSS <Code>font-size</Code> via a{" "}
             <Link href="/styles#theme-styles" passHref>
               <LinkText>global theme</LinkText>
-            </Link>{' '}
+            </Link>{" "}
             CSS variable, e.g. <Code>--daui-h1-font-size</Code>. Omit if setting
             a custom <Code>font-size</Code>.
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: 'id', idPrefix: 'prop' }} type="String">
+        <TypeCard identity={{ name: "id", idPrefix: "prop" }} type="String">
           <Para>
-            Sets an{' '}
+            Sets an{" "}
             <LinkText href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id">
               <Code>id</Code>
-            </LinkText>{' '}
-            attribute on the{' '}
+            </LinkText>{" "}
+            attribute on the{" "}
             <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText> and
             nests children in a <LinkComponent component="LinkText" /> component
             that links to it.
           </Para>
         </TypeCard>
         <TypeCard
-          identity={{ name: 'children', idPrefix: 'prop' }}
+          identity={{ name: "children", idPrefix: "prop" }}
           type={
             <LinkText href="https://reactjs.org/docs/jsx-in-depth.html#children-in-jsx">
               JSX children
@@ -96,15 +96,15 @@ const HeadingComponentPage = () => (
           required
         >
           <Para>
-            Content contained in the{' '}
+            Content contained in the{" "}
             <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText>,
-            nested in a <LinkComponent component="LinkText" /> if the{' '}
+            nested in a <LinkComponent component="LinkText" /> if the{" "}
             <LinkComponent component="Heading" prop="id" /> prop is specified.
           </Para>
         </TypeCard>
-        <TypeCard identity={{ name: '...props', idPrefix: 'prop' }} type="…*">
+        <TypeCard identity={{ name: "...props", idPrefix: "prop" }} type="…*">
           <Para>
-            Additional props for the container; a{' '}
+            Additional props for the container; a{" "}
             <LinkText href={HEADING_ELEMENT_URL}>heading element</LinkText>.
           </Para>
         </TypeCard>
@@ -116,7 +116,7 @@ const HeadingComponentPage = () => (
           caption="Suitable for a primary page heading."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Heading from 'device-agnostic-ui/Heading.mjs';
+              import Heading from "device-agnostic-ui/Heading.mjs";
 
               const result = <Heading size={1}>Heading</Heading>;
             `
@@ -128,7 +128,7 @@ const HeadingComponentPage = () => (
           caption="Suitable for a secondary page heading, with an ID."
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import Heading from 'device-agnostic-ui/Heading.mjs';
+              import Heading from "device-agnostic-ui/Heading.mjs";
 
               const result = (
                 <Heading level={2} size={2} id="heading">

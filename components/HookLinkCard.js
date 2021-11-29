@@ -1,10 +1,10 @@
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import LinkCard from 'device-agnostic-ui/LinkCard.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
-import PropTypes from 'prop-types';
-import React from 'react';
-import styles from './HookLinkCard.module.css';
+import Heading from "device-agnostic-ui/Heading.mjs";
+import LinkCard from "device-agnostic-ui/LinkCard.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import WordBreaks from "device-agnostic-ui/WordBreaks.mjs";
+import PropTypes from "prop-types";
+import React from "react";
+import styles from "./HookLinkCard.module.css";
 
 export const HookLinkCard = React.forwardRef(
   ({ hookName, hookDescription, ...props }, ref) => (
@@ -19,7 +19,7 @@ export const HookLinkCard = React.forwardRef(
   )
 );
 
-HookLinkCard.displayName = 'HookLinkCard';
+HookLinkCard.displayName = "HookLinkCard";
 
 HookLinkCard.propTypes = {
   hookName: PropTypes.string.isRequired,

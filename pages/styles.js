@@ -1,17 +1,17 @@
 // ignore unused exports default
 
-import Code from 'device-agnostic-ui/Code.mjs';
-import Html from 'device-agnostic-ui/Html.mjs';
-import LinkText from 'device-agnostic-ui/LinkText.mjs';
-import Margin from 'device-agnostic-ui/Margin.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Link from 'next/link';
-import { CodeExample } from '../components/CodeExample';
-import { LinkComponent } from '../components/LinkComponent';
-import { LinkElement } from '../components/LinkElement';
-import { Page } from '../components/Page';
-import { PageHeader } from '../components/PageHeader';
-import { Section } from '../components/Section';
+import Code from "device-agnostic-ui/Code.mjs";
+import Html from "device-agnostic-ui/Html.mjs";
+import LinkText from "device-agnostic-ui/LinkText.mjs";
+import Margin from "device-agnostic-ui/Margin.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Link from "next/link";
+import { CodeExample } from "../components/CodeExample";
+import { LinkComponent } from "../components/LinkComponent";
+import { LinkElement } from "../components/LinkElement";
+import { Page } from "../components/Page";
+import { PageHeader } from "../components/PageHeader";
+import { Section } from "../components/Section";
 
 const linkPrism = <LinkText href="https://prismjs.com">Prism</LinkText>;
 
@@ -22,20 +22,20 @@ const StylesPage = () => (
   >
     <PageHeader heading="Styles">
       <Para>
-        <LinkText href="#theme-styles">Theme</LinkText>,{' '}
-        <LinkText href="#global-styles">global</LinkText>,{' '}
-        <LinkText href="#component-styles">component</LinkText>, and{' '}
+        <LinkText href="#theme-styles">Theme</LinkText>,{" "}
+        <LinkText href="#global-styles">global</LinkText>,{" "}
+        <LinkText href="#component-styles">component</LinkText>, and{" "}
         <LinkText href="#syntax-highlighting-styles">
           syntax highlighting
-        </LinkText>{' '}
+        </LinkText>{" "}
         styles are published in vanilla CSS files that must be manually loaded
         in your app, as necessary.
       </Para>
       <Para>
-        Out of the box,{' '}
+        Out of the box,{" "}
         <LinkText href="https://nextjs.org/docs/basic-features/built-in-css-support">
           Next.js supports importing CSS files
-        </LinkText>{' '}
+        </LinkText>{" "}
         within React component modules.
       </Para>
     </PageHeader>
@@ -43,7 +43,7 @@ const StylesPage = () => (
       <Margin>
         <Para>
           The first styles to load in your app should establish the global theme
-          by setting the <Code>--daui-</Code> namespaced CSS variables at the{' '}
+          by setting the <Code>--daui-</Code> namespaced CSS variables at the{" "}
           <LinkText href="https://developer.mozilla.org/en-US/docs/Web/CSS/:root">
             <Code>:root</Code>
           </LinkText>
@@ -55,16 +55,16 @@ const StylesPage = () => (
           <CodeExample
             caption={
               <>
-                Import the default theme styles within a{' '}
+                Import the default theme styles within a{" "}
                 <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
                   Next.js custom app
-                </LinkText>{' '}
+                </LinkText>{" "}
                 in <Code>pages/_app.js</Code>.
               </>
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import 'device-agnostic-ui/theme.css';
+                import "device-agnostic-ui/theme.css";
               `
             }
           />
@@ -73,7 +73,7 @@ const StylesPage = () => (
       <Section level={3} heading="Custom theme" id="custom-theme">
         <Margin>
           <Para>
-            For a custom theme, either load the{' '}
+            For a custom theme, either load the{" "}
             <LinkText href="#default-theme">default theme</LinkText> and then
             override specific theme CSS variables, or manually set all of the
             theme CSS variables from scratch.
@@ -100,24 +100,24 @@ const StylesPage = () => (
       <Margin>
         <Para>
           After the <LinkText href="#theme-styles">theme styles</LinkText>, load
-          the essential <LinkElement element="html" /> and{' '}
+          the essential <LinkElement element="html" /> and{" "}
           <LinkElement element="body" /> global styles to establish the app
           viewport and typography.
         </Para>
         <CodeExample
           caption={
             <>
-              Import the global styles within a{' '}
+              Import the global styles within a{" "}
               <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
                 Next.js custom app
-              </LinkText>{' '}
+              </LinkText>{" "}
               in <Code>pages/_app.js</Code>.
             </>
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-                import 'device-agnostic-ui/global.css';
-              `
+              import "device-agnostic-ui/global.css";
+            `
           }
         />
       </Margin>
@@ -125,71 +125,71 @@ const StylesPage = () => (
     <Section level={2} heading="Component styles" id="component-styles">
       <Margin>
         <Para>
-          After the <LinkText href="#theme-styles">theme</LinkText> and{' '}
+          After the <LinkText href="#theme-styles">theme</LinkText> and{" "}
           <LinkText href="#global-styles">global</LinkText> styles, load the
-          styles for the{' '}
+          styles for the{" "}
           <Link href="/components" passHref>
             <LinkText>components</LinkText>
-          </Link>{' '}
+          </Link>{" "}
           used in your app.
         </Para>
         <CodeExample
           caption={
             <>
-              Import necessary component styles within a{' '}
+              Import necessary component styles within a{" "}
               <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
                 Next.js custom app
-              </LinkText>{' '}
+              </LinkText>{" "}
               in <Code>pages/_app.js</Code>.
             </>
           }
           code={
             /* syntax-highlight jsx */ /* JSX */ `
-              import 'device-agnostic-ui/Blockquote.css';
-              import 'device-agnostic-ui/Button.css';
-              import 'device-agnostic-ui/ButtonSubmit.css';
-              import 'device-agnostic-ui/Code.css';
-              import 'device-agnostic-ui/Fieldset.css';
-              import 'device-agnostic-ui/Heading.css';
-              import 'device-agnostic-ui/Html.css';
-              import 'device-agnostic-ui/Icon.css';
-              import 'device-agnostic-ui/LinkCard.css';
-              import 'device-agnostic-ui/LinkNav.css';
-              import 'device-agnostic-ui/LinkText.css';
-              import 'device-agnostic-ui/List.css';
-              import 'device-agnostic-ui/Loading.css';
-              import 'device-agnostic-ui/Margin.css';
-              import 'device-agnostic-ui/Nav.css';
-              import 'device-agnostic-ui/Para.css';
-              import 'device-agnostic-ui/Picture.css';
-              import 'device-agnostic-ui/Pre.css';
-              import 'device-agnostic-ui/Scroll.css';
-              import 'device-agnostic-ui/Select.css';
-              import 'device-agnostic-ui/Table.css';
-              import 'device-agnostic-ui/Textbox.css';
-              import 'device-agnostic-ui/Toggle.css';
+              import "device-agnostic-ui/Blockquote.css";
+              import "device-agnostic-ui/Button.css";
+              import "device-agnostic-ui/ButtonSubmit.css";
+              import "device-agnostic-ui/Code.css";
+              import "device-agnostic-ui/Fieldset.css";
+              import "device-agnostic-ui/Heading.css";
+              import "device-agnostic-ui/Html.css";
+              import "device-agnostic-ui/Icon.css";
+              import "device-agnostic-ui/LinkCard.css";
+              import "device-agnostic-ui/LinkNav.css";
+              import "device-agnostic-ui/LinkText.css";
+              import "device-agnostic-ui/List.css";
+              import "device-agnostic-ui/Loading.css";
+              import "device-agnostic-ui/Margin.css";
+              import "device-agnostic-ui/Nav.css";
+              import "device-agnostic-ui/Para.css";
+              import "device-agnostic-ui/Picture.css";
+              import "device-agnostic-ui/Pre.css";
+              import "device-agnostic-ui/Scroll.css";
+              import "device-agnostic-ui/Select.css";
+              import "device-agnostic-ui/Table.css";
+              import "device-agnostic-ui/Textbox.css";
+              import "device-agnostic-ui/Toggle.css";
             `
           }
         />
         <Para>
-          HTML element class names within{' '}
+          HTML element class names within{" "}
           <Link href="/components" passHref>
             <LinkText>components</LinkText>
-          </Link>{' '}
-          are <Code>daui-</Code> namespaced and follow the{' '}
+          </Link>{" "}
+          are <Code>daui-</Code> namespaced and follow the{" "}
           <LinkText href="https://en.bem.info/methodology/naming-convention">
             BEM naming convention
           </LinkText>
-          . These are private implementation details that may change in{' '}
+          . These are private implementation details that may change in{" "}
           <LinkText href="https://semver.org">semver</LinkText> non major
           releases and shouldn’t be used by app code.
         </Para>
         <Para>
-          Most of the{' '}
+          Most of the{" "}
           <Link href="/components" passHref>
             <LinkText>components</LinkText>
-          </Link>{' '}
-          can be customized via <Code>id</Code>, <Code>className</Code>, and{' '}
+          </Link>{" "}
+          can be customized via <Code>id</Code>, <Code>className</Code>, and{" "}
           <Code>style</Code> props.
         </Para>
       </Margin>
@@ -219,21 +219,21 @@ const StylesPage = () => (
           <CodeExample
             caption={
               <>
-                Import the {linkPrism} syntax highlighting styles within a{' '}
+                Import the {linkPrism} syntax highlighting styles within a{" "}
                 <LinkText href="https://nextjs.org/docs/advanced-features/custom-app">
                   Next.js custom app
-                </LinkText>{' '}
+                </LinkText>{" "}
                 in <Code>pages/_app.js</Code>.
               </>
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import 'device-agnostic-ui/syntax-highlighting-prism.css';
+                import "device-agnostic-ui/syntax-highlighting-prism.css";
               `
             }
           />
           <Para>
-            Use the <Code>daui--syntax-highlighting-prism</Code> class name on a{' '}
+            Use the <Code>daui--syntax-highlighting-prism</Code> class name on a{" "}
             <LinkElement element="code" /> element, or any of its ancestors.
           </Para>
           <CodeExample
@@ -244,14 +244,14 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import Code from 'device-agnostic-ui/Code.mjs';
+                import Code from "device-agnostic-ui/Code.mjs";
 
                 const result = (
                   <Code
                     className="daui--syntax-highlighting-prism"
                     dangerouslySetInnerHTML={{
                       __html:
-                        '<span class="token keyword">scalar</span> <span class="token class-name">Upload</span>',
+                        "<span class="token keyword">scalar</span> <span class="token class-name">Upload</span>",
                     }}
                   />
                 );
@@ -275,7 +275,7 @@ const StylesPage = () => (
             }
             code={
               /* syntax-highlight jsx */ /* JSX */ `
-                import Html from 'device-agnostic-ui/Html.mjs';
+                import Html from "device-agnostic-ui/Html.mjs";
 
                 const result = (
                   <Html
@@ -299,14 +299,14 @@ const StylesPage = () => (
             }
           />
           <Para>
-            To avoid using and bundling{' '}
+            To avoid using and bundling{" "}
             <LinkText href="https://npm.im/prismjs">
               <Code>prismjs</Code>
             </LinkText>
-            ,{' '}
+            ,{" "}
             <LinkText href="https://github.com/jaydenseric/babel-plugin-syntax-highlight">
               <Code>babel-plugin-syntax-highlight</Code>
-            </LinkText>{' '}
+            </LinkText>{" "}
             can be used to transform the code contents of template literals lead
             by comments specifying a {linkPrism} language into syntax
             highlighting HTML. This is how code examples at this site are done.
@@ -314,7 +314,7 @@ const StylesPage = () => (
           <CodeExample
             caption={
               <>
-                How to create a {linkPrism} HTML string via{' '}
+                How to create a {linkPrism} HTML string via{" "}
                 <LinkText href="https://github.com/jaydenseric/babel-plugin-syntax-highlight">
                   <Code>babel-plugin-syntax-highlight</Code>
                 </LinkText>

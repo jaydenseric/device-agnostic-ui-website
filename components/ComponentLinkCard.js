@@ -1,11 +1,11 @@
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import LinkCard from 'device-agnostic-ui/LinkCard.mjs';
-import Para from 'device-agnostic-ui/Para.mjs';
-import Picture from 'device-agnostic-ui/Picture.mjs';
-import WordBreaks from 'device-agnostic-ui/WordBreaks.mjs';
-import PropTypes from 'prop-types';
-import React from 'react';
-import styles from './ComponentLinkCard.module.css';
+import Heading from "device-agnostic-ui/Heading.mjs";
+import LinkCard from "device-agnostic-ui/LinkCard.mjs";
+import Para from "device-agnostic-ui/Para.mjs";
+import Picture from "device-agnostic-ui/Picture.mjs";
+import WordBreaks from "device-agnostic-ui/WordBreaks.mjs";
+import PropTypes from "prop-types";
+import React from "react";
+import styles from "./ComponentLinkCard.module.css";
 
 export const ComponentLinkCard = React.forwardRef(
   ({ componentName, componentDescription, ...props }, ref) => (
@@ -44,7 +44,7 @@ export const ComponentLinkCard = React.forwardRef(
   )
 );
 
-ComponentLinkCard.displayName = 'ComponentLinkCard';
+ComponentLinkCard.displayName = "ComponentLinkCard";
 
 ComponentLinkCard.propTypes = {
   componentName: PropTypes.string.isRequired,

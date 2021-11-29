@@ -1,6 +1,6 @@
-import Heading from 'device-agnostic-ui/Heading.mjs';
-import PropTypes from 'prop-types';
-import styles from './PageHeader.module.css';
+import Heading from "device-agnostic-ui/Heading.mjs";
+import PropTypes from "prop-types";
+import styles from "./PageHeader.module.css";
 
 export const PageHeader = ({ heading, children }) => (
   <header className={styles.header}>

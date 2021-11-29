@@ -1,10 +1,10 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const WIDTH = 123;
 const HEIGHT = 74;
 const ASPECT_RATIO = WIDTH / HEIGHT;
 
-export const DeviceAgnosticUILogo = ({ width, units = 'em' }) => {
+export const DeviceAgnosticUILogo = ({ width, units = "em" }) => {
   const height = width / ASPECT_RATIO;
   return (
     <svg
