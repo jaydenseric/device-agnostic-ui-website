@@ -43,15 +43,7 @@ const IndexPage = () => (
     <Section level={2} heading="Features" id="features">
       <Scroll>
         <EmojiCard emoji="📦" heading="Tiny bundle size">
-          JS tested to be{" "}
-          <LinkText href="https://bundlephobia.com/result?p=device-agnostic-ui">
-            &lt; 3 kB
-          </LinkText>{" "}
-          minified and gzipped, <em>before</em>{" "}
-          <LinkText href="https://webpack.js.org/guides/tree-shaking">
-            tree shaking
-          </LinkText>
-          .
+          The minified and gzipped bundle size of individual modules are tested.
         </EmojiCard>
         <EmojiCard emoji="📱" heading="Mobile first">
           Intuitive layouts suitable for any screen size,{" "}
@@ -112,13 +104,13 @@ const IndexPage = () => (
         </EmojiCard>
       </Scroll>
     </Section>
-    <Section level={2} heading="Setup" id="setup">
+    <Section level={2} heading="Installation" id="installation">
       <Margin>
         <List ordered>
           <li>
             <Para>
-              Install from{" "}
-              <LinkText href="https://www.npmjs.com/">npm</LinkText>:
+              To install with{" "}
+              <LinkText href="https://npmjs.com/get-npm">npm</LinkText>:
             </Para>
             <Pre>
               <CodeSyntaxHighlighted
