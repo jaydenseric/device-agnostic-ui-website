@@ -1,0 +1,10 @@
+.CardComponent__figure {
+  margin: 0;
+  width: 14em;
+  font-size: 90%;
+}
+
+.CardComponent__figcaption {
+  margin: 1em;
+  margin-bottom: 1.5em;
+}
