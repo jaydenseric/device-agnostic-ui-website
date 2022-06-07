@@ -9,6 +9,8 @@ export const css = new Set([
 
 export default function Example() {
   return createElement(Html, {
-    style: { "--daui-h1-font-size": "150%" },
+    style: /** @type {import("react").CSSProperties} */ ({
+      "--daui-h1-font-size": "150%",
+    }),
   }, createElement("h1", null, "Heading 1"));
 }

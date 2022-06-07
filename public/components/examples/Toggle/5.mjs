@@ -10,9 +10,9 @@ export const css = new Set([
 ]);
 
 export default function Example() {
-  const ref = useRef();
+  const ref = useRef(/** @type {HTMLInputElement | null} */ (null));
 
-  const onClick = () => ref.current.focus();
+  const onClick = () => /** @type {HTMLInputElement}*/ (ref.current).focus();
 
   return createElement(
     Fragment,
