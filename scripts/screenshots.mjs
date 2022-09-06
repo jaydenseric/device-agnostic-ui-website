@@ -15,7 +15,6 @@ const componentNames = [
   "Html",
   "Icon",
   "IconTick",
-  "LinkActive",
   "LinkCard",
   "LinkNav",
   "LinkText",

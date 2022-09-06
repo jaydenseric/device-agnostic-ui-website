@@ -79,16 +79,6 @@ export default function PageComponents() {
           componentDescription: "An inline SVG tick icon.",
         }),
         h(CardComponent, {
-          componentName: "LinkActive",
-          componentDescription: h(
-            Fragment,
-            null,
-            "A Next.js route link that puts an ",
-            h(Code, null, "active"),
-            " boolean prop on the child if the link matches the current route path.",
-          ),
-        }),
-        h(CardComponent, {
           componentName: "LinkCard",
           componentDescription: "A link to wrap a small card of content.",
         }),

@@ -41,7 +41,7 @@ export default function router(url, headManager, isInitialRoute) {
   }
 
   const matchPageComponent = url.pathname.match(
-    /^\/components\/(?<componentName>Blockquote|Button|ButtonSubmit|Code|Fieldset|Heading|Html|Icon|IconTick|LinkActive|LinkCard|LinkNav|LinkText|ListOrdered|ListUnordered|Loading|Margin|Nav|Para|Picture|Pre|Scroll|Select|Select|Table|Textbox|Toggle|WordBreaks)$/u,
+    /^\/components\/(?<componentName>Blockquote|Button|ButtonSubmit|Code|Fieldset|Heading|Html|Icon|IconTick|LinkCard|LinkNav|LinkText|ListOrdered|ListUnordered|Loading|Margin|Nav|Para|Picture|Pre|Scroll|Select|Select|Table|Textbox|Toggle|WordBreaks)$/u,
   );
 
   if (matchPageComponent?.groups) {

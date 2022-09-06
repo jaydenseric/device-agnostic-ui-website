@@ -37,7 +37,7 @@ export const css = new Set([
 export default function PageHome() {
   useTitle("Home");
   useDescription(
-    "Device agnostic styles, components & hooks for Deno/Node.js React & Ruck/Next.js apps.",
+    "Device agnostic styles, components & hooks for Deno/Node.js React apps.",
   );
 
   return h(
@@ -59,11 +59,9 @@ export default function PageHome() {
         h(LinkText, { href: "https://nodejs.org" }, "Node.js"),
         " ",
         h(LinkText, { href: "https://reactjs.org" }, "React"),
-        " & ",
+        " apps; ",
         h(LinkText, { href: "https://ruck.tech" }, "Ruck"),
-        "\xA0/\xA0",
-        h(LinkText, { href: "https://nextjs.org" }, "Next.js"),
-        " apps. Simple to build, test, & use with 1\xA0design for any:",
+        " ready. Simple to build, test, & use with 1\xA0design for any:",
       ),
       h(
         ListUnordered,
