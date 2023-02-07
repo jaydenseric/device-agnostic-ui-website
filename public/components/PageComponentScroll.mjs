@@ -24,7 +24,7 @@ export default function PageComponentScroll() {
       Fragment,
       null,
       h(LinkText, { href: "https://reactjs.org" }, "React"),
-      " component for preformatted text.",
+      " component for displaying children in a horizontally spaced and scrollable grid.",
     ),
     examples: h(CodeExample, {
       caption: h(
