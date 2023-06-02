@@ -45,7 +45,7 @@ try {
 
   const browser = await puppeteer.launch(
     {
-      // Todo: Enable headless mode after resoling why it causes `page.goto` to
+      // Todo: Enable headless mode after resolving why it causes `page.goto` to
       // timeout after the first couple of uses.
       headless: false,
       defaultViewport: {
