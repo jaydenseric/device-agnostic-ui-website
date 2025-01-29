@@ -2,8 +2,6 @@
 
 # Device Agnostic UI website
 
-[![CI status](https://github.com/jaydenseric/device-agnostic-ui-website/workflows/CI/badge.svg)](https://github.com/jaydenseric/device-agnostic-ui-website/actions)
-
 The [Device Agnostic UI](https://github.com/jaydenseric/device-agnostic-ui)
 website.
 
