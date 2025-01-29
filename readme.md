@@ -60,8 +60,8 @@ during the process):
 
 Extra requirements:
 
-- [`oxipng`](https://github.com/shssoichiro/oxipng) CLI
-- [`cwebp`](https://github.com/webmproject/libwebp) CLI
+- CLI [`oxipng`](https://github.com/shssoichiro/oxipng)
+- CLI [`cwebp`](https://github.com/webmproject/libwebp)
 
 ### Format
 
