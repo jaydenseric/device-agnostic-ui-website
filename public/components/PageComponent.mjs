@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { ReactNode } from "react" */
+
 import Code, { css as cssCode } from "device-agnostic-ui/Code.mjs";
 import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
 import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
@@ -32,10 +34,10 @@ export const css = new Set([
  * React component for a component page.
  * @param {object} props Props.
  * @param {string} props.componentName Component name.
- * @param {import("react").ReactNode} props.componentDescription Component description.
+ * @param {ReactNode} props.componentDescription Component description.
  * @param {boolean} [props.hasCss] Does the component module have a `css`
  *   export. Defaults to `true`.
- * @param {import("react").ReactNode} [props.examples] Examples.
+ * @param {ReactNode} [props.examples] Examples.
  */
 export default function PageComponent({
   componentName,

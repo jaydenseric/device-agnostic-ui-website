@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { ReactNode } from "react" */
+
 import LinkText, { css as cssLinkText } from "device-agnostic-ui/LinkText.mjs";
 import { createElement as h } from "react";
 import useOnClickRouteLink from "ruck/useOnClickRouteLink.mjs";
@@ -13,7 +15,7 @@ export const css = new Set([
  * React component for a Ruck app route {@link LinkText navigation link}.
  * @param {object} props Props.
  * @param {string} props.href Link HREF.
- * @param {import("react").ReactNode} [props.children] Children.
+ * @param {ReactNode} [props.children] Children.
  */
 export default function LinkTextRoute({ href, children }) {
   const route = useRoute();

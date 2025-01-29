@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { ReactNode } from "react" */
+
 import ButtonSubmit, {
   css as cssButtonSubmit,
 } from "device-agnostic-ui/ButtonSubmit.mjs";
@@ -26,10 +28,9 @@ export const css = new Set([
 /**
  * React component for a code example.
  * @param {object} props Props.
- * @param {import("react").ReactNode} props.caption Caption.
+ * @param {ReactNode} props.caption Caption.
  * @param {string} props.url Example module URL.
- * @param {() => import("react").ReactNode} props.Example Example functional
- *   component.
+ * @param {() => ReactNode} props.Example Example functional component.
  * @param {boolean} [props.screenshot] Is this example the screenshot target.
  */
 export default function CodeExample({ caption, url, Example, screenshot }) {

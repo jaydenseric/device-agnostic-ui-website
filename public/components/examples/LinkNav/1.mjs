@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { ReactNode } from "react" */
+
 import LinkNav, { css as cssLinkNav } from "device-agnostic-ui/LinkNav.mjs";
 import Nav, { css as cssNav } from "device-agnostic-ui/Nav.mjs";
 import { createElement } from "react";
@@ -15,7 +17,7 @@ export const css = new Set([
  * React component for a Ruck app route {@link LinkNav navigation link}.
  * @param {object} props Props.
  * @param {string} props.href Link HREF.
- * @param {import("react").ReactNode} [props.children] Children.
+ * @param {ReactNode} [props.children] Children.
  */
 function LinkNavRoute({ href, children }) {
   const route = useRoute();

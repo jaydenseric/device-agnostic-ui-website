@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { ReactNode } from "react" */
+
 import Heading, { css as cssHeading } from "device-agnostic-ui/Heading.mjs";
 import LinkCard, { css as cssLinkCard } from "device-agnostic-ui/LinkCard.mjs";
 import Para, { css as cssPara } from "device-agnostic-ui/Para.mjs";
@@ -19,8 +21,8 @@ export const css = new Set([
  * React component for a route link card for a Device Agnostic UI component.
  * @param {object} props Props.
  * @param {string} props.componentName Device Agnostic UI component name.
- * @param {import("react").ReactNode} props.componentDescription Device Agnostic
- *   UI component description.
+ * @param {ReactNode} props.componentDescription Device Agnostic UI component
+ *   description.
  */
 export default function CardComponent({ componentName, componentDescription }) {
   const onClick = useOnClickRouteLink();
