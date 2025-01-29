@@ -1,7 +1,7 @@
 // @ts-check
 
 import puppeteer from "puppeteer";
-import { ensureDir } from "std/fs/mod.ts";
+import { ensureDir } from "@std/fs/ensure-dir";
 
 const screenshotPath = "public/screenshots";
 const targetElementId = "daui-screenshot-target";
