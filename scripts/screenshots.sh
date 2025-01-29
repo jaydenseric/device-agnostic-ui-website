@@ -1,4 +1,4 @@
-#!/bin/sh
+#! /bin/sh
 # Loads the environment variables and screenshots the Device Agnostic UI
 # components.
 
