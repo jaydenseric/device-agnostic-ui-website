@@ -1,6 +1,5 @@
 {
   "imports": {
-    "@std/fs/": "jsr:/@std/fs@^1.0.10/",
     "@std/http/": "jsr:/@std/http@^1.0.12/",
     "@std/media-types/": "jsr:/@std/media-types@^1.1.0/",
     "@std/path/": "jsr:/@std/path@^1.0.8/",

@@ -26,7 +26,6 @@ deno run \
   --allow-read \
   --allow-write \
   --allow-run \
-  --unstable \
   --import-map=importMap.server.dev.json \
   scripts/screenshots.mjs &&
 
