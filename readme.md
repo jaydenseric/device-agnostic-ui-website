@@ -48,20 +48,23 @@ To serve the [Ruck](https://ruck.tech) app for either development or production:
 
 ### Screenshots
 
+> [!IMPORTANT]
+>
+> Extra [requirements](#requirements):
+>
+> - CLI [`oxipng`](https://github.com/shssoichiro/oxipng)
+> - CLI [`cwebp`](https://github.com/webmproject/libwebp)
+
+> [!IMPORTANT]
+>
+> The [Ruck](https://ruck.tech) app must be serving.
+
 To load the environment variables from `scripts/.env.sh` and generate the Device
-Agnostic UI component screenshot images in `public/screenshots` (the
-[Ruck](https://ruck.tech) app must be served, with the environment variable
-`RUCK_DEV` not `"true"` to avoid project file changes causing server restarts
-during the process):
+Agnostic UI component screenshot images in `public/screenshots`:
 
 ```sh
 ./scripts/screenshots.sh
 ```
-
-Extra requirements:
-
-- CLI [`oxipng`](https://github.com/shssoichiro/oxipng)
-- CLI [`cwebp`](https://github.com/webmproject/libwebp)
 
 ### Format
 
