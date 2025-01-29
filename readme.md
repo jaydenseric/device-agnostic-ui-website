@@ -78,3 +78,11 @@ To lint the project:
 ```sh
 deno lint
 ```
+
+### Type check
+
+To type check every JavaScript module in the project:
+
+```sh
+./scripts/type-check.sh
+```

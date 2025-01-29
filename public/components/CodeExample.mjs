@@ -50,8 +50,12 @@ export default function CodeExample({ caption, url, Example, screenshot }) {
         Prism.languages.javascript,
         "javascript",
       ));
-    } catch ({ message }) {
-      alert(`Unable to view example source: ${message}`);
+    } catch (error) {
+      alert(
+        `Unable to view example source: ${
+          error instanceof Error ? error.message : "Error."
+        }`,
+      );
     } finally {
       setLoading(false);
     }

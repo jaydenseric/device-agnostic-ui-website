@@ -6,6 +6,7 @@ scripts/.env.sh
 scripts/dev.sh
 scripts/screenshots.mjs
 scripts/screenshots.sh
+scripts/type-check.sh
 .editorconfig
 .gitignore
 fly.toml
