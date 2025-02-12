@@ -16,7 +16,7 @@ import { createElement as h, Fragment, useCallback, useState } from "react";
 Prism.manual = true;
 
 export const css = new Set([
-  "https://unpkg.com/device-agnostic-ui@10.1.0/syntax-highlighting-prism.css",
+  "https://unpkg.com/device-agnostic-ui@11.0.0/syntax-highlighting-prism.css",
   ...cssButtonSubmit,
   ...cssCode,
   ...cssHeading,
